@@ -140,7 +140,7 @@ class MyOnboardingCandidatesSingleView(HorillaListView):
     template_name = "cbv/dashboard/my_onboarding_task.html"
 
     columns = [
-        (_("Candidaate"), "candidate_id__name"),
+        (_("Candidate"), "candidate_id__name"),
         (_("Status"), "status_col"),
     ]
 

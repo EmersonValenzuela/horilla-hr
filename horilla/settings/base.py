@@ -372,7 +372,7 @@ WSGI_APPLICATION = "horilla.wsgi.application"
 # ========================================
 # INTERNATIONALIZATION
 # ========================================
-LANGUAGE_CODE = "en-us"
+LANGUAGE_CODE = "es"
 TIME_ZONE = env("TIME_ZONE", default="Asia/Kolkata")
 USE_I18N = True
 USE_TZ = True
@@ -457,12 +457,13 @@ SIDEBARS = [
     "employee",
     "attendance",
     "leave",
-    "payroll",
-    "recruitment",
     "onboarding",
     "offboarding",
     "pms",
-    "project",
+    # Temporarily hidden from navigation; apps and routes stay enabled.
+    # "payroll",
+    # "recruitment",
+    # "project",
     "asset",
     "helpdesk",
     "report",

@@ -1049,7 +1049,25 @@
             // Active-employee list filtered by one work-information field
             const employeeUrlFor = (field, id) => `${employeeListUrl}?${field}=${encodeURIComponent(id)}&is_active=True&filter_applied=on`;
 
-            document.getElementById('em-today-date').textContent = new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+            const uiLocale = window.CURRENT_LANGUAGE || 'en-US';
+            const ENGLISH_MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+            function localizedMonth(name, width = 'short') {
+                const index = ENGLISH_MONTHS.findIndex(month => month.toLowerCase() === String(name).slice(0, 3).toLowerCase());
+                return index < 0 ? name : new Date(2026, index, 1).toLocaleDateString(uiLocale, { month: width });
+            }
+            function localizedMonthYear(value) {
+                const match = /^([A-Za-z]{3})\s+(\d{4})$/.exec(String(value));
+                return match ? `${localizedMonth(match[1])} ${match[2]}` : value;
+            }
+            function localizedShortDate(value) {
+                const match = /^(\d{1,2})\s+([A-Za-z]{3})\s+(\d{4})$/.exec(String(value));
+                if (!match) return value;
+                const index = ENGLISH_MONTHS.findIndex(month => month.toLowerCase() === match[2].toLowerCase());
+                return index < 0
+                    ? value
+                    : new Date(Number(match[3]), index, Number(match[1])).toLocaleDateString(uiLocale, { day: 'numeric', month: 'short', year: 'numeric' });
+            }
+            document.getElementById('em-today-date').textContent = new Date().toLocaleDateString(uiLocale, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
 
             // ── Chart customize (show/hide + reorder, per group; stored per browser) ──
             const CUST_KEY = 'em_dashboard_prefs';
@@ -1219,7 +1237,7 @@
                 const data = turnoverData, measure = turnoverMeasure;
                 const picked = new Set(turnoverLegend.selectedNames());
                 const shown = data.departments.filter(d => picked.has(d.name));
-                const labels = data.months.map(m => m.month);
+                const labels = data.months.map(m => localizedMonthYear(m.month));
                 const peak = Math.max(0, ...labels.map((_, i) => shown.reduce((a, d) => a + d[measure][i], 0)));
                 // Whole people only: one tick per integer while the counts are small.
                 const yaxis = peak <= 5
@@ -1319,7 +1337,7 @@
                         colors: ['#22c55e', '#ef4444'],
                         fill: { type: 'gradient', gradient: { type: 'vertical', shadeIntensity: 0.3, opacityFrom: 1, opacityTo: 0.8 } },
                         plotOptions: { bar: { borderRadius: 6, borderRadiusApplication: 'end', columnWidth: '52%', grouped: true } },
-                        xaxis: { ...XAXIS_STYLE, categories: months.map(m => m.month) },
+                        xaxis: { ...XAXIS_STYLE, categories: months.map(m => localizedMonthYear(m.month)) },
                         // Whole people only: one tick per integer while the counts are small.
                         yaxis: (() => {
                             const peak = Math.max(1, ...months.map(m => Math.max(m.hires, m.exits)));
@@ -1460,7 +1478,7 @@
                                 <div class="em-emp-item__name">${esc(emp.name)}</div>
                                 <div class="em-emp-item__detail">${detail}</div>
                             </div>
-                            <span class="em-emp-item__date">${esc(emp.date_joining)}</span>
+                            <span class="em-emp-item__date">${esc(localizedShortDate(emp.date_joining))}</span>
                         </a>`;
                     }).join('');
                 }).catch(() => { setCount(0); container.innerHTML = `<div class="em-panel__empty">{% trans "No data"|escapejs %}</div>`; });
@@ -1485,7 +1503,7 @@
                                 <div class="em-emp-item__detail">${esc(doc.employee)}</div>
                             </div>
                             <div class="em-emp-item__expiry">
-                                <span class="em-emp-item__date">${esc(doc.expiry_date)}</span>
+                                <span class="em-emp-item__date">${esc(localizedShortDate(doc.expiry_date))}</span>
                                 <span class="em-emp-item__days">${doc.days_left === 0 ? "{% trans 'Expires today'|escapejs %}" : doc.days_left === 1 ? "{% trans '1 day left'|escapejs %}" : doc.days_left + " {% trans 'days left'|escapejs %}"}</span>
                             </div>
                         </div>`;

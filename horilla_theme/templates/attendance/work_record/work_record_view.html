@@ -22,14 +22,22 @@
                         hx-target="#workRecordTable"
                     >
                         <div class="flex items-stretch gap-2">
-                            <input
-                                class="text-color-600 border border-primary-500 rounded-md p-2 focus-visible:outline-0 placeholder:text-[#00000041] placeholder:font-medium text-xs [transition:.3s] focus:border-primary-600"
-                                type="month"
-                                id="monthYearField"
-                                value='{{ current_date|date:"Y-m" }}'
-                                name="month"
-                                onchange="$('#startDate').val('');$('#endDate').val('');$('#employeeFilter').click()"
-                            >
+                            <div style="position: relative">
+                                <input
+                                    class="text-color-600 border border-primary-500 rounded-md p-2 focus-visible:outline-0 placeholder:text-[#00000041] placeholder:font-medium text-xs [transition:.3s] focus:border-primary-600"
+                                    type="month"
+                                    id="monthYearField"
+                                    value='{{ current_date|date:"Y-m" }}'
+                                    name="month"
+                                    aria-label="{% trans 'Month' %}"
+                                    onchange="updateWorkRecordMonthLabel(this);$('#startDate').val('');$('#endDate').val('');$('#employeeFilter').click()"
+                                >
+                                <span
+                                    id="monthYearFieldLabel"
+                                    aria-hidden="true"
+                                    style="position: absolute; inset: 1px 2rem 1px 1px; display: flex; align-items: center; padding-left: .75rem; background: #fff; pointer-events: none; font-size: .75rem; color: #4b5563; border-radius: .375rem;"
+                                ></span>
+                            </div>
 
                             <button
                                 type="button"
@@ -89,7 +97,7 @@
                                                             name="start_date"
                                                             id="startDate"
                                                             class="oh-input"
-                                                            onchange="$('#monthYearField').val('')"
+                                                            onchange="clearWorkRecordMonthField()"
                                                         >
                                                     </div>
                                                 </div>
@@ -105,7 +113,7 @@
                                                             id="endDate"
                                                             class="oh-input"
                                                             max="{{ today|date:'Y-m-d' }}"
-                                                            onchange="$('#monthYearField').val('')"
+                                                            onchange="clearWorkRecordMonthField()"
                                                         >
                                                     </div>
                                                 </div>
@@ -150,7 +158,29 @@
         </div>
     </div>
     <script>
+        function updateWorkRecordMonthLabel(input) {
+            const label = document.getElementById("monthYearFieldLabel");
+            if (!label || !input || !input.value) {
+                if (label) label.textContent = "";
+                return;
+            }
+
+            const [year, month] = input.value.split("-").map(Number);
+            label.textContent = new Intl.DateTimeFormat(
+                window.CURRENT_LANGUAGE || "es",
+                { month: "long", year: "numeric" }
+            ).format(new Date(year, month - 1, 15));
+        }
+
+        function clearWorkRecordMonthField() {
+            const input = document.getElementById("monthYearField");
+            if (!input) return;
+            input.value = "";
+            updateWorkRecordMonthLabel(input);
+        }
+
         $(document).ready(function () {
+            updateWorkRecordMonthLabel(document.getElementById("monthYearField"));
             // :not(.oh-select-ajax) -- Company/Department/Shift/Employee
             // Tag/Reporting Manager/Job Position/Groups/Permissions (see
             // employee_filters.html) are AJAX-loaded comboboxes now

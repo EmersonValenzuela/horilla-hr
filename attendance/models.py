@@ -1835,7 +1835,19 @@ class WorkRecords(models.Model):
         title_message = self.message
         if title_message == "Leave":
             if apps.is_installed("leave"):
-                title_message += f" | {self.leave_request_id.leave_type_id}"
+                title_message = (
+                    f"{_('On leave')} | {self.leave_request_id.leave_type_id}"
+                )
+        else:
+            title_message = {
+                "Present": _("Present"),
+                "Half Day Present": _("Half Day Present"),
+                "Absent": _("Absent"),
+                "Validate the attendance": _("Validate the attendance"),
+                "Incomplete minimum hour": _("Incomplete minimum hour"),
+                "Incomplete half minimum hour": _("Incomplete half minimum hour"),
+                "Currently working": _("Currently working"),
+            }.get(title_message, title_message)
         return title_message
 
     def save(self, *args, **kwargs):

@@ -2370,7 +2370,8 @@
                 return `<div class="md-kpi-card"><a href="${href}" class="md-kpi-card__hit">${body}</a>${subHtml}</div>`;
             };
 
-            document.getElementById('md-date').textContent = new Date().toLocaleDateString('en-US', {
+            const uiLocale = window.CURRENT_LANGUAGE || 'en-US';
+            document.getElementById('md-date').textContent = new Date().toLocaleDateString(uiLocale, {
                 weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
             });
 
@@ -2494,7 +2495,7 @@
                 this_year: '{% trans "This Year"|escapejs %}',
             };
             function shortDate(d) {
-                return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+                return d.toLocaleDateString(uiLocale, { month: 'short', day: 'numeric', year: 'numeric' });
             }
             function periodLabel() {
                 const preset = detectPreset();
@@ -2502,7 +2503,7 @@
                 const to = new Date(toInput.value + 'T00:00:00');
                 let detail;
                 if (preset === 'this_month') {
-                    detail = from.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+                    detail = from.toLocaleDateString(uiLocale, { month: 'long', year: 'numeric' });
                 } else if (preset === 'this_year') {
                     detail = String(from.getFullYear());
                 } else if (preset === 'today') {
@@ -3476,6 +3477,14 @@
                 // and run into each other. Within one year just the month is enough (the card
                 // names the year); across years the year goes on a second line.
                 const MONTH_LABEL = /^([A-Za-z]{3,9})\.?\s+(\d{4})$/;
+                const ENGLISH_MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+                function localizedMonth(name, width = 'short') {
+                    const index = ENGLISH_MONTHS.findIndex(month => month.toLowerCase() === String(name).slice(0, 3).toLowerCase());
+                    return index < 0 ? name : new Date(2026, index, 1).toLocaleDateString(uiLocale, { month: width });
+                }
+                function localizedDateLabel(label) {
+                    return String(label).replace(/\b(Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\b/gi, month => localizedMonth(month));
+                }
                 const monthMatches = leaveTrendData.labels.map(l => MONTH_LABEL.exec(String(l)));
                 const monthly = monthMatches.length > 0 && monthMatches.every(Boolean);
                 const spansYears = new Set(monthMatches.filter(Boolean).map(m => m[2])).size > 1;
@@ -3497,7 +3506,7 @@
                     legend: { show: false },
                     // A week reads "05 Oct - 11 Oct": split over two lines (start, then "– end") so every
                     // label fits upright, instead of tilting and running off the chart's edges.
-                    xaxis: { ...XAXIS_STYLE, categories: leaveTrendData.labels.map((l, i) => { if (monthly) return spansYears ? [monthMatches[i][1], monthMatches[i][2]] : monthMatches[i][1]; const m = /^(\d{2})-(\d{2})-(\d{4})$/.exec(l); if (m) return `${+m[1]} ${['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][+m[2] - 1]}`; const range = String(l).split(/\s+[-–]\s+/); return range.length === 2 ? [range[0], '– ' + range[1]] : l; }),
+                    xaxis: { ...XAXIS_STYLE, categories: leaveTrendData.labels.map((l, i) => { if (monthly) { const month = localizedMonth(monthMatches[i][1]); return spansYears ? [month, monthMatches[i][2]] : month; } const m = /^(\d{2})-(\d{2})-(\d{4})$/.exec(l); if (m) return `${+m[1]} ${localizedMonth(ENGLISH_MONTHS[+m[2] - 1])}`; const range = String(l).split(/\s+[-–]\s+/).map(localizedDateLabel); return range.length === 2 ? [range[0], '– ' + range[1]] : localizedDateLabel(l); }),
                         labels: { ...XAXIS_STYLE.labels, rotate: 0, rotateAlways: false, hideOverlappingLabels: false, trim: false, maxHeight: 44, style: { ...XAXIS_STYLE.labels.style, fontSize: '10px' } } },
                     yaxis: { ...YAXIS_STYLE, min: 0, max: yMax, tickAmount: yMax / yStep, labels: { style: { colors: textColor, fontSize: '11px' }, formatter: v => Number.isInteger(+v) ? v : '' } },
                     grid: { ...GRID, padding: { left: 18, right: 22 } },
@@ -3507,7 +3516,7 @@
                         const total = rows.reduce((a, r) => a + r.n, 0);
                         const raw = (w.globals.categoryLabels && w.globals.categoryLabels[dataPointIndex]) || w.globals.labels[dataPointIndex] || '';
                         // Monthly axis labels drop the year; the tooltip keeps the full "Jan 2026".
-                        const title = monthly ? String(leaveTrendData.labels[dataPointIndex]) : (Array.isArray(raw) ? raw.join(' ') : raw);
+                        const title = monthly ? `${localizedMonth(monthMatches[dataPointIndex][1], 'long')} ${monthMatches[dataPointIndex][2]}` : localizedDateLabel(Array.isArray(raw) ? raw.join(' ') : raw);
                         return tipCard(title, [{ total: true, label: '{% trans "Total"|escapejs %}', value: total + ' {% trans "leave(s)"|escapejs %}' }, ...rows]);
                     } },
                 });

@@ -7,7 +7,7 @@
         </div>
         <h2 class="text-base font-semibold text-gray-800">{% trans "Import Result" %}</h2>
         <p class="mt-1 text-sm text-gray-500">
-            {% blocktrans %}No {{ model }} were imported. Please review the rows that failed and try again.{% endblocktrans %}
+            {% blocktrans with model=model %}No {{ model }} were imported. Please review the rows that failed and try again.{% endblocktrans %}
         </p>
     {% elif error_count %}
         <div class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-amber-100 text-amber-600">
@@ -15,7 +15,7 @@
         </div>
         <h2 class="text-base font-semibold text-gray-800">{% trans "Import Completed with Warnings" %}</h2>
         <p class="mt-1 text-sm text-gray-500">
-            {% blocktrans %}Some {{ model }} could not be imported. Download the error file to see what to fix.{% endblocktrans %}
+            {% blocktrans with model=model %}Some {{ model }} could not be imported. Download the error file to see what to fix.{% endblocktrans %}
         </p>
     {% else %}
         <div class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-green-100 text-green-600">
@@ -23,7 +23,7 @@
         </div>
         <h2 class="text-base font-semibold text-gray-800">{% trans "Import Successful" %}</h2>
         <p class="mt-1 text-sm text-gray-500">
-            {% blocktrans %}All {{ model }} were imported successfully.{% endblocktrans %}
+            {% blocktrans with model=model %}All {{ model }} were imported successfully.{% endblocktrans %}
         </p>
     {% endif %}
 

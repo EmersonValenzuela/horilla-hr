@@ -51,7 +51,7 @@ SUBMENUS = [
         ],
     },
     {
-        "menu": _("Leave Allocation Request"),
+        "menu": _("Leave Allocation Requests"),
         "redirect": reverse_lazy("leave-allocation-request-view"),
         # These are sibling URLs (not sub-paths of
         # leave-allocation-request-view/), so they need explicit prefixes for

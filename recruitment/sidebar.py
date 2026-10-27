@@ -6,6 +6,7 @@ To set Horilla sidebar for onboarding
 
 from django.apps import apps
 from django.contrib.auth.context_processors import PermWrapper
+from django.conf import settings
 from django.urls import reverse, reverse_lazy
 from django.utils.translation import gettext_lazy as _
 
@@ -171,7 +172,9 @@ def self_tracking_accessibility(request, submenu, user_perms, *args, **kwargs):
 class RecruitmentSettings:
     title = _("Recruitment")
     order = 4
-    condition = lambda self, request: apps.is_installed("recruitment")
+    condition = lambda self, request: apps.is_installed("recruitment") and (
+        "recruitment" in settings.SIDEBARS
+    )
     items = [
         {
             "label": _("Candidate Portal"),

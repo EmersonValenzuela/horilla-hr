@@ -24,6 +24,7 @@ from django import forms
 from django.apps import apps
 from django.conf import settings
 from django.contrib import messages
+from django.contrib.staticfiles import finders
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import Group, Permission
@@ -1391,6 +1392,9 @@ class SettingsView(LoginRequiredMixin, RedirectView):
     pattern_name = "system-preferences-view"
 
 
+_OPTIONAL_SIDEBAR_PERMISSION_APPS = frozenset({"payroll", "recruitment", "project"})
+
+
 def _permission_app_label(app_name):
     """
     Human label for permission UI module nav.
@@ -1434,7 +1438,12 @@ def _build_permission_matrix():
     """Shared permission matrix context for group/employee permission UIs."""
     permissions = []
     no_permission_models = settings.NO_PERMISSION_MODALS
+    hidden_sidebar_apps = _OPTIONAL_SIDEBAR_PERMISSION_APPS.difference(
+        settings.SIDEBARS
+    )
     for app_name in settings.APPS:
+        if app_name in hidden_sidebar_apps:
+            continue
         app_models = []
         for model in get_models_in_app(app_name):
             if model._meta.model_name in no_permission_models:
@@ -1641,9 +1650,16 @@ def update_group_permission(
     if not instance:
         messages.error(request, _("Group not found"))
         return JsonResponse({"message": "Group not found", "type": "danger"})
+    hidden_sidebar_apps = _OPTIONAL_SIDEBAR_PERMISSION_APPS.difference(
+        settings.SIDEBARS
+    )
+    hidden_permissions = list(
+        instance.permissions.filter(content_type__app_label__in=hidden_sidebar_apps)
+    )
     form = UserGroupForm(request.POST, instance=instance)
     if form.is_valid():
         form.save()
+        instance.permissions.add(*hidden_permissions)
         messages.success(request, _("Updated the permissions"))
         return JsonResponse({})
     if request.POST.get("name_update"):
@@ -2129,7 +2145,11 @@ def mail_server_conf(request):
 def mail_server_test_email(request):
     instance_id = request.GET.get("instance_id")
     white_labelling = getattr(settings, "WHITE_LABELLING", False)
-    image_path = path.join(settings.STATIC_ROOT, "images/ui/horilla-logo.png")
+    image_path = finders.find("images/ui/horilla-logo.png")
+    if image_path is None:
+        raise FileNotFoundError(
+            "Static asset images/ui/horilla-logo.png could not be found."
+        )
     company_name = "Horilla"
 
     if white_labelling:

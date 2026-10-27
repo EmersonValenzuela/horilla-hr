@@ -4,6 +4,7 @@ payroll/sidebar.py
 """
 
 from django.apps import apps
+from django.conf import settings
 from django.urls import reverse, reverse_lazy
 from django.utils.translation import gettext_lazy as _
 
@@ -140,7 +141,9 @@ def encashment_settings_accessibility(request, submenu, user_perms, *args, **kwa
 class PayrollSettings:
     title = _("Payroll")
     order = 7
-    condition = lambda self, request: apps.is_installed("payroll")
+    condition = lambda self, request: apps.is_installed("payroll") and (
+        "payroll" in settings.SIDEBARS
+    )
     items = [
         {
             "label": _("Encashment Settings"),

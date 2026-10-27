@@ -4,7 +4,7 @@ Tests for enterprise reporting foundation — registry, engine, metric formulas.
 
 from datetime import date
 
-from django.test import RequestFactory, SimpleTestCase, TestCase
+from django.test import RequestFactory, SimpleTestCase, TestCase, override_settings
 from django.utils.datastructures import MultiValueDict
 
 from horilla.testkit.factories import make_company, make_employee
@@ -92,6 +92,33 @@ class EngineHelpersTests(SimpleTestCase):
 
 
 class RegistryTests(SimpleTestCase):
+    @override_settings(
+        SIDEBARS=[
+            "employee",
+            "attendance",
+            "leave",
+            "onboarding",
+            "offboarding",
+            "pms",
+            "asset",
+            "helpdesk",
+            "report",
+        ]
+    )
+    def test_hidden_modules_are_omitted_but_performance_reports_remain(self):
+        import report.metrics  # noqa: F401
+        from report.registry import reports_by_domain
+
+        slugs = {
+            report.slug
+            for reports in reports_by_domain().values()
+            for report in reports
+        }
+        self.assertNotIn("labor-cost-summary", slugs)
+        self.assertNotIn("recruitment-funnel", slugs)
+        self.assertNotIn("onboarding-progress", slugs)
+        self.assertIn("performance-distribution", slugs)
+
     def test_new_operational_registers_registered(self):
         "Payroll readiness and the three registers are in the catalog."
         import report.metrics  # noqa: F401

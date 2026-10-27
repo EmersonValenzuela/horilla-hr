@@ -981,7 +981,8 @@
                 return `&${field}_from=${from}&${field}_till=${to}`;
             }
 
-            document.getElementById('ob-date').textContent = new Date().toLocaleDateString('en-US', {
+            const uiLocale = window.CURRENT_LANGUAGE || 'en-US';
+            document.getElementById('ob-date').textContent = new Date().toLocaleDateString(uiLocale, {
                 weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
             });
 
@@ -1049,13 +1050,13 @@
                 this_month: '{% trans "This Month"|escapejs %}',
                 this_year: '{% trans "This Year"|escapejs %}',
             };
-            function shortDate(d) { return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }); }
+            function shortDate(d) { return d.toLocaleDateString(uiLocale, { month: 'short', day: 'numeric', year: 'numeric' }); }
             function periodLabel() {
                 const preset = detectPreset();
                 const from = new Date(fromInput.value + 'T00:00:00');
                 const to = new Date(toInput.value + 'T00:00:00');
                 let detail;
-                if (preset === 'this_month') detail = from.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+                if (preset === 'this_month') detail = from.toLocaleDateString(uiLocale, { month: 'long', year: 'numeric' });
                 else if (preset === 'this_year') detail = String(from.getFullYear());
                 else if (preset === 'today') detail = shortDate(from);
                 else detail = shortDate(from) + ' – ' + shortDate(to);

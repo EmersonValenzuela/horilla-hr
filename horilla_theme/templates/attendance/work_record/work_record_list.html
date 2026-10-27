@@ -249,7 +249,7 @@
 <script>
     $(document).ready(function(){
         {% if request.GET.start_date or request.GET.end_date %}
-            $("#monthYearField").val("");
+            clearWorkRecordMonthField();
         {% elif request.GET.month %}
             $("#startDate").val("");
             $("#endDate").val("");

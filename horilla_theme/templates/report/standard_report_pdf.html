@@ -386,7 +386,7 @@
   <h2 {% if kpis or chart_images %}class="section-break"{% endif %}>{% trans "Detail data" %}</h2>
   {% if truncated %}
   <div class="truncation-note">
-    {% blocktrans %}Showing the first {{ shown_rows }} of {{ total_rows }} rows. Narrow the filters or export to CSV for the complete data set.{% endblocktrans %}
+    {% blocktrans with shown_rows=shown_rows total_rows=total_rows %}Showing the first {{ shown_rows }} of {{ total_rows }} rows. Narrow the filters or export to CSV for the complete data set.{% endblocktrans %}
   </div>
   {% endif %}
   <table class="data-table{% if dense %} dense{% endif %}" repeat="1">

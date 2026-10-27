@@ -247,10 +247,10 @@ msgid "Horilla Hr Apps. eg Dashboard"
 msgstr "Apps de Horilla HR, p. ej. Panel"
 
 msgid "Pipeline"
-msgstr "Pipeline"
+msgstr "Proceso de selección"
 
 msgid "Recruitment pipeline management"
-msgstr "Gestión del pipeline de reclutamiento"
+msgstr "Gestión del proceso de selección"
 
 msgid "New Recruitment"
 msgstr "Nuevo reclutamiento"
@@ -262,7 +262,7 @@ msgid "Filter"
 msgstr "Filtro"
 
 msgid "Pipeline filter option"
-msgstr "Opción de filtro de pipeline"
+msgstr "Opción de filtro del proceso de selección"
 
 msgid "Toggle View"
 msgstr "Cambiar vista"
@@ -412,7 +412,7 @@ msgid "Selected settings view"
 msgstr "Vista de ajustes seleccionada"
 
 msgid "Project: "
-msgstr ""
+msgstr "Proyecto: "
 
 msgid "watchFile"
 msgstr ""

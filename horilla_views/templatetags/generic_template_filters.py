@@ -77,6 +77,13 @@ def selected_format(date, company: object = None) -> str:
     return date
 
 
+@register.filter(name="display_value")
+def display_value(value):
+    if value is None or value == "":
+        return "—"
+    return value
+
+
 @register.filter(name="cell_tooltip")
 def cell_tooltip(value) -> str:
     """

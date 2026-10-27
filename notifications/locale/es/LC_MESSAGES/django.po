@@ -16,90 +16,89 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? "
-"1 : 2;\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "Mark selected notifications as unread"
-msgstr ""
+msgstr "Marcar las notificaciones seleccionadas como no leídas"
 
 msgid "Notifications"
-msgstr ""
+msgstr "Notificaciones"
 
 msgid "level"
-msgstr ""
+msgstr "nivel"
 
 msgid "recipient"
-msgstr ""
+msgstr "destinatario"
 
 msgid "unread"
-msgstr ""
+msgstr "no leída"
 
 msgid "actor content type"
-msgstr ""
+msgstr "tipo de contenido del autor"
 
 msgid "actor object id"
-msgstr ""
+msgstr "ID del objeto del autor"
 
 msgid "actor"
-msgstr ""
+msgstr "autor"
 
 msgid "verb"
-msgstr ""
+msgstr "acción"
 
 msgid "description"
-msgstr ""
+msgstr "descripción"
 
 msgid "target content type"
-msgstr ""
+msgstr "tipo de contenido del objetivo"
 
 msgid "target object id"
-msgstr ""
+msgstr "ID del objeto del objetivo"
 
 msgid "target"
-msgstr ""
+msgstr "objetivo"
 
 msgid "action object content type"
-msgstr ""
+msgstr "tipo de contenido del objeto de la acción"
 
 msgid "action object object id"
-msgstr ""
+msgstr "ID del objeto de la acción"
 
 msgid "action object"
-msgstr ""
+msgstr "objeto de la acción"
 
 msgid "timestamp"
-msgstr ""
+msgstr "fecha y hora"
 
 msgid "public"
-msgstr ""
+msgstr "pública"
 
 msgid "deleted"
-msgstr ""
+msgstr "eliminada"
 
 msgid "emailed"
-msgstr ""
+msgstr "enviada por correo"
 
 msgid "data"
-msgstr ""
+msgstr "datos"
 
 msgid "Notification"
-msgstr ""
+msgstr "Notificación"
 
 #, python-format
 msgid "%(actor)s %(verb)s %(action_object)s on %(target)s %(timesince)s ago"
-msgstr ""
+msgstr "Hace %(timesince)s, %(actor)s %(verb)s %(action_object)s en %(target)s"
 
 #, python-format
 msgid "%(actor)s %(verb)s %(target)s %(timesince)s ago"
-msgstr ""
+msgstr "Hace %(timesince)s, %(actor)s %(verb)s %(target)s"
 
 #, python-format
 msgid "%(actor)s %(verb)s %(action_object)s %(timesince)s ago"
-msgstr ""
+msgstr "Hace %(timesince)s, %(actor)s %(verb)s %(action_object)s"
 
 #, python-format
 msgid "%(actor)s %(verb)s %(timesince)s ago"
-msgstr ""
+msgstr "Hace %(timesince)s, %(actor)s %(verb)s"
 
 msgid "Make a notification"
-msgstr ""
+msgstr "Crear una notificación"

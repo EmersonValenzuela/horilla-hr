@@ -471,11 +471,11 @@ def leave_on_leave_today(request):
                     "name": emp.get_full_name() if emp else "—",
                     "avatar": emp.get_avatar() if emp else None,
                     "leave_type": lr.leave_type_id.name if lr.leave_type_id else "—",
-                    "start": lr.start_date.strftime("%b %d"),
+                    "start": lr.start_date.isoformat(),
                     "end": (
-                        lr.end_date.strftime("%b %d")
+                        lr.end_date.isoformat()
                         if lr.end_date
-                        else lr.start_date.strftime("%b %d")
+                        else lr.start_date.isoformat()
                     ),
                     "days": float(lr.requested_days) if lr.requested_days else 1,
                 }
@@ -507,9 +507,9 @@ def leave_upcoming_holidays(request):
             holidays.append(
                 {
                     "name": h.name,
-                    "start": h.start_date.strftime("%b %d"),
+                    "start": h.start_date.isoformat(),
                     "end": (
-                        h.end_date.strftime("%b %d")
+                        h.end_date.isoformat()
                         if h.end_date and h.end_date != h.start_date
                         else None
                     ),
@@ -530,13 +530,13 @@ def leave_weekly_pattern(request):
 
     from_date, to_date = _parse_period(request)
     days = [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday",
-        "Sunday",
+        str(_("Monday")),
+        str(_("Tuesday")),
+        str(_("Wednesday")),
+        str(_("Thursday")),
+        str(_("Friday")),
+        str(_("Saturday")),
+        str(_("Sunday")),
     ]
     counts = [0] * 7
 
@@ -599,11 +599,11 @@ def leave_upcoming(request):
                     "name": emp.get_full_name() if emp else "—",
                     "avatar": emp.get_avatar() if emp else None,
                     "leave_type": lr.leave_type_id.name if lr.leave_type_id else "—",
-                    "start": lr.start_date.strftime("%b %d"),
+                    "start": lr.start_date.isoformat(),
                     "end": (
-                        lr.end_date.strftime("%b %d")
+                        lr.end_date.isoformat()
                         if lr.end_date
-                        else lr.start_date.strftime("%b %d")
+                        else lr.start_date.isoformat()
                     ),
                     "days": float(lr.requested_days) if lr.requested_days else 1,
                     "days_away": days_away,

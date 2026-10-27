@@ -11,6 +11,7 @@ Sections registered:
 """
 
 from django.apps import apps
+from django.conf import settings
 from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
 
@@ -30,10 +31,14 @@ def system_preferences_accessibility(request, submenu, user_perms, *args, **kwar
             "horilla_audit.view_accountblockunblock",
             "employee.change_employeegeneralsetting",
             "horilla_audit.view_historytrackingfields",
-            "payroll.view_payrollsettings",
             "base.view_company",
             "base.view_companylanguagesetting",
         ]
+        + (
+            ["payroll.view_payrollsettings"]
+            if "payroll" in settings.SIDEBARS
+            else []
+        )
     )
 
 
@@ -144,7 +149,9 @@ def gdrive_accessibility(request, submenu, user_perms, *args, **kwargs):
 
 
 def linkedin_accessibility(request, submenu, user_perms, *args, **kwargs):
-    return request.user.has_perm("recruitment.view_linkedinaccount")
+    return "recruitment" in settings.SIDEBARS and request.user.has_perm(
+        "recruitment.view_linkedinaccount"
+    )
 
 
 def ldap_accessibility(request, submenu, user_perms, *args, **kwargs):

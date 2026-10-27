@@ -1,15 +1,15 @@
 {% load static i18n %}
 {% load horillafilters %}
+{% get_current_language as LANGUAGE_CODE %}
 {% get_def_theme as theme_obj %}
 <!DOCTYPE html>
-<html>
+<html lang="{{ LANGUAGE_CODE }}">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="{% static 'horilla_theme/assets/css/tailwind.css' %}" rel="stylesheet">
         <title>
-            {% blocktrans with company_name=white_label_company_name %}Login - {{ company_name }}
-                Dashboard{% endblocktrans %}
+            {% trans "Sign In" %} - {{ white_label_company_name }}
         </title>
         <link
             rel="apple-touch-icon"
@@ -36,124 +36,304 @@
             rel="stylesheet"
             href="/static/horilla_theme/assets/css/v1_styles.css"
         >
-        <script src='{% static "horilla_theme/assets/js/tailwindcdn.js" %}'></script>
-        <script>
-            window.tailwind.config = {
-                theme: {
-                    colors: {
-                        white: '#FFFFFF',
-                        primary: {
-                            50:  '{{ theme_obj.primary_50  | default:"#f6f6f6" }}',
-                            100: '{{ theme_obj.primary_100 | default:"#FFF5F1" }}',
-                            200: '{{ theme_obj.primary_200 | default:"#FEF6F5" }}',
-                            300: '{{ theme_obj.primary_300 | default:"#FCEDEB" }}',
-                            400: '{{ theme_obj.primary_400 | default:"#FBE5E1" }}',
-                            500: '{{ theme_obj.primary_500 | default:"#F7C8C1" }}',
-                            600: '{{ theme_obj.primary_600 | default:"#E54F38" }}',
-                            700: '{{ theme_obj.primary_700 | default:"#ce4732" }}',
-                            800: '{{ theme_obj.primary_800 | default:"#AC3B2A" }}',
-                            900: '{{ theme_obj.primary_900 | default:"#672419" }}',
-                        },
-                        brand: {
-                            50:  '{{ theme_obj.primary_50  | default:"#f6f6f6" }}',
-                            100: '{{ theme_obj.primary_100 | default:"#FFF5F1" }}',
-                            200: '{{ theme_obj.primary_200 | default:"#FEF6F5" }}',
-                            300: '{{ theme_obj.primary_300 | default:"#FCEDEB" }}',
-                            400: '{{ theme_obj.primary_400 | default:"#FBE5E1" }}',
-                            500: '{{ theme_obj.primary_500 | default:"#F7C8C1" }}',
-                            600: '{{ theme_obj.primary_600 | default:"#E54F38" }}',
-                            700: '{{ theme_obj.primary_700 | default:"#ce4732" }}',
-                            800: '{{ theme_obj.primary_800 | default:"#AC3B2A" }}',
-                            900: '{{ theme_obj.primary_900 | default:"#672419" }}',
-                        },
-                        dark: {
-                            50:  '{{ theme_obj.dark_50  | default:"#E6E6E6" }}',
-                            100: '{{ theme_obj.dark_100 | default:"#A8A8A8" }}',
-                            200: '{{ theme_obj.dark_200 | default:"#515151" }}',
-                            300: '{{ theme_obj.dark_300 | default:"#501C14" }}',
-                            400: '{{ theme_obj.dark_400 | default:"#64748B" }}',
-                            500: '{{ theme_obj.dark_500 | default:"#190906" }}',
-                            600: '{{ theme_obj.dark_600 | default:"#000000" }}',
-                        },
-                        secondary: {
-                            50:  '{{ theme_obj.secondary_50  | default:"#f8fafc" }}',
-                            100: '{{ theme_obj.secondary_100 | default:"#f1f5f9" }}',
-                            200: '{{ theme_obj.secondary_200 | default:"#e2e8f0" }}',
-                            300: '{{ theme_obj.secondary_300 | default:"#cbd5e1" }}',
-                            400: '{{ theme_obj.secondary_400 | default:"#FBE5E1" }}',
-                            500: '{{ theme_obj.secondary_500 | default:"#F7C8C1" }}',
-                            600: '{{ theme_obj.secondary_600 | default:"#E54F38" }}',
-                            700: '{{ theme_obj.secondary_700 | default:"#334155" }}',
-                            800: '{{ theme_obj.secondary_800 | default:"#1e293b" }}',
-                            900: '{{ theme_obj.secondary_900 | default:"#0f172a" }}',
-                        },
-                        color: { 600: '#374151' },
-                        success: { light: "#86efac", DEFAULT: "#22c55e", dark: "#15803d" },
-                        warning: { light: "#fde68a", DEFAULT: "#f59e0b", dark: "#b45309" },
-                        danger:  { light: "#fca5a5", DEFAULT: "#ef4444", dark: "#b91c1c" },
-                    },
-                    extend: {
-                        boxShadow: { card: "0px 0px 10px rgba(0, 0, 0, 0.05)" },
-                        spacing: { 18: "4.5rem", 72: "18rem", 84: "21rem", 96: "24rem" },
-                        borderRadius: { "4xl": "2rem", "5xl": "2.5rem" },
-                        fontSize: { xxs: "0.625rem" },
-                        height: { "screen-50": "50vh", "screen-75": "75vh" },
-                    },
-                },
-            };
-        </script>
         <script src="{% static '/jquery/jquery.min.js' %}"></script>
+        <style>
+            :root {
+                --login-accent: {{ theme_obj.primary_600|default:"#E54F38" }};
+                --login-accent-dark: {{ theme_obj.primary_800|default:"#AC3B2A" }};
+                --login-ink: #172033;
+                --login-muted: #687386;
+                --login-line: #e5e9f0;
+            }
+            * { box-sizing: border-box; }
+            body.login-page {
+                min-height: 100vh;
+                margin: 0;
+                padding: 32px;
+                display: grid;
+                place-items: center;
+                color: var(--login-ink);
+                background:
+                    radial-gradient(ellipse at 9% 12%, rgba(229, 79, 56, .12), transparent 34%),
+                    radial-gradient(ellipse at 95% 88%, rgba(49, 91, 150, .12), transparent 36%),
+                    #f4f6fa;
+                font-family: Inter, "Segoe UI", sans-serif;
+            }
+            .login-shell {
+                width: min(1120px, 100%);
+                min-height: 650px;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                overflow: hidden;
+                border: 1px solid rgba(226, 231, 240, .9);
+                border-radius: 28px;
+                background: #fff;
+                box-shadow: 0 30px 90px rgba(25, 38, 64, .15);
+            }
+            .login-story {
+                position: relative;
+                isolation: isolate;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                min-width: 0;
+                overflow: hidden;
+                padding: 52px 54px 38px;
+                color: #fff;
+                background:
+                    radial-gradient(ellipse at 82% 25%, rgba(255,255,255,.16), transparent 33%),
+                    linear-gradient(145deg, #18243b 0%, #243957 58%, #16243c 100%);
+            }
+            .login-story::before, .login-story::after {
+                position: absolute;
+                z-index: -1;
+                content: "";
+                border: 1px solid rgba(255,255,255,.1);
+                border-radius: 50%;
+            }
+            .login-story::before { width: 460px; height: 460px; right: -210px; top: 100px; }
+            .login-story::after { width: 340px; height: 340px; right: -150px; top: 160px; }
+            .login-brand { display: flex; align-items: center; gap: 12px; }
+            .login-brand__logo {
+                width: 44px;
+                height: 44px;
+                padding: 6px;
+                border-radius: 13px;
+                background: #fff;
+                object-fit: contain;
+            }
+            .login-brand__name { font-size: 15px; font-weight: 700; letter-spacing: .01em; }
+            .login-brand__caption { margin-top: 3px; color: rgba(255,255,255,.62); font-size: 11px; }
+            .login-story__content { position: relative; z-index: 1; max-width: 440px; margin: 54px 0 38px; }
+            .login-eyebrow {
+                display: inline-flex;
+                align-items: center;
+                gap: 9px;
+                margin-bottom: 20px;
+                color: #f7c4b9;
+                font-size: 11px;
+                font-weight: 700;
+                letter-spacing: .14em;
+                text-transform: uppercase;
+            }
+            .login-eyebrow::before { width: 7px; height: 7px; border-radius: 50%; background: #ff886e; content: ""; }
+            .login-story h2 { max-width: 430px; margin: 0; font-size: clamp(34px, 4vw, 48px); line-height: 1.12; letter-spacing: -.045em; }
+            .login-story__copy { max-width: 390px; margin: 20px 0 0; color: rgba(255,255,255,.72); font-size: 15px; line-height: 1.8; }
+            .login-visual {
+                position: relative;
+                z-index: 1;
+                max-width: 405px;
+                padding: 20px;
+                border: 1px solid rgba(255,255,255,.15);
+                border-radius: 18px;
+                background: rgba(255,255,255,.09);
+                box-shadow: 0 18px 40px rgba(5,12,25,.15);
+                backdrop-filter: blur(12px);
+            }
+            .login-visual__top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+            .login-visual__label { color: rgba(255,255,255,.7); font-size: 11px; }
+            .login-visual__badge { padding: 5px 9px; border: 1px solid rgba(255,255,255,.15); border-radius: 20px; color: #d7f4e3; font-size: 10px; }
+            .login-visual__people { display: flex; align-items: center; margin: 18px 0 16px; }
+            .login-avatar {
+                width: 34px;
+                height: 34px;
+                display: grid;
+                place-items: center;
+                margin-right: -7px;
+                border: 2px solid #293d59;
+                border-radius: 50%;
+                color: #fff;
+                font-size: 10px;
+                font-weight: 700;
+            }
+            .login-avatar:nth-child(1) { background: #df816c; }
+            .login-avatar:nth-child(2) { background: #687eb1; }
+            .login-avatar:nth-child(3) { background: #6a9c8a; }
+            .login-avatar:nth-child(4) { background: #c69b58; }
+            .login-visual__rows { display: grid; gap: 10px; }
+            .login-visual__row { display: grid; grid-template-columns: 74px 1fr 28px; align-items: center; gap: 10px; color: rgba(255,255,255,.74); font-size: 10px; }
+            .login-visual__track { height: 5px; overflow: hidden; border-radius: 5px; background: rgba(255,255,255,.16); }
+            .login-visual__track span { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, #f3a18f, #f7c4b9); }
+            .login-visual__value { text-align: right; color: rgba(255,255,255,.9); }
+            .login-story__foot { color: rgba(255,255,255,.5); font-size: 11px; }
+            .login-panel {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 60px clamp(36px, 6vw, 78px);
+            }
+            .login-panel__overline { margin: 0 0 10px; color: var(--login-accent-dark); font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+            .login-panel h1 { margin: 0; color: var(--login-ink); font-size: 34px; font-weight: 750; letter-spacing: -.04em; line-height: 1.2; }
+            .login-panel__intro { margin: 12px 0 32px; color: var(--login-muted); font-size: 14px; line-height: 1.7; }
+            .login-form { display: grid; gap: 20px; }
+            .login-field label { display: block; margin-bottom: 8px; color: #313b4d; font-size: 13px; font-weight: 650; }
+            .login-field input {
+                width: 100%;
+                height: 52px;
+                padding: 0 15px;
+                border: 1px solid var(--login-line);
+                border-radius: 10px;
+                outline: none;
+                background: #fbfcfe;
+                color: var(--login-ink);
+                font: inherit;
+                font-size: 14px;
+                transition: border-color .18s ease, box-shadow .18s ease, background .18s ease;
+            }
+            .login-field input::placeholder { color: #a4acb9; }
+            .login-field input:focus { border-color: var(--login-accent); background: #fff; box-shadow: 0 0 0 4px color-mix(in srgb, var(--login-accent) 15%, transparent); }
+            .login-password { position: relative; }
+            .login-password input { padding-right: 50px; }
+            .login-password__toggle {
+                position: absolute;
+                top: 50%;
+                right: 12px;
+                width: 32px;
+                height: 32px;
+                display: grid;
+                place-items: center;
+                padding: 0;
+                transform: translateY(-50%);
+                border: 0;
+                border-radius: 7px;
+                background: transparent;
+                color: #737e90;
+                cursor: pointer;
+                z-index: 1;
+            }
+            .login-password__toggle:hover { background: #f0f2f6; color: var(--login-ink); }
+            .login-password__toggle ion-icon { font-size: 19px; }
+            .login-forgot { display: flex; justify-content: flex-end; margin-top: -8px; }
+            .login-forgot a { color: var(--login-accent-dark); font-size: 12px; font-weight: 650; text-decoration: none; }
+            .login-forgot a:hover { text-decoration: underline; }
+            .login-submit {
+                width: 100%;
+                min-height: 52px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                margin-top: 3px;
+                border: 0;
+                border-radius: 10px;
+                background: var(--login-accent);
+                box-shadow: 0 8px 18px color-mix(in srgb, var(--login-accent) 24%, transparent);
+                color: #fff;
+                cursor: pointer;
+                font: inherit;
+                font-size: 14px;
+                font-weight: 700;
+                transition: transform .18s ease, background .18s ease, box-shadow .18s ease;
+            }
+            .login-submit:hover { transform: translateY(-1px); background: var(--login-accent-dark); box-shadow: 0 11px 22px color-mix(in srgb, var(--login-accent) 30%, transparent); }
+            .login-submit ion-icon { font-size: 18px; }
+            .login-secure { display: flex; align-items: center; justify-content: center; gap: 7px; margin: 24px 0 0; color: #8992a1; font-size: 11px; }
+            .login-secure ion-icon { color: #3a9970; font-size: 15px; }
+            .login-init-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 20px; }
+            .login-init-actions a { min-height: 42px; display: flex; align-items: center; justify-content: center; gap: 6px; padding: 8px 10px; border: 1px solid var(--login-line); border-radius: 9px; color: var(--login-ink); font-size: 11px; font-weight: 650; text-align: center; text-decoration: none; }
+            .login-init-actions a:hover { border-color: var(--login-accent); color: var(--login-accent-dark); }
+            .oh-alert-container { position: fixed; z-index: 20; top: 16px; left: 50%; width: min(600px, calc(100% - 32px)); transform: translateX(-50%); }
+            .login-message { padding: 12px 16px; border-radius: 10px; background: #fff; box-shadow: 0 8px 30px rgba(20,30,50,.12); font-size: 13px; }
+            @media (max-width: 800px) {
+                body.login-page { padding: 18px; }
+                .login-shell { width: min(520px, 100%); min-height: 0; grid-template-columns: 1fr; }
+                .login-story { min-height: 240px; padding: 28px 32px; }
+                .login-story__content { margin: 35px 0 28px; }
+                .login-story h2 { max-width: 520px; font-size: clamp(30px, 7vw, 40px); }
+                .login-story__copy { margin-top: 12px; font-size: 13px; }
+                .login-visual, .login-story__foot { display: none; }
+                .login-panel { padding: 38px 32px 34px; }
+            }
+            @media (max-width: 420px) {
+                body.login-page { padding: 0; background: #fff; }
+                .login-shell { min-height: 100vh; border: 0; border-radius: 0; box-shadow: none; }
+                .login-story { min-height: 205px; padding: 24px; }
+                .login-story__content { margin: 24px 0 8px; }
+                .login-story__copy { display: none; }
+                .login-panel { padding: 32px 24px; }
+                .login-panel h1 { font-size: 30px; }
+            }
+            @media (prefers-reduced-motion: reduce) {
+                *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+            }
+        </style>
     </head>
-    <body class="bg-[{{theme_obj.primary_200}}] font-[Inter,_sans-serif]">
+    <body class="login-page">
         <div class="oh-alert-container">
             {% for message in messages %}
-                <div class="oh-alert oh-alert--animated {{ message.tags }}">
+                <div class="oh-alert oh-alert--animated login-message {{ message.tags }}">
                     {{ message }}
                 </div>
             {% endfor %}
         </div>
 
-        <div class="h-screen w-full flex items-center justify-center">
-            <div class="bg-white p-[50px] rounded-2xl [box-shadow:0px_0px_25px_#a1a1a1] w-[450px]">
-                <img
-                    src="{% if white_label_company.icon %}{{white_label_company.icon.url}}{% else %}{% static 'horilla_theme/assets/img/logo.svg' %}{% endif %}"
-                    alt=""
-                    class="m-auto mb-4"
-                    width="80"
-                >
-                <h1 class="text-3xl font-bold mb-2 text-center">
-                    {% trans "Welcome to" %}
-                    {{ white_label_company_name }}
-                    {% trans "HR" %}
-                </h1>
-                <p class="mb-5 text-center text-sm text-color-600">
-                    {% trans "Please login to access the dashboard." %}
-                </p>
-                <form method="post" class="oh-form-group">
+        <main class="login-shell">
+            <section class="login-story" aria-label="{% trans 'People operations, made human.' %}">
+                <div class="login-brand">
+                    <img
+                        src="{% if white_label_company.icon %}{{white_label_company.icon.url}}{% else %}{% static 'horilla_theme/assets/img/logo.svg' %}{% endif %}"
+                        alt=""
+                        class="login-brand__logo"
+                    >
+                    <div>
+                        <div class="login-brand__name">{{ white_label_company_name }}</div>
+                        <div class="login-brand__caption">{% trans "Your people workspace" %}</div>
+                    </div>
+                </div>
+                <div class="login-story__content">
+                    <div class="login-eyebrow">{% trans "People operations, made human." %}</div>
+                    <h2>{% trans "Bring your whole team together." %}</h2>
+                    <p class="login-story__copy">{% trans "One thoughtful space to support your people and make work better, every day." %}</p>
+                </div>
+                <div class="login-visual" aria-hidden="true">
+                    <div class="login-visual__top">
+                        <span class="login-visual__label">{% trans "Your team at a glance" %}</span>
+                        <span class="login-visual__badge">{% trans "All together" %}</span>
+                    </div>
+                    <div class="login-visual__people">
+                        <span class="login-avatar">AM</span>
+                        <span class="login-avatar">JL</span>
+                        <span class="login-avatar">CV</span>
+                        <span class="login-avatar">MR</span>
+                    </div>
+                    <div class="login-visual__rows">
+                        <div class="login-visual__row"><span>{% trans "People" %}</span><span class="login-visual__track"><span style="width: 86%"></span></span><span class="login-visual__value">86%</span></div>
+                        <div class="login-visual__row"><span>{% trans "Wellbeing" %}</span><span class="login-visual__track"><span style="width: 72%"></span></span><span class="login-visual__value">72%</span></div>
+                    </div>
+                </div>
+                <div class="login-story__foot">{% trans "A better workday starts here." %}</div>
+            </section>
+
+            <section class="login-panel">
+                <p class="login-panel__overline">{% trans "Secure access" %}</p>
+                <h1>{% trans "Sign In" %}</h1>
+                <p class="login-panel__intro">{% trans "Please login to access the dashboard." %}</p>
+                <form method="post" class="login-form">
                     {% csrf_token %}
-                    <div class="mb-3">
-                        <label for="username" class="text-sm text-color-600">{% trans "Username" %}</label>
+                    <div class="login-field">
+                        <label for="username">{% trans "Username" %}</label>
                         <input
                             type="text"
                             id="username"
                             name="username"
+                            autocomplete="username"
+                            required
                             placeholder="{% trans 'e.g. adam.luis@horilla.com' %}"
-                            class="text-color-600 w-full border border-dark-50 rounded-md p-3 mt-1 focus-visible:outline-0 placeholder:text-[#00000041] placeholder:font-medium text-xs [transition:.3s] {% if theme_obj %} focus:border-[{{theme_obj.primary_700}}] {% else %} focus:border-primary-600 {% endif %}"
                         >
                     </div>
-                    <label for="password" class="text-sm text-color-600">{% trans "Password" %}</label>
-                    <div class="oh-password-input-container relative">
-                        <input
-                            type="password"
-                            id="password"
-                            name="password"
-                            placeholder="{% trans 'Enter Password' %}"
-                            class="oh-input--password text-color-600 p-3 pr-[40px] w-full border border-dark-50 rounded-md mt-1 focus-visible:outline-0 placeholder:text-[#00000041] placeholder:font-medium text-xs [transition:.3s] {% if theme_obj %} focus:border-[{{theme_obj.primary_700}}] {% else %} focus:border-primary-600 {% endif %}"
-                        >
-                        <span
-                            type="button"
-                            class="oh-btn oh-btn--transparent oh-password-input--toggle"
-                        >
+                    <div class="login-field">
+                        <label for="password">{% trans "Password" %}</label>
+                        <div class="oh-password-input-container login-password">
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                autocomplete="current-password"
+                                required
+                                placeholder="{% trans 'Enter Password' %}"
+                                class="oh-input--password"
+                            >
+                            <button type="button" class="login-password__toggle oh-password-input--toggle" aria-label="{% trans 'Show Password' %}">
                             <ion-icon
                                 class="oh-password-input__show-icon"
                                 title="{% trans 'Show Password' %}"
@@ -164,53 +344,44 @@
                                 title="{% trans 'Hide Password' %}"
                                 name="eye-off-outline"
                             ></ion-icon>
-                        </span>
+                            </button>
+                        </div>
                     </div>
                     {% if not initialize_database %}
-                        <div class="flex justify-end">
-                            <a
-                                href="{% url 'forgot-password' %}"
-                                class="text-sm text-right font-medium text-[red] mb-3 mt-2 cursor-pointer"
-                            >
+                        <div class="login-forgot">
+                            <a href="{% url 'forgot-password' %}">
                                 {% trans "Forgot Password ?" %}
                             </a>
                         </div>
                     {% endif %}
-                    <button
-                        type="submit"
-                        class="p-3 mt-3 bg-brand-600 hover:bg-brand-800 w-full flex gap-3 justify-center rounded-md text-[white] [transition:.3s]"
-                    >
-                        <img src='{% static "horilla_theme/assets/icons/sign.svg" %}' alt=""> {% trans "Sign In" %}
+                    <button type="submit" class="login-submit">
+                        <ion-icon name="log-in-outline" aria-hidden="true"></ion-icon>
+                        {% trans "Sign In" %}
                     </button>
                 </form>
+                <p class="login-secure"><ion-icon name="shield-checkmark-outline" aria-hidden="true"></ion-icon>{% trans "Secure access for your organization" %}</p>
                 {% if initialize_database %}
-                    <div>
-                        <div class="d-flex gap-2">
+                    <div class="login-init-actions">
                             <a
                                 href="{% url 'initialize-database' %}"
-                                class="oh-btn oh-onboarding-card__button mt-4 oh-btn--shadow w-full mb-4"
+                                class="login-init-action"
                                 role="button"
-                                style="background-color: rgba(229, 79, 56, 0.1); color: hsl(8, 77%, 56%)"
                             >
                                 {% trans "Initialize Database" %}
                                 <ion-icon
-                                    class="ms-2"
                                     name="arrow-forward-outline"
                                 ></ion-icon>
                             </a>
                             <a
                                 onclick="$('#dataLoadAuthentication').toggleClass('oh-modal--show')"
-                                class="oh-btn oh-onboarding-card__button mt-4 oh-btn--shadow w-full mb-4"
-                                style="background-color: #31b46e1f; color: #1fad61"
+                                class="login-init-action"
                                 role="button"
                             >
                                 {% trans "Load Demo Data" %}
                                 <ion-icon
-                                    class="ms-2"
                                     name="arrow-forward-outline"
                                 ></ion-icon>
                             </a>
-                        </div>
                     </div>
                     <div
                         class="oh-modal"
@@ -224,8 +395,8 @@
                         </div>
                     </div>
                 {% endif %}
-            </div>
-        </div>
+            </section>
+        </main>
 
         <script type="module" src="{% static 'images/ionicons/ui_icons/ionicons/ionicons.esm.js' %}"></script>
         <script>
@@ -246,10 +417,12 @@
                         passwordInput.type = 'text';
                         showIcon.classList.add('hidden', 'd-none');
                         hideIcon.classList.remove('hidden', 'd-none');
+                        this.setAttribute('aria-label', '{% trans "Hide Password"|escapejs %}');
                     } else {
                         passwordInput.type = 'password';
                         showIcon.classList.remove('hidden', 'd-none');
                         hideIcon.classList.add('hidden', 'd-none');
+                        this.setAttribute('aria-label', '{% trans "Show Password"|escapejs %}');
                     }
                 });
             });

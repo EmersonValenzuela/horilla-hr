@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from django.apps import apps
+from django.conf import settings
 from django.shortcuts import render
 from django.urls import reverse
 from django.utils.translation import gettext_lazy as _lazy
@@ -68,6 +69,8 @@ def explorer_domain_entries(request) -> list[dict]:
     entries = []
     for app_label, url_name, name, description, permission in _DOMAINS:
         if not apps.is_installed(app_label):
+            continue
+        if app_label not in settings.SIDEBARS:
             continue
         if not (user.is_superuser or user.has_perm(permission)):
             continue

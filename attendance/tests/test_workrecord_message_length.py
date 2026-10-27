@@ -1,6 +1,7 @@
 from datetime import date
 
 from django.test import TestCase
+from django.utils.translation import override
 
 from attendance.models import WorkRecords
 from base.models import Company
@@ -35,3 +36,9 @@ class WorkRecordMessageLengthTests(TestCase):
         )
         record.refresh_from_db()
         self.assertEqual(record.message, LONG_TRANSLATED_MESSAGE)
+
+    def test_title_message_translates_stored_attendance_status(self):
+        record = WorkRecords(message="Present")
+
+        with override("es"):
+            self.assertEqual(record.title_message(), "Presente")

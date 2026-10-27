@@ -1,11 +1,12 @@
 {% load static i18n %}
+{% get_current_language as LANGUAGE_CODE %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ LANGUAGE_CODE }}">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{% trans "Registration Success - OpenHRMS Dashboard" %}</title>
+        <title>{% trans "Password reset email sent" %} - {{ white_label_company_name }}</title>
         <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicons/apple-touch-icon.png' %}">
         <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicons/favicon-32x32.png' %}">
         <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicons/favicon-16x16.png' %}">
@@ -44,8 +45,7 @@
                             <div class="oh-onboarding__title-container">
                                 <h1 class="oh-onboarding__title">{% trans "Forget Password Mail Send Successfully" %}</h1>
                                 <p class="oh-onboarding__content">
-                                    Your link to reset a Password is ready, check your inbox and also check spam if not
-                                    showing the inbox.
+                                    {% trans "Your password reset link is ready. Check your inbox and your spam folder if it is not there." %}
                                 </p>
                                 <!-- <a href="#" class="oh-btn oh-btn--secondary">{% trans "Return home" %}</a> -->
                             </div>
@@ -89,7 +89,7 @@
                                 class="oh-btn oh-btn--light-danger mr-1 oh-remove-image"
                                 data-target=".oh-upload-photo"
                             >
-                                <ion-icon class="me-1" name="trash-outline"></ion-icon>Delete image
+                                <ion-icon class="me-1" name="trash-outline"></ion-icon>{% trans "Delete image" %}
                             </button>
                             <button
                                 type="submit"

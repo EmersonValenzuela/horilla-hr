@@ -1,3 +1,36 @@
+{% load i18n %}
+
+<style>
+    .disciplinary-file-picker {
+        display: inline-flex;
+        position: relative;
+        align-items: center;
+        padding: 6px 10px;
+        gap: 10px;
+        overflow: hidden;
+        border: 1px solid rgba(128, 128, 128, 0.3);
+        border-radius: 6px;
+        cursor: pointer;
+    }
+    .disciplinary-file-picker__input {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        opacity: 0;
+    }
+    .disciplinary-file-picker__button {
+        color: var(--primary-600, #3b82f6);
+        font-weight: 600;
+        white-space: nowrap;
+    }
+    .disciplinary-file-picker__name {
+        color: #64748b;
+        overflow-wrap: anywhere;
+    }
+</style>
+
 <script>
     function actionTypeChange(selectElement) {
         var selectedActiontype = selectElement.val();
@@ -93,10 +126,35 @@
 </div>
 
 <script>
+    function initDisciplinaryFilePicker() {
+        var input = $("#formContainer input[type='file']").first();
+        if (!input.length || input.parent().hasClass("disciplinary-file-picker")) {
+            return;
+        }
+
+        input.wrap('<label class="disciplinary-file-picker"></label>');
+        input.addClass("disciplinary-file-picker__input")
+            .attr("aria-label", "{% trans 'Choose file'|escapejs %}");
+        input.after(
+            $('<span class="disciplinary-file-picker__button"></span>').text("{% trans 'Choose file'|escapejs %}"),
+            $('<span class="disciplinary-file-picker__name"></span>').text("{% trans 'No file chosen'|escapejs %}")
+        );
+        input.on("change", function () {
+            var names = Array.from(this.files || []).map(function (file) {
+                return file.name;
+            });
+            $(this).siblings(".disciplinary-file-picker__name").text(
+                names.length ? names.join(", ") : "{% trans 'No file chosen'|escapejs %}"
+            );
+        });
+    }
+
     // Re-sync after htmx settles, since settling restores attributes on reopened modals.
     $(document).off("htmx:afterSettle.disciplinaryActionForm").on("htmx:afterSettle.disciplinaryActionForm", function () {
         syncDisciplinaryPeriodFields();
+        initDisciplinaryFilePicker();
     });
 
     syncDisciplinaryPeriodFields();
+    initDisciplinaryFilePicker();
 </script>

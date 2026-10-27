@@ -162,7 +162,7 @@ class ReloadField(View):
         queryset = model.objects.all()
         queryset = field.queryset
         choices = [(instance.id, instance) for instance in queryset]
-        choices.insert(0, ("", "Select option"))
+        choices.insert(0, ("", _("Select option")))
         choices.append(
             (
                 "dynamic_create",

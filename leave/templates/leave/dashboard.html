@@ -367,10 +367,11 @@
     const cardBg = isDark ? '#242424' : '#ffffff';
     const COLORS = ['#E54F38','#22c55e','#f59e0b','#3b82f6','#a855f7','#06b6d4','#ec4899','#84cc16','#64748b','#8b5e3c'];
     const emptyHtml = (msg) => `<div class="ld-empty"><img src="/static/images/ui/no_records.svg" alt="">${msg}</div>`;
+    const uiLocale = window.CURRENT_LANGUAGE || 'en-US';
     const leaveRequestUrl = "{% url 'request-view' %}";
     const leaveRequestUrlFor = id => id ? `${leaveRequestUrl}?employee_id=${id}` : '#';
 
-    document.getElementById('ld-date').textContent = new Date().toLocaleDateString('en-US', {
+    document.getElementById('ld-date').textContent = new Date().toLocaleDateString(uiLocale, {
         weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
     });
 
@@ -422,13 +423,18 @@
         this_month: '{% trans "This Month"|escapejs %}',
         this_year: '{% trans "This Year"|escapejs %}',
     };
-    function shortDate(d) { return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }); }
+    function shortDate(d) { return d.toLocaleDateString(uiLocale, { month: 'short', day: 'numeric', year: 'numeric' }); }
+    function formatApiDate(value) {
+        const [year, month, day] = value.split('-').map(Number);
+        return new Intl.DateTimeFormat(uiLocale, { month: 'short', day: 'numeric' })
+            .format(new Date(year, month - 1, day));
+    }
     function periodLabel() {
         const preset = detectPreset();
         const from = new Date(fromInput.value + 'T00:00:00');
         const to = new Date(toInput.value + 'T00:00:00');
         let detail;
-        if (preset === 'this_month') detail = from.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+        if (preset === 'this_month') detail = from.toLocaleDateString(uiLocale, { month: 'long', year: 'numeric' });
         else if (preset === 'this_year') detail = String(from.getFullYear());
         else if (preset === 'today') detail = shortDate(from);
         else detail = shortDate(from) + ' – ' + shortDate(to);
@@ -747,7 +753,12 @@
                 stroke: { width: 2, colors: [cardBg] },
                 dataLabels: { enabled: false },
                 legend: { show: false },
-                tooltip: { theme: isDark ? 'dark' : 'light', y: { formatter: (v, { seriesIndex: i }) => `${v} days (${data.types[i].count} requests)` } },
+                tooltip: { theme: isDark ? 'dark' : 'light', y: { formatter: (v, { seriesIndex: i }) => {
+                    const count = data.types[i].count;
+                    const unit = v === 1 ? '{% trans "day"|escapejs %}' : '{% trans "days"|escapejs %}';
+                    const requestLabel = count === 1 ? '{% trans "request"|escapejs %}' : '{% trans "requests"|escapejs %}';
+                    return `${v} ${unit} (${count} ${requestLabel})`;
+                } } },
             });
         }).catch(() => { const el = document.querySelector("#chart-leave-types"); if (el) el.innerHTML = chartFailHtml(); });
     }
@@ -779,7 +790,12 @@
                 stroke: { width: 2, colors: [cardBg] },
                 dataLabels: { enabled: false },
                 legend: { show: false },
-                tooltip: { theme: isDark ? 'dark' : 'light', y: { formatter: (v, { seriesIndex: i }) => `${v} days (${[data.paid_requests, data.unpaid_requests][i] || 0} requests)` } },
+                tooltip: { theme: isDark ? 'dark' : 'light', y: { formatter: (v, { seriesIndex: i }) => {
+                    const count = [data.paid_requests, data.unpaid_requests][i] || 0;
+                    const unit = v === 1 ? '{% trans "day"|escapejs %}' : '{% trans "days"|escapejs %}';
+                    const requestLabel = count === 1 ? '{% trans "request"|escapejs %}' : '{% trans "requests"|escapejs %}';
+                    return `${v} ${unit} (${count} ${requestLabel})`;
+                } } },
             });
         }).catch(() => { const el = document.querySelector("#chart-paid-unpaid"); if (el) el.innerHTML = chartFailHtml(); });
     }
@@ -801,7 +817,7 @@
                 xaxis: { categories: data.days },
                 yaxis: { show: false, max: maxCount > 0 ? maxCount * 1.2 : 10 },
                 markers: { size: 4 },
-                tooltip: { theme: isDark ? 'dark' : 'light', y: { formatter: v => v + ' leave day(s)' } },
+                tooltip: { theme: isDark ? 'dark' : 'light', y: { formatter: v => v + ' ' + (v === 1 ? '{% trans "day of leave"|escapejs %}' : '{% trans "days of leave"|escapejs %}') } },
             });
         }).catch(() => { const el = document.querySelector("#chart-weekly-pattern"); if (el) el.innerHTML = chartFailHtml(); });
     }
@@ -830,7 +846,7 @@
                         <div class="ld-leave-item__name">${e.name}</div>
                         <div class="ld-leave-item__type">${e.leave_type}</div>
                     </div>
-                    <div class="ld-leave-item__days">${e.start}${e.start !== e.end ? ' – ' + e.end : ''}</div>
+                    <div class="ld-leave-item__days">${formatApiDate(e.start)}${e.start !== e.end ? ' – ' + formatApiDate(e.end) : ''}</div>
                 </a>`;
             }).join('');
         }).catch(() => { document.getElementById('ld-on-leave').innerHTML = '<div class="ld-info-panel__empty">{% trans "No one on leave today"|escapejs %}</div>'; });
@@ -851,12 +867,12 @@
                 const avatarInner = u.avatar ? `<img src="${u.avatar}" alt="">` : initials;
                 const badge = u.days_away === 1
                     ? '<span class="ld-badge ld-badge--amber">{% trans "Tomorrow"|escapejs %}</span>'
-                    : `<span class="ld-badge ld-badge--green">${u.days_away}d</span>`;
+                    : `<span class="ld-badge ld-badge--green">${u.days_away} {% trans "days"|escapejs %}</span>`;
                 return `<a href="${leaveRequestUrlFor(u.id)}" class="ld-leave-item">
                     <div class="ld-leave-item__avatar">${avatarInner}</div>
                     <div class="ld-leave-item__info">
                         <div class="ld-leave-item__name">${u.name}</div>
-                        <div class="ld-leave-item__type">${u.leave_type} · ${u.start}${u.start !== u.end ? ' – ' + u.end : ''} · ${u.days} ${u.days === 1 ? '{% trans "day"|escapejs %}' : '{% trans "days"|escapejs %}'}</div>
+                        <div class="ld-leave-item__type">${u.leave_type} · ${formatApiDate(u.start)}${u.start !== u.end ? ' – ' + formatApiDate(u.end) : ''} · ${u.days} ${u.days === 1 ? '{% trans "day"|escapejs %}' : '{% trans "days"|escapejs %}'}</div>
                     </div>
                     ${badge}
                 </a>`;
@@ -880,9 +896,9 @@
                     <div class="ld-leave-item__avatar">${avatarInner}</div>
                     <div class="ld-leave-item__info">
                         <div class="ld-leave-item__name">${t.name}</div>
-                        <div class="ld-leave-item__type">${t.requests} {% trans "request(s)"|escapejs %}</div>
+                        <div class="ld-leave-item__type">${t.requests} ${t.requests === 1 ? '{% trans "request"|escapejs %}' : '{% trans "requests"|escapejs %}'}</div>
                     </div>
-                    <div class="ld-leave-item__days" style="font-weight:700;color:var(--ld-amber);">${t.days}d</div>
+                    <div class="ld-leave-item__days" style="font-weight:700;color:var(--ld-amber);">${t.days} ${t.days === 1 ? '{% trans "day"|escapejs %}' : '{% trans "days"|escapejs %}'}</div>
                 </a>`;
             }).join('');
         }).catch(() => { document.getElementById('ld-top-takers').innerHTML = '<div class="ld-info-panel__empty">{% trans "No leaves in this period"|escapejs %}</div>'; });
@@ -898,13 +914,13 @@
             setCountBadge('ld-holidays-count', data.holidays.length);
             if (!data.holidays.length) { el.innerHTML = '<div class="ld-info-panel__empty">{% trans "No upcoming holidays"|escapejs %}</div>'; return; }
             el.innerHTML = data.holidays.map(h => {
-                const badge = h.days_away === 0 ? '{% trans "Today"|escapejs %}' : h.days_away === 1 ? '{% trans "Tomorrow"|escapejs %}' : h.days_away + 'd';
+                const badge = h.days_away === 0 ? '{% trans "Today"|escapejs %}' : h.days_away === 1 ? '{% trans "Tomorrow"|escapejs %}' : `${h.days_away} {% trans "days"|escapejs %}`;
                 return `<div class="ld-holiday-item">
                     <div class="ld-holiday-item__info">
                         <div class="ld-holiday-item__name">${h.name}</div>
                         <div class="ld-holiday-item__away">${badge}</div>
                     </div>
-                    <div class="ld-holiday-item__date${h.days_away === 0 ? ' ld-holiday-item__date--today' : ''}">${h.start}</div>
+                    <div class="ld-holiday-item__date${h.days_away === 0 ? ' ld-holiday-item__date--today' : ''}">${formatApiDate(h.start)}</div>
                 </div>`;
             }).join('');
         }).catch(() => { document.getElementById('ld-holidays').innerHTML = '<div class="ld-info-panel__empty">{% trans "No upcoming holidays"|escapejs %}</div>'; });

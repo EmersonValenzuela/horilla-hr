@@ -5,11 +5,12 @@ from types import SimpleNamespace
 
 from django.contrib.sessions.middleware import SessionMiddleware
 from django.http import HttpResponse
-from django.test import RequestFactory, SimpleTestCase, TestCase
+from django.test import RequestFactory, SimpleTestCase, TestCase, override_settings
 
 from horilla.testkit import make_user
 from report.sidebar import employee_accessibility, menu_accessibility
 from report.views import check_export_access
+from report.views.explorer import explorer_domain_entries
 
 
 def _call_check_export_access(request):
@@ -24,6 +25,31 @@ def _call_check_export_access(request):
 
 
 class ReportSidebarAccessibilityTests(SimpleTestCase):
+    @override_settings(
+        SIDEBARS=[
+            "employee",
+            "attendance",
+            "leave",
+            "onboarding",
+            "offboarding",
+            "pms",
+            "asset",
+            "helpdesk",
+            "report",
+        ]
+    )
+    def test_explorer_hides_hidden_modules_for_superusers(self):
+        request = SimpleNamespace(
+            user=SimpleNamespace(is_superuser=True, has_perm=lambda _perm: False)
+        )
+
+        entries = explorer_domain_entries(request)
+        names = {str(entry["name"]) for entry in entries}
+
+        self.assertNotIn("Payroll", names)
+        self.assertNotIn("Recruitment", names)
+        self.assertIn("Performance", names)
+
     def test_employee_accessibility_with_perm(self):
         request = SimpleNamespace(
             user=SimpleNamespace(

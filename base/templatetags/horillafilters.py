@@ -11,6 +11,7 @@ from itertools import groupby
 
 from django import template
 from django.apps import apps
+from django.conf import settings
 from django.forms.widgets import SelectMultiple, Textarea
 from django.template import TemplateSyntaxError
 from django.utils.translation import gettext as _
@@ -260,6 +261,12 @@ def app_installed(app_name):
     Returns True if the app with the given name is installed, otherwise False.
     """
     return apps.is_installed(app_name)
+
+
+@register.filter(name="sidebar_app_enabled")
+def sidebar_app_enabled(app_name):
+    """Return whether an app is included in the configured main navigation."""
+    return app_name in settings.SIDEBARS
 
 
 @register.filter(name="integration_installed")

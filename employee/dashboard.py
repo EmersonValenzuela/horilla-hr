@@ -178,7 +178,7 @@ def _distribution(field):
 @login_required
 @manager_can_enter(EMPLOYEE_PERM)
 def employee_by_work_type(request):
-    """Active employees by work type."""
+    """Empleados activos por tipo de trabajo."""
     return JsonResponse({"items": _distribution("work_type")})
 
 

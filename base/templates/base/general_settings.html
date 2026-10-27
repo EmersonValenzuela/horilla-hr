@@ -3,7 +3,7 @@
     {% load i18n %}
     {% load horillafilters %}
 
-    {% if "payroll"|app_installed %}
+    {% if "payroll"|sidebar_app_enabled %}
         {% if perms.payroll.change_encashmentgeneralsettings %}
             {% include "settings/encashment_settings.html" %}
         {% endif %}

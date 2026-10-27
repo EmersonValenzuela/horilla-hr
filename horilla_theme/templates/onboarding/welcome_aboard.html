@@ -1,8 +1,9 @@
 {% load static i18n %}
 {% load i18n horillafilters %}
+{% get_current_language as LANGUAGE_CODE %}
 {% get_company as theme_obj %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ LANGUAGE_CODE }}">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">

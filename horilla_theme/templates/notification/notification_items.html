@@ -12,7 +12,8 @@
                 >{{ notification.get_translated_verb }}</a>
                 <br>
                 <p class="text-xs text-[#777777] mt-1">
-                    {{ notification.timesince }} ago by
+                    {% blocktrans with time=notification.timesince %}{{ time }} ago{% endblocktrans %}
+                    {% trans "by" %}
                     {% if notification.actor.employee_first_name %}
                         {{ notification.actor.get_full_name }}
                     {% else %}

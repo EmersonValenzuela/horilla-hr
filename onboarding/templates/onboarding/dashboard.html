@@ -216,13 +216,14 @@
 <script>
 (function() {
     const isDark = document.documentElement.classList.contains('dark') || document.body.classList.contains('dark');
+    const locale = document.documentElement.lang || 'es';
     const textColor = isDark ? '#e2e8f0' : '#334155';
     const gridColor = isDark ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.06)';
     const cardBg = isDark ? '#242424' : '#ffffff';
     const COLORS = ['#E54F38','#22c55e','#f59e0b','#ef4444','#3b82f6','#a855f7','#06b6d4','#ec4899','#14b8a6','#f97316'];
     const emptyHtml = (msg) => `<div class="on-empty"><img src="/static/images/ui/no_records.svg" alt="">${msg}</div>`;
 
-    document.getElementById('on-date').textContent = new Date().toLocaleDateString('en-US', {
+    document.getElementById('on-date').textContent = new Date().toLocaleDateString(locale, {
         weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
     });
 
@@ -256,7 +257,7 @@
     initPeriod();
     // Card tags: the period the cards are scoped to.
     (function () {
-        const d = v => new Date(v + 'T00:00:00').toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' });
+        const d = v => new Date(v + 'T00:00:00').toLocaleDateString(locale, { year: 'numeric', month: 'short', day: 'numeric' });
         if (!fromInput.value || !toInput.value) return;
         document.querySelectorAll('[data-period-label]').forEach(el => { el.textContent = d(fromInput.value) + ' – ' + d(toInput.value); });
     })();
@@ -389,7 +390,7 @@
                     <div class="on-kpi-card__label">{% trans "Onboarding Candidates"|escapejs %}</div>
                     <div class="on-kpi-card__value">${data.total_candidates}</div>
                 </a>
-                <div class="on-kpi-card on-kpi-card--static" title="${'Candidate Rate In Final Stage = Finished (' + data.completed_all_time + ') / Total Onboarding (' + data.total_candidates + ') × 100 = ' + data.completion_rate + '%'}">
+                <div class="on-kpi-card on-kpi-card--static" title="${'{% trans "Candidate completion rate"|escapejs %}: ' + data.completion_rate + '%'}">
                     <div class="on-kpi-card__icon on-kpi-card__icon--green"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
                     <div class="on-kpi-card__label">{% trans "Candidate Rate In Final Stage"|escapejs %}</div>
                     <div class="on-kpi-card__value">${data.completion_rate}%</div>
@@ -397,7 +398,7 @@
                 </div>
                 <a href="{% url 'candidate-tasks-view' %}?status=stuck&filter_applied=on" class="on-kpi-card">
                     <div class="on-kpi-card__icon on-kpi-card__icon--red"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/><path d="M9 14l2 2 4-4"/></svg></div>
-                    <div class="on-kpi-card__label">{% trans "Stucked Tasks"|escapejs %}</div>
+                    <div class="on-kpi-card__label">{% trans "Stuck Tasks"|escapejs %}</div>
                     <div class="on-kpi-card__value">${data.stuck_tasks}</div>
                     <div class="on-kpi-card__sub">${data.stuck_tasks > 0 ? '<span class="on-badge on-badge--red">' + data.stuck_tasks + '/' + data.total_tasks + ' {% trans "Tasks"|escapejs %}</span>' : ''}</div>
                 </a>
@@ -423,7 +424,7 @@
             const total = data.data.reduce((a, b) => a + b, 0);
             if (!total) { PieLegend.clearFor(document.querySelector("#chart-offer-status")); document.querySelector("#chart-offer-status").innerHTML = emptyHtml('{% trans "No candidates"|escapejs %}'); return; }
             const offerColors = ['#94a3b8', '#f59e0b', '#22c55e', '#ef4444', '#E54F38'];
-            renderChart('offer-status', document.querySelector("#chart-offer-status"), PieLegend.options(document.querySelector("#chart-offer-status"), () => chartInstances['offer-status'], 'statuses', {
+            renderChart('offer-status', document.querySelector("#chart-offer-status"), PieLegend.options(document.querySelector("#chart-offer-status"), () => chartInstances['offer-status'], '{% trans "statuses"|escapejs %}', {
                 series: data.data,
                 chart: { type: 'donut', height: 300, background: 'transparent', fontFamily: 'inherit',
                     events: { dataPointSelection: (e, ctx, config) => {
@@ -478,7 +479,7 @@
             grid: { borderColor: gridColor },
             dataLabels: { enabled: true, style: { fontSize: '11px' } },
             legend: { show: false },
-            tooltip: { theme: isDark ? 'dark' : 'light', y: { formatter: v => v + ' candidates' } },
+            tooltip: { theme: isDark ? 'dark' : 'light', y: { formatter: v => v + ' ' + (v === 1 ? '{% trans "candidate"|escapejs %}' : '{% trans "candidates"|escapejs %}') } },
             states: { hover: { filter: { type: 'darken', value: 0.85 } } },
         });
     }
@@ -530,7 +531,7 @@
             grid: { borderColor: gridColor, strokeDashArray: 4 },
             dataLabels: { enabled: true, style: { fontSize: '12px' }, background: { enabled: false }, offsetY: -20 },
             legend: { show: false },
-            tooltip: { theme: isDark ? 'dark' : 'light', y: { formatter: v => v + ' candidate(s)' } },
+            tooltip: { theme: isDark ? 'dark' : 'light', y: { formatter: v => v + ' ' + (v === 1 ? '{% trans "candidate"|escapejs %}' : '{% trans "candidates"|escapejs %}') } },
         });
     }
     function loadCompletionTrend() {
@@ -564,7 +565,7 @@
                 return `<a class="on-cand-item" href="{% url 'candidate-tasks-view' %}?onboarding_task_id=${t.id}&task_manager={{ request.user.employee_get.id }}&filter_applied=on" style="text-decoration:none;color:inherit;">
                     <div class="on-cand-item__info">
                         <div class="on-cand-item__name">${t.title}</div>
-                        <div class="on-cand-item__detail">${t.stage} · ${t.done}/${t.total} {% trans "done"|escapejs %}</div>
+                        <div class="on-cand-item__detail">${t.stage} · ${t.done}/${t.total} {% trans "completed tasks"|escapejs %}</div>
                     </div>
                     <div class="on-cand-item__progress">
                         <div class="on-cand-item__bar"><div class="on-cand-item__fill" style="width:${t.progress}%;background:${color};"></div></div>

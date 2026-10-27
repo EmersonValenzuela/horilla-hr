@@ -8,6 +8,7 @@ from dataclasses import dataclass, field
 from typing import Callable, Optional
 
 from django.apps import apps
+from django.conf import settings
 from django.utils.translation import gettext_lazy as _
 
 from report.engine import ReportFilters
@@ -54,6 +55,17 @@ class ReportDefinition:
 
 _REGISTRY: dict[str, ReportDefinition] = {}
 
+# Standard reports use the same sidebar visibility as their module explorers.
+_EXPLORER_APPS = {
+    "employee-report": "employee",
+    "attendance-report": "attendance",
+    "leave-report": "leave",
+    "payroll-report": "payroll",
+    "recruitment-report": "recruitment",
+    "asset-report": "asset",
+    "pms-report": "pms",
+}
+
 DOMAIN_LABELS = {
     "workforce": _("Workforce"),
     "time_leave": _("Time & Leave"),
@@ -61,6 +73,12 @@ DOMAIN_LABELS = {
     "talent": _("Talent"),
     "compliance": _("Compliance"),
 }
+
+
+def is_report_module_visible(definition: ReportDefinition) -> bool:
+    """Whether a report's module is included in the application's sidebar."""
+    explorer_app = _EXPLORER_APPS.get(definition.explorer_url_name)
+    return not explorer_app or explorer_app in settings.SIDEBARS
 
 
 def register(definition: ReportDefinition) -> ReportDefinition:
@@ -128,6 +146,8 @@ def reports_by_domain(
 ) -> dict[str, list[ReportDefinition]]:
     grouped: dict[str, list[ReportDefinition]] = {}
     for definition in list_reports(user=user, company_id=company_id):
+        if not is_report_module_visible(definition):
+            continue
         grouped.setdefault(definition.domain, []).append(definition)
     return grouped
 

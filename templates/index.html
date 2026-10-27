@@ -3,10 +3,10 @@
 {% load horillafilters %}
 {% load basefilters %}
 {% show_section as show_section %}
-<!DOCTYPE html>
-<html>
-{% get_current_language_bidi as LANGUAGE_BIDI %}
 {% get_current_language as LANGUAGE_CODE %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}">
+{% get_current_language_bidi as LANGUAGE_BIDI %}
 {% comment %} <html dir="{% if LANGUAGE_BIDI %}rtl{% else %}ltr{% endif %}" lang="{{ LANGUAGE_CODE }}"> {% endcomment %}
 
 <head>
