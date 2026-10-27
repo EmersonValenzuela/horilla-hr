@@ -29134,6 +29134,102 @@ msgstr "calculado por la estructura"
 msgid "working days"
 msgstr "días laborables"
 
+msgid "Your personal dashboard"
+msgstr "Tu panel personal"
+
+msgid "This is your HR self-service hub. View your attendance, leave balance, payslips and requests — all in one place."
+msgstr "Este es tu espacio de autoservicio de Recursos Humanos. Consulta aquí tu asistencia, saldo de permisos, nóminas y solicitudes."
+
+msgid "Your attendance rate, leave balance and open requests are summarised here at a glance."
+msgstr "Aquí puedes consultar rápidamente tu porcentaje de asistencia, saldo de permisos y solicitudes pendientes."
+
+msgid "Leave balance"
+msgstr "Saldo de permisos"
+
+msgid "See your approved and remaining days for each leave type. Click the chart to apply for leave."
+msgstr "Consulta los días aprobados y disponibles de cada tipo de permiso. Haz clic en el gráfico para solicitar uno."
+
+msgid "Attendance calendar"
+msgstr "Calendario de asistencia"
+
+msgid "Your attendance is plotted day by day. Green means present, amber means late, red means absent."
+msgstr "Tu asistencia se muestra día por día. El verde indica presencia, el ámbar llegada tarde y el rojo ausencia."
+
+msgid "My requests"
+msgstr "Mis solicitudes"
+
+msgid "Check the status of your leave applications, attendance corrections and other requests right here."
+msgstr "Consulta aquí el estado de tus solicitudes de permisos, correcciones de asistencia y otras peticiones."
+
+msgid "A guided tour of the employee self-service dashboard."
+msgstr "Un recorrido guiado por el panel de autoservicio del empleado."
+
+msgid "{current} of {total}"
+msgstr "{current} de {total}"
+
+msgid "No tours available for this page."
+msgstr "No hay recorridos disponibles para esta página."
+
+msgid "Getting Started"
+msgstr "Primeros pasos"
+
+msgid "A 3-minute setup walkthrough for new admins."
+msgstr "Una guía de configuración de tres minutos para administradores nuevos."
+
+msgid "Welcome to Horilla 👋"
+msgstr "Te damos la bienvenida a Horilla 👋"
+
+msgid "Let's get your HR system ready in a few quick steps. This takes about three minutes — you can skip and resume anytime."
+msgstr "Preparemos tu sistema de Recursos Humanos en unos pocos pasos. Te llevará unos tres minutos; puedes omitirlos y continuar cuando quieras."
+
+msgid "Step 1 — Add your company details"
+msgstr "Paso 1 — Añade los datos de tu empresa"
+
+msgid "Open Settings → Companies to set your company name, logo, address and timezone. This personalises the whole workspace."
+msgstr "Ve a Configuración → Empresas para indicar el nombre, logotipo, dirección y zona horaria. Así personalizarás todo el espacio de trabajo."
+
+msgid "Step 2 — Create departments & job positions"
+msgstr "Paso 2 — Crea departamentos y puestos"
+
+msgid "Under Settings → Base, add your Departments and Job Positions so employees can be placed correctly and reports make sense."
+msgstr "En Configuración → Base, añade los departamentos y puestos para asignar correctamente a los empleados y obtener informes útiles."
+
+msgid "Step 3 — Configure email (important)"
+msgstr "Paso 3 — Configura el correo electrónico (importante)"
+
+msgid "Open Settings → Mail Server Configuration. Without it, password resets, employee invites and notifications cannot be delivered."
+msgstr "Ve a Configuración → Configuración del servidor de correo. Sin este ajuste no se podrán enviar restablecimientos de contraseña, invitaciones ni notificaciones."
+
+msgid "Step 4 — Add your team"
+msgstr "Paso 4 — Añade a tu equipo"
+
+msgid "Go to Employees to add people one by one or import them in bulk. Each employee gets their own login and self-service portal."
+msgstr "Ve a Empleados para añadir personas individualmente o importarlas en grupo. Cada empleado tendrá su propio acceso y portal de autoservicio."
+
+msgid "You're all set!"
+msgstr "¡Todo listo!"
+
+msgid "Click this help button any time to replay a tour or start another one."
+msgstr "Haz clic en este botón de ayuda cuando quieras para repetir un recorrido o iniciar otro."
+
+msgid "Dashboard Overview"
+msgstr "Resumen del panel"
+
+msgid "A quick look at your Horilla home dashboard."
+msgstr "Un vistazo rápido al panel principal de Horilla."
+
+msgid "Your dashboard"
+msgstr "Tu panel"
+
+msgid "This is your home base. KPIs, charts and quick actions update automatically as your team uses Horilla."
+msgstr "Este es tu espacio principal. Los indicadores, gráficos y accesos rápidos se actualizan automáticamente a medida que tu equipo usa Horilla."
+
+msgid "Take a tour anytime"
+msgstr "Haz un recorrido cuando quieras"
+
+msgid "Open guided tours from this help button whenever you need a refresher on a feature."
+msgstr "Abre los recorridos guiados desde este botón de ayuda cuando quieras repasar una función."
+
 msgid "Shortlist Rate by Recruitment"
 msgstr "Tasa de preselección por proceso"
 

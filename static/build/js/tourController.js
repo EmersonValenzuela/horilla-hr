@@ -72,6 +72,9 @@
       animate: true,
       allowClose: tour.allow_close !== false,
       showProgress: tour.show_progress !== false,
+      nextBtnText: CFG.nextBtnText,
+      prevBtnText: CFG.prevBtnText,
+      progressText: CFG.progressText,
       steps: steps,
       onDestroyStarted: function (el, step, opts) {
         var idx = opts.state.activeIndex;
@@ -167,13 +170,13 @@
     // Header
     var hdr = document.createElement('div');
     hdr.style.cssText = 'padding:10px 12px 8px;border-bottom:1px solid #f3f4f6;font-size:11px;font-weight:600;color:#6b7280;text-transform:uppercase;letter-spacing:.05em;';
-    hdr.textContent = 'Product Tours';
+    hdr.textContent = CFG.launcherTitle || 'Product Tours';
     panel.appendChild(hdr);
 
     if (!tours.length) {
       var empty = document.createElement('div');
       empty.style.cssText = 'padding:20px 16px;font-size:12px;color:#9ca3af;text-align:center;';
-      empty.textContent = 'No tours available for this page.';
+      empty.textContent = CFG.emptyMessage || 'No tours available for this page.';
       panel.appendChild(empty);
       return;
     }
@@ -233,7 +236,8 @@
     if (!panel) return;
     panel.style.display = 'block';
     // Always re-fetch: path may have changed via HTMX since last open
-    panel.innerHTML = '<div style="padding:16px;font-size:12px;color:#9ca3af;text-align:center;">Loading…</div>';
+    panel.innerHTML = '<div style="padding:16px;font-size:12px;color:#9ca3af;text-align:center;">' +
+      (CFG.loadingMessage || 'Loading…') + '</div>';
     fetchTours().then(function (tours) { renderPanel(tours); });
   }
 

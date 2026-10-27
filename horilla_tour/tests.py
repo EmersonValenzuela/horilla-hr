@@ -11,6 +11,7 @@ import json
 
 from django.test import Client, TestCase
 from django.urls import reverse
+from django.utils import translation
 
 from base.models import Company
 from employee.models import Employee
@@ -88,6 +89,20 @@ class TourApiTests(TestCase):
         self.assertIn("getting-started", tours)
         self.assertTrue(tours["getting-started"]["auto_start"])
         self.assertGreater(len(tours["getting-started"]["steps"]), 0)
+
+    def test_ess_tour_is_translated_for_spanish_users(self):
+        self.client.force_login(self.employee)
+        with translation.override("es"):
+            tours = self._active("ess-dashboard")
+
+        tour = tours["ess-dashboard-tour"]
+        self.assertEqual(tour["title"], "Mi panel")
+        self.assertEqual(tour["steps"][0]["title"], "Tu panel personal")
+        self.assertEqual(
+            tour["steps"][0]["description"],
+            "Este es tu espacio de autoservicio de Recursos Humanos. "
+            "Consulta aquí tu asistencia, saldo de permisos, nóminas y solicitudes.",
+        )
 
     def test_page_matching_excludes_other_pages(self):
         self.client.force_login(self.admin)

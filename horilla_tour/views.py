@@ -20,7 +20,7 @@ from django.http import HttpResponse, JsonResponse
 from django.shortcuts import get_object_or_404, render
 from django.urls import reverse
 from django.utils.decorators import method_decorator
-from django.utils.translation import gettext_lazy as _
+from django.utils.translation import gettext, gettext_lazy as _
 from django.views.decorators.http import require_GET, require_POST
 
 from horilla.decorators import permission_required
@@ -87,8 +87,8 @@ def _serialize_steps(tour, page):
             continue
         steps.append(
             {
-                "title": step.title,
-                "description": step.description,
+                "title": gettext(step.title),
+                "description": gettext(step.description),
                 "element": step.element_selector or None,
                 "side": step.side,
                 "align": step.align,
@@ -136,8 +136,8 @@ def tour_active(request):
             {
                 "id": tour.id,
                 "slug": tour.slug,
-                "title": tour.title,
-                "description": tour.description,
+                "title": gettext(tour.title),
+                "description": gettext(tour.description),
                 "icon": tour.icon or "map-outline",
                 "auto_start": auto_start,
                 "show_progress": tour.show_progress,

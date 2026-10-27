@@ -55,10 +55,16 @@
     page: "{{ request.resolver_match.url_name|default:'' }}",
     path: "{{ request.path|escapejs }}",
     activeUrl: "{% url 'tour-active' %}",
-    progressUrl: "{% url 'tour-progress' %}"
+    progressUrl: "{% url 'tour-progress' %}",
+    nextBtnText: "{% trans 'Next' %} &rarr;",
+    prevBtnText: "&larr; {% trans 'Previous' %}",
+    progressText: "{% trans '{current} of {total}' %}",
+    launcherTitle: "{% trans 'Product Tours' %}",
+    emptyMessage: "{% trans 'No tours available for this page.' %}",
+    loadingMessage: "{% trans 'Loading…' %}"
   };
 </script>
-<script src="{% static 'build/js/tourController.js' %}?v=1"></script>
+<script src="{% static 'build/js/tourController.js' %}?v=2"></script>
 {% endif %}
 
 {% block footer_scripts %}
