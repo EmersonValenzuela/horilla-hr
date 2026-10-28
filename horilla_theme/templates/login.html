@@ -102,20 +102,6 @@
                 background: #fff;
                 object-fit: contain;
             }
-            .login-brand__monogram {
-                display: grid;
-                width: 44px;
-                height: 44px;
-                flex: 0 0 44px;
-                place-items: center;
-                border-radius: 14px;
-                background: linear-gradient(145deg, #243957, #16243c);
-                color: #fff;
-                font-size: 15px;
-                font-weight: 800;
-                letter-spacing: -.04em;
-                box-shadow: 0 8px 18px rgba(22, 36, 60, .24);
-            }
             .login-brand__name { font-size: 15px; font-weight: 700; letter-spacing: .01em; }
             .login-brand__caption { margin-top: 3px; color: rgba(255,255,255,.62); font-size: 11px; }
             .login-story__content { position: relative; z-index: 1; max-width: 440px; margin: 54px 0 38px; }
@@ -284,15 +270,11 @@
         <main class="login-shell">
             <section class="login-story" aria-label="{% trans 'People operations, made human.' %}">
                 <div class="login-brand">
-                    {% if white_label_company.icon %}
-                        <img
-                            src="{{ white_label_company.icon.url }}"
-                            alt=""
-                            class="login-brand__logo"
-                        >
-                    {% else %}
-                        <span class="login-brand__monogram" aria-hidden="true">SZ</span>
-                    {% endif %}
+                    <img
+                        src="{% static 'images/ui/safe-zone-personas-logo.png' %}"
+                        alt=""
+                        class="login-brand__logo"
+                    >
                     <div>
                         <div class="login-brand__name">{{ product_name }}</div>
                         <div class="login-brand__caption">{% trans "Your people workspace" %}</div>

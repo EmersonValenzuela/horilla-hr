@@ -592,11 +592,11 @@
                             class="oh-sidebar-label w-7 h-7 rounded-full flex-shrink-0"
                         >
                     {% else %}
-                        <span
-                            aria-hidden="true"
-                            class="oh-sidebar-label w-7 h-7 rounded-full flex-shrink-0 inline-flex items-center justify-center"
-                            style="background: #243957; color: #fff; font-size: 10px; font-weight: 800;"
-                        >SZ</span>
+                        <img
+                            src="{% static 'images/ui/safe-zone-personas-logo.png' %}"
+                            alt="{% trans 'Company logo' %}"
+                            class="oh-sidebar-label w-7 h-7 rounded-md bg-white p-1 object-contain flex-shrink-0"
+                        >
                     {% endif %}
                     <div class="oh-sidebar__company-details oh-sidebar-label min-w-0">
                         <span

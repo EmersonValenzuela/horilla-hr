@@ -11,19 +11,19 @@
         <link
             rel="apple-touch-icon"
             sizes="180x180"
-            href="{% if white_label_company.icon %}{{white_label_company.icon.url}} {% else %}{% static 'favicons/apple-touch-icon.png' %}{% endif %}"
+            href="{% if white_label_company.icon %}{{white_label_company.icon.url}}{% else %}{% static 'images/ui/safe-zone-personas-logo.png' %}{% endif %}"
         >
         <link
             rel="icon"
             type="image/png"
             sizes="32x32"
-            href="{% if white_label_company.icon %}{{white_label_company.icon.url}} {% else %}{% static 'favicons/favicon-32x32.png' %}{% endif %}"
+            href="{% if white_label_company.icon %}{{white_label_company.icon.url}}{% else %}{% static 'images/ui/safe-zone-personas-logo.png' %}{% endif %}"
         >
         <link
             rel="icon"
             type="image/png"
             sizes="16x16"
-            href="{% if white_label_company.icon %}{{white_label_company.icon.url}} {% else %}{% static 'favicons/favicon-16x16.png' %}{% endif %}"
+            href="{% if white_label_company.icon %}{{white_label_company.icon.url}}{% else %}{% static 'images/ui/safe-zone-personas-logo.png' %}{% endif %}"
         >
         <link rel="stylesheet" href="{% static '/build/css/style.min.css' %}">
         <link rel="manifest" href="{% static 'build/manifest.json' %}">
@@ -143,18 +143,11 @@
                     {% endif %}
                 </div>
                 <div style="display: contents">
-                    {% if white_label_company.icon %}
-                        <img
-                            src="{{ white_label_company.icon.url }}"
-                            alt="{{ white_label_company_name }}"
-                            style="opacity: .90; max-width: 200px; max-height: 140px;"
-                        >
-                    {% else %}
-                        <span
-                            aria-hidden="true"
-                            style="display: inline-grid; width: 88px; height: 88px; place-items: center; border-radius: 24px; background: #243957; color: #fff; font-size: 30px; font-weight: 800;"
-                        >SZ</span>
-                    {% endif %}
+                    <img
+                        src="{% static 'images/ui/safe-zone-personas-logo.png' %}"
+                        alt="{{ product_name }}"
+                        style="max-width: 200px; max-height: 140px; object-fit: contain;"
+                    >
                     {% if white_label_company %}
                         <p style="font-size: large; color: gray; text-align: center" class="mt-2">
                             {{ white_label_company }}
