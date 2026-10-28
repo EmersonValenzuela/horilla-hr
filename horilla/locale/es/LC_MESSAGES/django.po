@@ -14734,7 +14734,7 @@ msgid "Candidate"
 msgstr "Candidato"
 
 msgid "Onboarding"
-msgstr "Incorporación"
+msgstr "Onboarding"
 
 msgid "Recruitment Reports"
 msgstr "Informes de selección"
@@ -17261,7 +17261,7 @@ msgid "Offboarding task \"%(title)s\" has been assigned"
 msgstr "Se te ha asignado la tarea de desvinculación \"%(title)s\""
 
 msgid "Offboarding"
-msgstr "Desvinculación"
+msgstr "Offboarding"
 
 msgid "Resignation Letters"
 msgstr "Letras de resignación"
