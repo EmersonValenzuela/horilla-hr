@@ -121,6 +121,7 @@ class CandidateFilter(HorillaFilterSet):
     )
     hired_date = django_filters.DateFilter(
         field_name="hired_date",
+        label=_("Hired Date"),
         widget=forms.DateInput(attrs={"type": "date"}),
     )
     joining_date_from = django_filters.DateFilter(

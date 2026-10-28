@@ -19,5 +19,5 @@ Examples:
     MIDDLEWARE += ["client_portal.middleware.ClientTrackingMiddleware"]
 """
 
-PRODUCT_NAME = "Safe Zone Personas"
+PRODUCT_NAME = "Safe Zone Perú Colaboradores"
 WHITE_LABELLING = True

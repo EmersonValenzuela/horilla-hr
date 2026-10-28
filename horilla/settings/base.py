@@ -463,7 +463,7 @@ SIDEBARS = [
     "pms",
     # Temporarily hidden from navigation; apps and routes stay enabled.
     # "payroll",
-    # "recruitment",
+    "recruitment",
     # "project",
     "asset",
     "helpdesk",

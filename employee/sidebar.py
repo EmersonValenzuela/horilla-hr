@@ -12,7 +12,7 @@ from base.templatetags.basefilters import is_reportingmanager
 from horilla.horilla_middlewares import _thread_locals
 
 request = getattr(_thread_locals, "request", None)
-MENU = _("Employee")
+MENU = _("Employees")
 IMG_SRC = "images/ui/employees.svg"
 
 
@@ -32,7 +32,7 @@ SUBMENUS = [
         ],
     },
     {
-        "menu": _("Organization Chart"),
+        "menu": _("Organigram"),
         "redirect": reverse_lazy("organisation-chart"),
     },
     {

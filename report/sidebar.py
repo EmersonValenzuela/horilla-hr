@@ -13,6 +13,11 @@ SUBMENUS = [
         "accessibility": "report.sidebar.standard_accessibility",
     },
     {
+        "menu": _("Recruitment Reports"),
+        "redirect": reverse_lazy("recruitment-report"),
+        "accessibility": "report.sidebar.recruitment_accessibility",
+    },
+    {
         "menu": _("Explorer"),
         "redirect": reverse_lazy("report-explorer"),
         "accessibility": "report.sidebar.standard_accessibility",
@@ -37,10 +42,6 @@ def standard_accessibility(request, submenu, user_perms, *args, **kwargs):
     return menu_accessibility(request, submenu, user_perms, *args, **kwargs)
 
 
-# Per-domain gates below are no longer wired into SUBMENUS (the Explorer
-# picker page does its own per-domain permission check instead of a
-# separate sidebar entry per app), but they're kept as importable helpers
-# since other code/tests still depend on them individually.
 def recruitment_accessibility(request, submenu, user_perms, *args, **kwargs):
     return request.user.is_superuser or request.user.has_perm(
         "recruitment.view_recruitment"

@@ -1,0 +1,951 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <title>Safe Zone Perú Colaboradores | Presentación</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #17243a;
+        --muted: #65748b;
+        --blue: #2768cf;
+        --line: #dce4ef;
+        --canvas: #e9eef5;
+        --paper: #f8fafc;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        overflow: hidden;
+      }
+
+      body {
+        display: grid;
+        place-items: center;
+        background: var(--canvas);
+        color: var(--ink);
+        font-family: Inter, "Segoe UI", Arial, sans-serif;
+      }
+
+      .deck {
+        position: relative;
+        width: min(100vw, 177.7778vh, 1680px);
+        aspect-ratio: 16 / 9;
+        overflow: hidden;
+        background: var(--paper);
+        box-shadow: 0 20px 70px #152b4930;
+      }
+
+      .slide {
+        position: absolute;
+        inset: 0;
+        display: none;
+        flex-direction: column;
+        gap: 1.2%;
+        padding: 2.2% 3% 5%;
+        background:
+          radial-gradient(ellipse at 100% 0, #eaf1fa 0, transparent 42%),
+          var(--paper);
+      }
+
+      .slide.active {
+        display: flex;
+      }
+
+      .slide-head {
+        display: flex;
+        min-height: 78px;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 24px;
+      }
+
+      .context {
+        margin: 0 0 6px;
+        color: var(--blue);
+        font-size: clamp(11px, 0.8vw, 13px);
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .slide h1 {
+        margin: 0;
+        font-size: clamp(23px, 2.1vw, 36px);
+        font-weight: 700;
+        letter-spacing: -0.025em;
+        line-height: 1.12;
+      }
+
+      .description {
+        margin: 6px 0 0;
+        color: var(--muted);
+        font-size: clamp(12px, 1vw, 16px);
+        line-height: 1.35;
+      }
+
+      .sequence {
+        padding-bottom: 5px;
+        color: var(--muted);
+        font-size: 13px;
+        font-variant-numeric: tabular-nums;
+        white-space: nowrap;
+      }
+
+      .frame {
+        display: flex;
+        flex: 1;
+        min-height: 0;
+        margin: 0;
+        overflow: hidden;
+        padding: 6px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #fff;
+        box-shadow: 0 5px 16px #2037510d;
+      }
+
+      .frame img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center top;
+      }
+
+      .call-notes {
+        display: flex;
+        min-height: 44px;
+        align-items: center;
+        gap: 14px;
+        margin: 0;
+        padding: 7px 12px;
+        border-left: 3px solid var(--blue);
+        border-radius: 0 6px 6px 0;
+        background: #edf4ff;
+        color: #28415f;
+        font-size: clamp(10px, 0.78vw, 13px);
+        line-height: 1.35;
+      }
+
+      .call-notes strong {
+        flex: 0 0 auto;
+        color: var(--blue);
+      }
+
+      .call-notes ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px 24px;
+        margin: 0;
+        padding-left: 16px;
+      }
+
+      .controls {
+        position: absolute;
+        right: 2.8%;
+        bottom: 1.7%;
+        z-index: 5;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 5px 7px;
+        border: 1px solid #dfe6ef;
+        border-radius: 8px;
+        background: #ffffffed;
+        backdrop-filter: blur(8px);
+      }
+
+      .controls button {
+        min-width: 36px;
+        height: 34px;
+        padding: 0 9px;
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        background: #fff;
+        color: var(--ink);
+        cursor: pointer;
+        font: inherit;
+        font-size: 12px;
+      }
+
+      .controls button:hover {
+        border-color: var(--blue);
+        color: var(--blue);
+      }
+
+      .controls button:focus-visible {
+        outline: 3px solid #3d82ed80;
+        outline-offset: 2px;
+      }
+
+      .count {
+        min-width: 60px;
+        color: var(--muted);
+        font-size: 12px;
+        font-variant-numeric: tabular-nums;
+        text-align: center;
+      }
+
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        clip-path: inset(50%);
+      }
+
+      .slide--cover,
+      .slide--closing {
+        justify-content: center;
+        padding: 7%;
+        background:
+          radial-gradient(ellipse at 80% 10%, #73b5ff55 0, transparent 38%),
+          linear-gradient(130deg, #10243e, #1d4167 68%, #2768cf);
+        color: #fff;
+      }
+
+      .cover-layout {
+        display: grid;
+        grid-template-columns: 1fr 0.9fr;
+        align-items: center;
+        gap: 5%;
+      }
+
+      .cover-copy {
+        max-width: 680px;
+      }
+
+      .brand-mark {
+        display: grid;
+        width: 60px;
+        height: 60px;
+        place-items: center;
+        margin-bottom: 30px;
+        border: 1px solid #ffffff50;
+        border-radius: 18px;
+        background: #ffffff18;
+        color: #fff;
+        font-size: 23px;
+        font-weight: 800;
+        letter-spacing: -0.04em;
+      }
+
+      .slide--cover .context,
+      .slide--closing .context {
+        color: #ffb49f;
+      }
+
+      .slide--cover h1,
+      .slide--closing h1 {
+        max-width: 700px;
+        font-size: clamp(38px, 5vw, 76px);
+        line-height: 1.04;
+      }
+
+      .slide--cover .description,
+      .slide--closing .description {
+        margin-top: 20px;
+        color: #e2edf9;
+        font-size: clamp(18px, 1.8vw, 27px);
+      }
+
+      .cover-footer {
+        margin-top: 42px;
+        color: #c5d5e8;
+        font-size: 14px;
+        letter-spacing: 0.02em;
+      }
+
+      .cover-preview {
+        width: 100%;
+        aspect-ratio: 1.35;
+        overflow: hidden;
+        border: 1px solid #ffffff55;
+        border-radius: 18px;
+        background: #fff;
+        box-shadow: 0 28px 80px #06142670;
+        transform: rotate(1.5deg);
+      }
+
+      .cover-preview img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      .slide--modules,
+      .slide--features {
+        justify-content: center;
+        padding: 5% 7%;
+      }
+
+      .slide--modules .slide-head,
+      .slide--features .slide-head {
+        min-height: 0;
+        margin-bottom: 2.5%;
+      }
+
+      .module-grid {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 13px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .module-card,
+      .feature-card {
+        display: flex;
+        min-height: 118px;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 10px;
+        padding: 16px;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: #fff;
+        box-shadow: 0 5px 16px #2037510d;
+        font-size: clamp(13px, 1vw, 17px);
+        font-weight: 650;
+      }
+
+      .module-icon,
+      .feature-icon {
+        font-size: 27px;
+        line-height: 1;
+      }
+
+      .slide--features .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .feature-card {
+        min-height: 150px;
+        flex-direction: row;
+        align-items: center;
+        gap: 18px;
+        font-size: clamp(16px, 1.4vw, 22px);
+      }
+
+      .feature-icon {
+        display: grid;
+        width: 54px;
+        height: 54px;
+        flex: 0 0 auto;
+        place-items: center;
+        border-radius: 16px;
+        background: #edf4ff;
+        color: var(--blue);
+        font-size: 28px;
+      }
+
+      .slide--closing .description {
+        margin-bottom: 26px;
+      }
+
+      .contact-card {
+        display: grid;
+        gap: 10px;
+        width: min(100%, 680px);
+        padding: 20px 22px;
+        border: 1px solid #ffffff45;
+        border-radius: 12px;
+        background: #ffffff12;
+        color: #f2f7ff;
+        font-size: clamp(14px, 1.1vw, 18px);
+      }
+
+      .contact-card p {
+        margin: 0;
+      }
+
+      .contact-placeholder {
+        color: #ffcfbf;
+      }
+
+      .slide--cover .call-notes,
+      .slide--closing .call-notes {
+        border-left-color: #ffb49f;
+        background: #ffffff14;
+        color: #e2edf9;
+      }
+
+      .slide--cover .call-notes strong,
+      .slide--closing .call-notes strong {
+        color: #ffcfbf;
+      }
+
+      .closing-note {
+        margin-top: 12px;
+        color: #c5d5e8;
+        font-size: 12px;
+      }
+
+      @media (max-width: 1000px) {
+        .module-grid {
+          grid-template-columns: repeat(5, minmax(0, 1fr));
+          gap: 8px;
+        }
+
+        .module-card {
+          min-height: 100px;
+          padding: 10px;
+        }
+
+        .cover-layout {
+          grid-template-columns: 1fr 0.75fr;
+        }
+      }
+
+      @media (max-width: 720px) {
+        .deck {
+          width: 100vw;
+          height: 100dvh;
+          aspect-ratio: auto;
+        }
+
+        .slide {
+          gap: 10px;
+          padding: 5% 4% 18%;
+        }
+
+        .slide-head {
+          min-height: 0;
+          align-items: flex-start;
+        }
+
+        .slide h1 {
+          font-size: clamp(22px, 6vw, 32px);
+        }
+
+        .description {
+          font-size: 13px;
+        }
+
+        .frame {
+          padding: 4px;
+        }
+
+        .call-notes {
+          min-height: 0;
+          align-items: flex-start;
+          gap: 8px;
+          padding: 7px 9px;
+          font-size: 10px;
+        }
+
+        .call-notes ul {
+          display: block;
+          padding-left: 14px;
+        }
+
+        .controls {
+          right: 3%;
+          bottom: 2%;
+          gap: 4px;
+        }
+
+        .controls button {
+          padding: 0 6px;
+          font-size: 11px;
+        }
+
+        .cover-layout {
+          grid-template-columns: 1fr;
+        }
+
+        .slide--cover,
+        .slide--closing {
+          padding: 7%;
+        }
+
+        .slide--cover h1,
+        .slide--closing h1 {
+          font-size: clamp(36px, 10vw, 56px);
+        }
+
+        .cover-preview {
+          width: 72%;
+          justify-self: end;
+        }
+
+        .brand-mark {
+          width: 48px;
+          height: 48px;
+          margin-bottom: 18px;
+        }
+
+        .cover-footer {
+          margin-top: 20px;
+        }
+
+        .slide--modules,
+        .slide--features {
+          padding: 8% 5% 18%;
+        }
+
+        .module-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 8px;
+        }
+
+        .module-card {
+          min-height: 76px;
+          flex-direction: row;
+          align-items: center;
+          justify-content: flex-start;
+          padding: 10px;
+          font-size: 12px;
+        }
+
+        .module-icon {
+          font-size: 22px;
+        }
+
+        .slide--features .feature-grid {
+          gap: 9px;
+        }
+
+        .feature-card {
+          min-height: 105px;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 8px;
+          padding: 12px;
+          font-size: 13px;
+        }
+
+        .feature-icon {
+          width: 38px;
+          height: 38px;
+          border-radius: 11px;
+          font-size: 22px;
+        }
+      }
+
+      @media (prefers-reduced-motion: no-preference) {
+        .controls button {
+          transition: color 0.12s, border-color 0.12s;
+        }
+      }
+
+      @media print {
+        @page {
+          size: 13.333in 7.5in;
+          margin: 0;
+        }
+
+        html,
+        body {
+          display: block;
+          width: 13.333in;
+          height: 7.5in;
+          overflow: visible;
+          background: #fff;
+        }
+
+        .deck {
+          width: 13.333in;
+          height: auto;
+          aspect-ratio: auto;
+          overflow: visible;
+          box-shadow: none;
+        }
+
+        .slide {
+          position: relative;
+          display: flex !important;
+          width: 13.333in;
+          height: 7.5in;
+          padding: 0.3in 0.4in 0.55in;
+          break-after: page;
+          page-break-after: always;
+        }
+
+        .slide:last-of-type {
+          break-after: auto;
+          page-break-after: auto;
+        }
+
+        .controls {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main id="deck" class="deck" aria-label="Presentación de Safe Zone Perú Colaboradores">
+      <div id="slides"></div>
+      <nav class="controls" aria-label="Controles de la presentación">
+        <button id="previous" type="button" aria-label="Diapositiva anterior">Anterior</button>
+        <output id="count" class="count" aria-live="polite">1 / 20</output>
+        <button id="next" type="button" aria-label="Diapositiva siguiente">Siguiente</button>
+        <button id="print" type="button" aria-label="Imprimir o guardar como PDF">Imprimir</button>
+      </nav>
+      <p class="sr-only">Usa las flechas izquierda y derecha para cambiar de diapositiva. Inicio y Fin van a la primera y última diapositiva.</p>
+    </main>
+    <script>
+      const modules = [
+        { icon: "🧭", name: "Reclutamiento" },
+        { icon: "🚀", name: "Onboarding" },
+        { icon: "👥", name: "Colaboradores" },
+        { icon: "🕒", name: "Asistencia" },
+        { icon: "🌿", name: "Permisos" },
+        { icon: "🎯", name: "Rendimiento" },
+        { icon: "💻", name: "Activos" },
+        { icon: "🛟", name: "Incidencias" },
+        { icon: "👋", name: "Offboarding" },
+        { icon: "📊", name: "Informes" },
+      ];
+
+      const slides = [
+        {
+          type: "cover",
+          title: "Safe Zone Perú Colaboradores",
+          subtitle: "Toda la gestión de tu equipo en un solo lugar",
+          image: "login.png",
+          footer: "Versión 2.2.0 · octubre 2026",
+          notes: ["Presenta la plataforma como un solo espacio de gestión", "Menciona la versión y el alcance del recorrido"],
+        },
+        {
+          type: "modules",
+          section: "La plataforma",
+          title: "Un sistema, todo el ciclo del colaborador",
+          subtitle: "Del reclutamiento a la salida, en 10 módulos conectados",
+          notes: ["Recorre los módulos en el orden del ciclo", "Destaca cómo se conectan entre sí"],
+        },
+        {
+          type: "screen",
+          section: "Acceso",
+          title: "Acceso seguro",
+          subtitle: "Ingresa a tu espacio de trabajo con tu usuario de la organización",
+          image: "login.png",
+          alt: "Inicio de sesión de Safe Zone Perú Colaboradores",
+          notes: ["Señala el acceso centralizado", "Menciona las credenciales de la organización"],
+        },
+        {
+          type: "screen",
+          section: "Reclutamiento",
+          title: "Panel de selección",
+          subtitle: "Vacantes, candidatos y entrevistas de la semana, de un vistazo",
+          image: "reclutamiento-panel.png",
+          alt: "Panel del módulo de Reclutamiento",
+          notes: ["Vacantes abiertas y candidatos", "Próximas entrevistas de la semana"],
+        },
+        {
+          type: "screen",
+          section: "Reclutamiento",
+          title: "Flujo de selección",
+          subtitle: "Mueve a cada candidato por etapas, sin perder el seguimiento",
+          image: "flujo-seleccion.png",
+          alt: "Flujo de selección de candidatos",
+          notes: ["Etapas del proceso", "Seguimiento de candidatos por vacante"],
+        },
+        {
+          type: "screen",
+          section: "Onboarding",
+          title: "Incorporación guiada",
+          subtitle: "Cada nuevo colaborador con sus tareas, documentos y fechas claras",
+          image: "onboarding-tareas.png",
+          alt: "Tareas y etapas de incorporación de colaboradores",
+          notes: ["Tareas agrupadas por etapa", "Responsables y avance de incorporación"],
+        },
+        {
+          type: "screen",
+          section: "Panel",
+          title: "Panel general",
+          subtitle: "Los indicadores clave de tu organización, en una sola pantalla",
+          image: "panel.png",
+          alt: "Panel general de la organización",
+          notes: ["Tarjetas de totales y gráfico por departamento", "Cumpleaños y anuncios"],
+        },
+        {
+          type: "screen",
+          section: "Colaboradores",
+          title: "Panel del colaborador",
+          subtitle: "Solicitudes pendientes y distribución del equipo, al instante",
+          image: "empleado-panel.png",
+          alt: "Panel del módulo Colaboradores",
+          notes: ["Distribución del equipo", "Solicitudes pendientes"],
+        },
+        {
+          type: "screen",
+          section: "Colaboradores",
+          title: "Organigrama interactivo",
+          subtitle: "Entiende quién reporta a quién, sin armar presentaciones aparte",
+          image: "grafico-organizaciones.png",
+          alt: "Organigrama interactivo de la organización",
+          notes: ["Zoom y búsqueda", "Expande los equipos para ver sus reportes"],
+        },
+        {
+          type: "screen",
+          section: "Asistencia",
+          title: "Panel de asistencia",
+          subtitle: "Detecta retrasos y ausencias frecuentes en segundos",
+          image: "asistencia-panel.png",
+          alt: "Panel del módulo Asistencia",
+          notes: ["Entradas de hoy y tasa diaria", "Revisa la lista de ausencias frecuentes"],
+        },
+        {
+          type: "screen",
+          section: "Asistencia",
+          title: "Estado laboral diario",
+          subtitle: "Presente, permiso o media jornada de cada persona, día por día",
+          image: "estado-laboral-diario.png",
+          alt: "Estado laboral diario de los colaboradores",
+          notes: ["Estados por colaborador y fecha", "Filtra los registros del día"],
+        },
+        {
+          type: "screen",
+          section: "Asistencia",
+          title: "Resumen mensual de asistencia",
+          subtitle: "Totales del mes y horas trabajadas, listos para planilla",
+          image: "resumen-mensual-cursor.png",
+          alt: "Resumen mensual de asistencia con detalle de registros de presencia",
+          notes: ["Tarjetas con totales del mes", "Detalle de presencia y horas extra"],
+        },
+        {
+          type: "screen",
+          section: "Permisos",
+          title: "Panel de permisos",
+          subtitle: "Aprueba solicitudes y anticipa ausencias del equipo",
+          image: "permisos-panel.png",
+          alt: "Panel del módulo Permisos",
+          notes: ["Solicitudes por revisar", "Tendencias y ausencias planificadas"],
+        },
+        {
+          type: "screen",
+          section: "Rendimiento",
+          title: "Panel de desempeño",
+          subtitle: "Objetivos y resultados clave, con alertas de lo que está en riesgo",
+          image: "rendimiento-panel.png",
+          alt: "Panel del módulo Rendimiento",
+          notes: ["Progreso promedio y objetivos en riesgo", "Mejores resultados del equipo"],
+        },
+        {
+          type: "screen",
+          section: "Activos",
+          title: "Control de activos",
+          subtitle: "Sabe qué equipo tiene cada persona y cuál está disponible",
+          image: "activos.png",
+          alt: "Gestión de activos",
+          notes: ["Activos asignados a cada persona", "Identifica los equipos disponibles"],
+        },
+        {
+          type: "screen",
+          section: "Incidencias",
+          title: "Gestión de incidencias",
+          subtitle: "Cada solicitud de soporte con responsable, prioridad y estado",
+          image: "incidencias.png",
+          alt: "Gestión de incidencias y solicitudes de soporte",
+          notes: ["Responsable y prioridad", "Estado y seguimiento de cada solicitud"],
+        },
+        {
+          type: "screen",
+          section: "Offboarding",
+          title: "Proceso de desvinculación",
+          subtitle: "Cierra cada salida con entrevista, entrega de funciones y checklist",
+          image: "offboarding-proceso.png",
+          alt: "Proceso de desvinculación de colaboradores",
+          notes: ["Etapas y checklist de salida", "Entrevista y entrega de funciones"],
+        },
+        {
+          type: "screen",
+          section: "Informes",
+          title: "Informes estándar",
+          subtitle: "27 informes en PDF o Excel, con opción de programarlos",
+          image: "informes-estandar.png",
+          alt: "Catálogo de informes estándar",
+          notes: ["Categorías y botón Generar", "Programa entregas y exporta en PDF o Excel"],
+        },
+        {
+          type: "features",
+          section: "Diferenciadores",
+          title: "Pensado para tu forma de trabajar",
+          subtitle: "Personaliza la experiencia y lleva tus datos al formato que necesitas",
+          features: [
+            { icon: "⚙️", name: "Paneles personalizables" },
+            { icon: "🌙", name: "Modo oscuro" },
+            { icon: "🗓️", name: "Informes programables" },
+            { icon: "📄", name: "Exportación a PDF y Excel" },
+          ],
+          notes: ["Adapta los paneles a cada equipo", "Programa y comparte tus informes"],
+        },
+        {
+          type: "closing",
+          title: "Empieza a ordenar a tu equipo hoy",
+          subtitle: "Solicita una demostración",
+          contact: [
+            "Contacto: [nombre o área comercial]",
+            "Correo: [correo de contacto]",
+            "Web: [sitio web]",
+          ],
+          note: "Completa los datos de contacto antes de compartir la presentación.",
+          notes: ["Invita al cliente a solicitar una demostración", "Sustituye los datos de contacto provisionales"],
+        },
+      ];
+
+      const slidesContainer = document.querySelector("#slides");
+
+      function element(tag, className, text) {
+        const node = document.createElement(tag);
+        if (className) node.className = className;
+        if (text) node.textContent = text;
+        return node;
+      }
+
+      function addHeading(slide, data) {
+        const header = element("header", "slide-head");
+        const copy = element("div");
+        copy.append(
+          element("p", "context", data.section),
+          element("h1", "", data.title),
+          element("p", "description", data.subtitle),
+        );
+        header.append(copy, element("div", "sequence"));
+        slide.append(header);
+      }
+
+      function addNotes(slide, notes) {
+        const aside = element("aside", "call-notes");
+        aside.setAttribute("aria-label", "Notas para la llamada");
+        aside.append(element("strong", "", "En la llamada:"));
+        const list = element("ul");
+        for (const note of notes) list.append(element("li", "", note));
+        aside.append(list);
+        slide.append(aside);
+      }
+
+      function renderSlide(data, index) {
+        const slide = element("section", `slide slide--${data.type}`);
+        slide.setAttribute("aria-label", data.title);
+        slide.setAttribute("aria-hidden", "true");
+
+        if (data.type === "cover") {
+          slide.classList.add("active");
+          slide.setAttribute("aria-hidden", "false");
+          const layout = element("div", "cover-layout");
+          const copy = element("div", "cover-copy");
+          copy.append(
+            element("div", "brand-mark", "SZ"),
+            element("p", "context", "Plataforma de gestión de talento"),
+            element("h1", "", data.title),
+            element("p", "description", data.subtitle),
+            element("p", "cover-footer", data.footer),
+          );
+          const preview = element("figure", "cover-preview");
+          const image = element("img");
+          image.src = `presentacion-safezone-assets/${data.image}`;
+          image.alt = "Vista previa de Safe Zone Perú Colaboradores";
+          preview.append(image);
+          layout.append(copy, preview);
+          slide.append(layout);
+          addNotes(slide, data.notes);
+          return slide;
+        }
+
+        if (data.type === "closing") {
+          slide.append(
+            element("p", "context", "Safe Zone Perú Colaboradores"),
+            element("h1", "", data.title),
+            element("p", "description", data.subtitle),
+          );
+          const contact = element("div", "contact-card");
+          for (const line of data.contact) {
+            const paragraph = element("p", "", line);
+            paragraph.classList.add("contact-placeholder");
+            contact.append(paragraph);
+          }
+          slide.append(contact, element("p", "closing-note", data.note));
+          addNotes(slide, data.notes);
+          return slide;
+        }
+
+        addHeading(slide, data);
+
+        if (data.type === "modules") {
+          const list = element("ul", "module-grid");
+          for (const module of modules) {
+            const card = element("li", "module-card");
+            card.append(
+              element("span", "module-icon", module.icon),
+              element("span", "", module.name),
+            );
+            list.append(card);
+          }
+          slide.append(list);
+          addNotes(slide, data.notes);
+        } else if (data.type === "features") {
+          const grid = element("div", "feature-grid");
+          for (const feature of data.features) {
+            const card = element("div", "feature-card");
+            card.append(
+              element("span", "feature-icon", feature.icon),
+              element("span", "", feature.name),
+            );
+            grid.append(card);
+          }
+          slide.append(grid);
+          addNotes(slide, data.notes);
+        } else {
+          const frame = element("figure", "frame");
+          const image = element("img");
+          image.src = `presentacion-safezone-assets/${data.image}`;
+          image.alt = data.alt;
+          frame.append(image);
+          slide.append(frame);
+          addNotes(slide, data.notes);
+        }
+
+        return slide;
+      }
+
+      const renderedSlides = slides.map((slide, index) => {
+        const node = renderSlide(slide, index);
+        slidesContainer.append(node);
+        return node;
+      });
+
+      let current = 0;
+      const count = document.querySelector("#count");
+
+      function show(index) {
+        current = (index + renderedSlides.length) % renderedSlides.length;
+        renderedSlides.forEach((slide, i) => {
+          const active = i === current;
+          slide.classList.toggle("active", active);
+          slide.setAttribute("aria-hidden", String(!active));
+        });
+        count.textContent = `${current + 1} / ${renderedSlides.length}`;
+      }
+
+      document.querySelector("#previous").addEventListener("click", () => show(current - 1));
+      document.querySelector("#next").addEventListener("click", () => show(current + 1));
+      document.querySelector("#print").addEventListener("click", () => window.print());
+      document.addEventListener("keydown", (event) => {
+        if (event.key === " " && event.target.closest("button")) return;
+        if (event.key === "ArrowRight" || event.key === " ") show(current + 1);
+        if (event.key === "ArrowLeft") show(current - 1);
+        if (event.key === "Home") show(0);
+        if (event.key === "End") show(renderedSlides.length - 1);
+      });
+    </script>
+  </body>
+</html>

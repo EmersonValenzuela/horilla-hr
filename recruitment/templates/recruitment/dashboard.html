@@ -1156,9 +1156,12 @@
 
             const emptyHtml = (msg) => `<div class="rd-empty"><img src="/static/images/ui/no_records.svg" alt="">${msg}</div>`;
 
-            document.getElementById('rd-date').textContent = new Date().toLocaleDateString('en-US', {
+            document.getElementById('rd-date').textContent = new Date().toLocaleDateString(
+                document.documentElement.lang || 'es-PE',
+                {
                 weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
-            });
+                }
+            );
 
             function fetchP(url) { return fetch(url); }
 

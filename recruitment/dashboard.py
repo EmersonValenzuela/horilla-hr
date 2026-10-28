@@ -8,6 +8,7 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Count, Q
 from django.http import JsonResponse
 from django.shortcuts import render
+from django.utils import formats
 from django.utils.translation import gettext as _
 
 from employee.models import Employee
@@ -475,9 +476,9 @@ def recruitment_upcoming_interviews(request):
                     "candidate": cand.name if cand else "—",
                     "candidate_id": cand.id if cand else None,
                     "stage": cand.stage_id.stage if cand and cand.stage_id else "—",
-                    "date": iv.interview_date.strftime("%b %d"),
+                    "date": formats.date_format(iv.interview_date, "j F"),
                     "time": (
-                        iv.interview_time.strftime("%I:%M %p")
+                        formats.time_format(iv.interview_time, "TIME_FORMAT")
                         if iv.interview_time
                         else ""
                     ),
@@ -672,21 +673,6 @@ def recruitment_joinings_monthly(request):
 
     from_date, to_date = _parse_period(request)
 
-    month_names = [
-        "January",
-        "February",
-        "March",
-        "April",
-        "May",
-        "June",
-        "July",
-        "August",
-        "September",
-        "October",
-        "November",
-        "December",
-    ]
-
     buckets = []
     cursor = date(from_date.year, from_date.month, 1)
     end_marker = date(to_date.year, to_date.month, 1)
@@ -714,10 +700,9 @@ def recruitment_joinings_monthly(request):
 
     multi_year = from_date.year != to_date.year
     labels = [
-        (
-            f"{month_names[b['month'] - 1][:3]} {b['year']}"
-            if multi_year
-            else month_names[b["month"] - 1]
+        formats.date_format(
+            date(b["year"], b["month"], 1),
+            "M Y" if multi_year else "F",
         )
         for b in buckets
     ]

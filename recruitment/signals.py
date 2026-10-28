@@ -1,6 +1,7 @@
 from django.core.cache import cache as CACHE
 from django.db.models.signals import m2m_changed, post_delete, post_save
 from django.dispatch import receiver
+from django.utils.translation import gettext as _
 
 from recruitment.models import (
     CandidateDocument,
@@ -76,7 +77,7 @@ def candidate_document_create(instance):
         document, created = CandidateDocument.objects.get_or_create(
             candidate_id=candidate,
             document_request_id=instance,
-            defaults={"title": f"Upload {instance.title}"},
+            defaults={"title": _("Upload %(title)s") % {"title": instance.title}},
         )
-        document.title = f"Upload {instance.title}"
+        document.title = _("Upload %(title)s") % {"title": instance.title}
         document.save()

@@ -19,19 +19,19 @@ msgstr ""
 "X-Crowdin-Project-ID: 855866\n"
 
 msgid "Default Employee View"
-msgstr "Vista por defecto del empleado"
+msgstr "Vista por defecto del colaborador"
 
 msgid "Default Employee Detailed View"
-msgstr "Vista detallada del empleado por defecto"
+msgstr "Vista detallada del colaborador por defecto"
 
 msgid "You don't have access to the feature"
 msgstr "No tienes acceso a la función"
 
 msgid "Employee"
-msgstr "Empleado"
+msgstr "Colaborador"
 
 msgid "Exclude Employees"
-msgstr "Excluir Empleados"
+msgstr "Excluir Colaboradores"
 
 msgid "Permissions"
 msgstr "Permisos"
@@ -46,7 +46,7 @@ msgid "Work Type"
 msgstr "Tipo de trabajo"
 
 msgid "Employee Type"
-msgstr "Tipo de empleado"
+msgstr "Tipo de colaborador"
 
 msgid "Job Role"
 msgstr "Rol de trabajo"
@@ -91,7 +91,7 @@ msgid ""
 "Only those normal users/employees with any category mentioned in the form "
 "can access the"
 msgstr ""
-"Sólo aquellos usuarios/empleados normales con cualquier categoría mencionada "
+"Sólo aquellos usuarios/colaboradores normales con cualquier categoría mencionada "
 "en el formulario pueden acceder al"
 
 msgid "feature"
@@ -102,7 +102,7 @@ msgid ""
 "can access the feature"
 msgstr ""
 "Si omite todos los campos de categoría en el formulario, todos los usuarios/"
-"empleados normales pueden acceder a la característica"
+"colaboradores normales pueden acceder a la característica"
 
 msgid "Accessibility filter saved"
 msgstr "Filtro de accesibilidad guardado"
@@ -261,7 +261,7 @@ msgid "Expiry Date"
 msgstr "Fecha de vencimiento"
 
 msgid "Asset Request / Employee"
-msgstr "Solicitud de Activos / Empleado"
+msgstr "Solicitud de Activos / Colaborador"
 
 msgid "Asset Request / Asset Category"
 msgstr "Solicitud de recurso / categoría de recurso"
@@ -273,7 +273,7 @@ msgid "Asset Request / Status"
 msgstr "Solicitud de Activos / Estado"
 
 msgid "Asset Allocation / Employee"
-msgstr "Asignación de Activos / Empleado"
+msgstr "Asignación de Activos / Colaborador"
 
 msgid "Asset Allocation / Assigned Date"
 msgstr "Asignación de Activos / Fecha Asignada"
@@ -369,7 +369,7 @@ msgid "Name or Badge ID"
 msgstr "Nombre o ID de credencial"
 
 msgid "Search employee..."
-msgstr "Buscar empleado..."
+msgstr "Buscar colaborador..."
 
 msgid "Asset Request Date"
 msgstr "Fecha de solicitud de recurso"
@@ -914,7 +914,7 @@ msgid "Reject"
 msgstr "Rechazar"
 
 msgid "Requested Employee"
-msgstr "Empleado solicitado"
+msgstr "Colaborador solicitado"
 
 msgid "Current Asset"
 msgstr "Activo actual"
@@ -1063,7 +1063,7 @@ msgid "assets in use"
 msgstr "activos en uso"
 
 msgid "Employee not found."
-msgstr "Empleado no encontrado."
+msgstr "Colaborador no encontrado."
 
 msgid "Attendance Date"
 msgstr "Fecha de asistencia"
@@ -1510,19 +1510,19 @@ msgid "Pending Hour Lesser or Equal"
 msgstr "Horas pendientes menores o iguales que"
 
 msgid "Employees"
-msgstr "Empleados"
+msgstr "Colaboradores"
 
 msgid "This field is required"
 msgstr "Este campo es obligatorio"
 
 msgid "Employee not chosen"
-msgstr "Empleado no seleccionado"
+msgstr "Colaborador no seleccionado"
 
 msgid ""
 "Do not Auto Validate Attendance if an Employee Works More Than this Amount "
 "of Duration"
 msgstr ""
-"No validar automáticamente la asistencia si el empleado trabaja más de esta "
+"No validar automáticamente la asistencia si el colaborador trabaja más de esta "
 "duración"
 
 msgid "Worked Hours(At Work) Auto Approve Till"
@@ -1541,7 +1541,7 @@ msgid "This field is required."
 msgstr "Este campo es obligatorio."
 
 msgid "Employee work info not found"
-msgstr "Información de trabajo del empleado no encontrada"
+msgstr "Información de trabajo del colaborador no encontrada"
 
 msgid "Allcocate this grace time for Check-In Attendance"
 msgstr "Preparar este tiempo de gracia para la asistencia al registro"
@@ -1709,7 +1709,7 @@ msgid ""
 "Enabling this feature allows employees to record their attendance using the "
 "Check-In/Check-Out button."
 msgstr ""
-"Habilitar esta función permite a los empleados grabar su asistencia usando "
+"Habilitar esta función permite a los colaboradores grabar su asistencia usando "
 "el botón de \"check-out\"."
 
 msgid "Present"
@@ -1806,7 +1806,7 @@ msgid "Enable Check In / Check Out"
 msgstr "Habilitar entrada/salida"
 
 msgid "Employees record attendance using the Check-In/Out button"
-msgstr "Los empleados registran la asistencia usando el botón Entrada/Salida"
+msgstr "Los colaboradores registran la asistencia usando el botón Entrada/Salida"
 
 msgid "At-Work Tracker"
 msgstr "Rastreador de At-Work"
@@ -1820,7 +1820,7 @@ msgid "Track Late Arrival & Early Departure"
 msgstr "Registrar retrasos y salidas anticipadas"
 
 msgid "Track late arrivals and early departures of employees"
-msgstr "Seguimiento de llegadas tardías y salidas anticipadas de empleados"
+msgstr "Seguimiento de llegadas tardías y salidas anticipadas de colaboradores"
 
 msgid "IP Login Restriction"
 msgstr "Restricción de inicio de sesión IP"
@@ -1839,7 +1839,7 @@ msgstr "Detección de rostros"
 
 msgid "Allow employees to mark attendance using face detection"
 msgstr ""
-"Permitir que los empleados marquen la asistencia mediante detección de "
+"Permitir que los colaboradores marquen la asistencia mediante detección de "
 "rostros"
 
 msgid "Geofencing"
@@ -2024,7 +2024,7 @@ msgstr "Ver solicitud"
 msgid ""
 "The attendances for this employee in %(month_name)s has not been validated."
 msgstr ""
-"Las asistencias de este empleado en %(month_name)s no han sido validadas."
+"Las asistencias de este colaborador en %(month_name)s no han sido validadas."
 
 msgid "Export Hours Balances"
 msgstr "Exportar saldos de horas"
@@ -2120,7 +2120,7 @@ msgid "Clock-in Distribution"
 msgstr "Distribución de las entradas"
 
 msgid "When employees clock in today"
-msgstr "Cuándo fichan los empleados hoy"
+msgstr "Cuándo fichan los colaboradores hoy"
 
 msgid "Department Attendance"
 msgstr "Asistencia por departamento"
@@ -2186,10 +2186,10 @@ msgid "Shift Distribution"
 msgstr "Distribución de turnos"
 
 msgid "Active employees by shift"
-msgstr "Empleados activos por turno"
+msgstr "Colaboradores activos por turno"
 
 msgid "Top Absentees"
-msgstr "Empleados con más ausencias"
+msgstr "Colaboradores con más ausencias"
 
 msgid "Reset to default"
 msgstr "Restablecer los valores predeterminados"
@@ -2216,7 +2216,7 @@ msgid "rate"
 msgstr "tasa"
 
 msgid "employees"
-msgstr "empleados"
+msgstr "colaboradores"
 
 msgid "early departure"
 msgstr "salida anticipada"
@@ -2279,13 +2279,13 @@ msgid "No shift data"
 msgstr "No hay datos de turnos"
 
 msgid "When employees clock in"
-msgstr "Cuándo fichan los empleados"
+msgstr "Cuándo fichan los colaboradores"
 
 msgid "No clock-in data"
 msgstr "No hay datos de entrada"
 
 msgid "employee(s)"
-msgstr "empleado(s)"
+msgstr "colaborador(s)"
 
 msgid "Attendance Rate"
 msgstr "Tasa de asistencia"
@@ -2336,7 +2336,7 @@ msgid "Date range"
 msgstr "Rango de fechas"
 
 msgid "Offline Employees"
-msgstr "Empleados sin conexión"
+msgstr "Colaboradores sin conexión"
 
 msgid "Hours Chart"
 msgstr "Gráfico de Horas"
@@ -2351,7 +2351,7 @@ msgid "Department Overtime Chart"
 msgstr "Gráfico del Departamento Overtime"
 
 msgid "No employees are currently taking a break."
-msgstr "Ningún empleado está tomando un descanso."
+msgstr "Ningún colaborador está tomando un descanso."
 
 msgid "checkmark outline"
 msgstr ""
@@ -2714,7 +2714,7 @@ msgid "Monthly Attendance Summary"
 msgstr "Resumen mensual de asistencia"
 
 msgid "Employee name…"
-msgstr "Nombre del empleado…"
+msgstr "Nombre del colaborador…"
 
 msgid "Clear"
 msgstr "Limpiar"
@@ -2723,10 +2723,10 @@ msgid "Find a filter"
 msgstr "Buscar un filtro"
 
 msgid "Employee Tag"
-msgstr "Etiqueta de empleado"
+msgstr "Etiqueta de colaborador"
 
 msgid "Select employee tag..."
-msgstr "Seleccionar etiqueta de empleado..."
+msgstr "Seleccionar etiqueta de colaborador..."
 
 msgid "Is Active"
 msgstr "Está activo"
@@ -2774,7 +2774,7 @@ msgid "Update Attendance"
 msgstr "Actualizar asistencia"
 
 msgid "employee(s) selected"
-msgstr "empleado(s) seleccionado(s)"
+msgstr "colaborador(s) seleccionado(s)"
 
 msgid "Mark as"
 msgstr "Marcar como"
@@ -2871,7 +2871,7 @@ msgid ""
 "their attendance."
 msgstr ""
 "Al permitir esto, usted realiza un seguimiento de la llegada tardía y de las "
-"primeras sesiones de los empleados en su asistencia."
+"primeras sesiones de los colaboradores en su asistencia."
 
 msgid "IP Restriction"
 msgstr "Restricción de IP"
@@ -2905,14 +2905,14 @@ msgstr "Activar reconocimiento facial"
 msgid ""
 "By enabling this, employees can mark their attendance using face detection."
 msgstr ""
-"Al activar esto, los empleados pueden registrar su asistencia mediante "
+"Al activar esto, los colaboradores pueden registrar su asistencia mediante "
 "reconocimiento facial."
 
 msgid ""
 "Configure the location and radius within which employees are allowed to mark "
 "their attendance."
 msgstr ""
-"Configure la ubicación y el radio dentro del cual los empleados pueden "
+"Configure la ubicación y el radio dentro del cual los colaboradores pueden "
 "registrar su asistencia."
 
 msgid "Download"
@@ -3054,7 +3054,7 @@ msgid ""
 "Check-In Unavailable: Your employee profile or work information is "
 "incomplete."
 msgstr ""
-"Entrada no disponible: su perfil de empleado o su información laboral están "
+"Entrada no disponible: su perfil de colaborador o su información laboral están "
 "incompletos."
 
 msgid ""
@@ -3449,7 +3449,7 @@ msgid "Edit Announcement."
 msgstr "Editar anuncio."
 
 msgid "Announcement created successfully to all employees in "
-msgstr "Anuncio creado correctamente para todos los empleados de "
+msgstr "Anuncio creado correctamente para todos los colaboradores de "
 
 #, python-format
 msgid "File type %(ext)s is not allowed for security reasons."
@@ -3543,7 +3543,7 @@ msgid "Department has been created successfully!"
 msgstr "¡El departamento ha sido creado con éxito!"
 
 msgid "Employee Shift"
-msgstr "Cambio de empleado"
+msgstr "Cambio de colaborador"
 
 msgid "Weekly Full Time"
 msgstr "Semanalmente a tiempo completo"
@@ -3555,16 +3555,16 @@ msgid "Shift Schedule"
 msgstr "Horario de cambio"
 
 msgid "Create Employee Shift Schedule"
-msgstr "Crear horario de cambio de empleado"
+msgstr "Crear horario de cambio de colaborador"
 
 msgid "Update Employee Shift Schedule"
-msgstr "Actualizar horario de cambio de empleado"
+msgstr "Actualizar horario de cambio de colaborador"
 
 msgid "Shift schedule Updated!."
 msgstr "Programa de cambio actualizado!."
 
 msgid "Employee Shift Schedule has been created successfully!"
-msgstr "Horario del cambio de empleado se ha creado correctamente!"
+msgstr "Horario del cambio de colaborador se ha creado correctamente!"
 
 msgid "Start Time"
 msgstr "Hora de inicio"
@@ -3585,16 +3585,16 @@ msgid "Automatic Check Out Time"
 msgstr "Hora de salida automática"
 
 msgid "Create Employee Type"
-msgstr "Crear tipo de empleado"
+msgstr "Crear tipo de colaborador"
 
 msgid "Update Employee Type"
-msgstr "Actualizar tipo de empleado"
+msgstr "Actualizar tipo de colaborador"
 
 msgid "The employee type updated successfully."
-msgstr "El tipo de empleado se ha actualizado correctamente."
+msgstr "El tipo de colaborador se ha actualizado correctamente."
 
 msgid "The employee type created successfully."
-msgstr "El tipo de empleado creado con éxito."
+msgstr "El tipo de colaborador creado con éxito."
 
 msgid "Holiday Name"
 msgstr "Nombre de festivo"
@@ -3731,7 +3731,7 @@ msgstr "Cuadrante publicado para %(dept)s (%(range)s)."
 
 #, python-format
 msgid "Roster published for %(count)s employee(s)."
-msgstr "Cuadrante publicado para %(count)s empleado(s)."
+msgstr "Cuadrante publicado para %(count)s colaborador(s)."
 
 msgid "No file uploaded."
 msgstr "Ningún archivo subido."
@@ -3877,7 +3877,7 @@ msgid "Requested Till"
 msgstr "Solicitado hasta"
 
 msgid "Allocated Employee"
-msgstr "Empleado Asignado"
+msgstr "Colaborador Asignado"
 
 msgid "User Availability"
 msgstr "Disponibilidad del usuario"
@@ -4001,7 +4001,7 @@ msgid "Add your company profile — name, logo and timezone."
 msgstr "Añada el perfil de su empresa: nombre, logotipo y zona horaria."
 
 msgid "Create the departments your employees will belong to."
-msgstr "Cree los departamentos a los que pertenecerán sus empleados."
+msgstr "Cree los departamentos a los que pertenecerán sus colaboradores."
 
 msgid "Job Positions"
 msgstr "Posiciones de trabajo"
@@ -4027,10 +4027,10 @@ msgstr ""
 "correos."
 
 msgid "First Employee"
-msgstr "Primer empleado"
+msgstr "Primer colaborador"
 
 msgid "Add your first employee to bring everything together."
-msgstr "Añada su primer empleado para unirlo todo."
+msgstr "Añada su primer colaborador para unirlo todo."
 
 msgid "All companies"
 msgstr "Todas las empresas"
@@ -4054,7 +4054,7 @@ msgid "Unassigned"
 msgstr "Sin asignar"
 
 msgid "Your account is not linked to an employee record."
-msgstr "Su cuenta no está vinculada a un registro de empleado."
+msgstr "Su cuenta no está vinculada a un registro de colaborador."
 
 msgid "Cancelled"
 msgstr "Cancelado"
@@ -4091,7 +4091,7 @@ msgstr ""
 "seleccionadas. Déjelo vacío para todas las empresas que pueda gestionar."
 
 msgid "Search employees..."
-msgstr "Buscar empleados..."
+msgstr "Buscar colaboradores..."
 
 msgid ""
 "Members get this group's permissions only in the selected companies. You can "
@@ -4267,8 +4267,8 @@ msgid ""
 "If no employee, department or job position is selected, the announcement "
 "will be visible to all employees in the selected company."
 msgstr ""
-"Si no se selecciona ningún empleado, departamento o puesto de trabajo, el "
-"anuncio será visible para todos los empleados de la empresa seleccionada."
+"Si no se selecciona ningún colaborador, departamento o puesto de trabajo, el "
+"anuncio será visible para todos los colaboradores de la empresa seleccionada."
 
 msgid "Description is required."
 msgstr "Se requiere descripción."
@@ -4318,7 +4318,7 @@ msgstr "Este documento no se pudo generar de forma segura."
 
 msgid "An employee related to this user's credentials does not exist."
 msgstr ""
-"Un empleado relacionado con las credenciales de este usuario no existe."
+"Un colaborador relacionado con las credenciales de este usuario no existe."
 
 msgid "You must change your password before continuing."
 msgstr "Debe cambiar su contraseña antes de continuar."
@@ -4393,25 +4393,25 @@ msgid "Date must be greater than or equal to today"
 msgstr "La fecha debe ser mayor o igual a hoy"
 
 msgid "Only one active record allowed per employee"
-msgstr "Sólo un registro activo permitido por empleado"
+msgstr "Sólo un registro activo permitido por colaborador"
 
 msgid "Employee Types"
-msgstr "Tipos de Empleados"
+msgstr "Tipos de Colaboradores"
 
 msgid "This employee type already exists in this company"
-msgstr "Este tipo de empleado ya existe en esta empresa."
+msgstr "Este tipo de colaborador ya existe en esta empresa."
 
 msgid "Employee Shift Day"
-msgstr "Día de Cambio de Empleado"
+msgstr "Día de Cambio de Colaborador"
 
 msgid "Employee Shift Days"
-msgstr "Días de cambio de empleado"
+msgstr "Días de cambio de colaborador"
 
 msgid "Employee Shifts"
-msgstr "Mayús del Empleado"
+msgstr "Mayús del Colaborador"
 
 msgid "This employee shift already exists in this company"
-msgstr "Este turno de empleado ya existe en esta empresa."
+msgstr "Este turno de colaborador ya existe en esta empresa."
 
 msgid "Night Shift"
 msgstr "Cambio nocturno"
@@ -4427,13 +4427,13 @@ msgid ""
 "attendance if they forget."
 msgstr ""
 "Hora en la que la horilla automáticamente revisará la asistencia de los "
-"empleados si lo falsifican."
+"colaboradores si lo falsifican."
 
 msgid "Employee Shift Schedule"
-msgstr "Horario de cambio de empleado"
+msgstr "Horario de cambio de colaborador"
 
 msgid "Employee Shift Schedules"
-msgstr "Horarios de cambio de empleado"
+msgstr "Horarios de cambio de colaborador"
 
 msgid "Rotating Shifts"
 msgstr "Girando Mayús"
@@ -4445,7 +4445,7 @@ msgid "Published"
 msgstr "Publicado"
 
 msgid "Visible to the employee once published."
-msgstr "Visible para el empleado una vez publicado."
+msgstr "Visible para el colaborador una vez publicado."
 
 msgid "Day Off"
 msgstr "Día libre"
@@ -4472,7 +4472,7 @@ msgid "Published On"
 msgstr "Publicado el"
 
 msgid "Total Employees"
-msgstr "Empleados totales"
+msgstr "Colaboradores totales"
 
 msgid "Roster Publish Log"
 msgstr "Registro de publicación del cuadrante"
@@ -4503,7 +4503,7 @@ msgid "Requesting Shift"
 msgstr "Solicitando cambio"
 
 msgid "Reallocate Employee"
-msgstr "Reasignar Empleado"
+msgstr "Reasignar Colaborador"
 
 msgid "An approved shift request already exists during this time period."
 msgstr ""
@@ -4618,7 +4618,7 @@ msgstr "Mostrar comentarios a todos"
 
 msgid "If enabled, all employees can view each other's comments."
 msgstr ""
-"Si está activado, todos los empleados pueden ver los comentarios de los "
+"Si está activado, todos los colaboradores pueden ver los comentarios de los "
 "demás."
 
 msgid "Announcement"
@@ -4631,7 +4631,7 @@ msgid "Excluded Charts"
 msgstr "Gráficos excluidos"
 
 msgid "Dashboard Employee Charts"
-msgstr "Tabla de Cartas de Empleados"
+msgstr "Tabla de Cartas de Colaboradores"
 
 msgid "Only one BiometricAttendance instance is allowed per company."
 msgstr "Solo se permite una instancia de BiometricAttendance por empresa."
@@ -4724,7 +4724,7 @@ msgstr "Prefijo de ID de credencial"
 msgid "Prefix added to employee badge IDs e.g. EMP0001"
 msgstr ""
 "Prefijo agregado a las identificaciones de las credenciales de los "
-"empleados, p. EMP0001"
+"colaboradores, p. EMP0001"
 
 msgid "Currency Symbol"
 msgstr "Símbolo de moneda"
@@ -4756,13 +4756,13 @@ msgstr "Restringir cuenta de acceso"
 msgid "Allow admins to block or unblock employee login"
 msgstr ""
 "Permitir a los administradores bloquear o desbloquear el inicio de sesión de "
-"los empleados"
+"los colaboradores"
 
 msgid "Restrict Profile Edit"
 msgstr "Restringir edición del perfil"
 
 msgid "Prevent employees from editing their own profile"
-msgstr "Evitar que los empleados editen su propio perfil"
+msgstr "Evitar que los colaboradores editen su propio perfil"
 
 msgid "Work Information Tracking"
 msgstr "Seguimiento de información de trabajo"
@@ -4772,7 +4772,7 @@ msgid ""
 "selected company"
 msgstr ""
 "Activar el seguimiento de los cambios en los campos de información laboral "
-"del empleado para la empresa seleccionada"
+"del colaborador para la empresa seleccionada"
 
 msgid "Tracking Fields"
 msgstr "Campos de seguimiento"
@@ -4802,7 +4802,7 @@ msgid "Roles and Permissions"
 msgstr "Roles y permisos"
 
 msgid "Create reusable roles and assign direct employee permissions"
-msgstr "Cree roles reutilizables y asigne permisos directos a los empleados"
+msgstr "Cree roles reutilizables y asigne permisos directos a los colaboradores"
 
 msgid "Roles"
 msgstr "Roles"
@@ -4811,10 +4811,10 @@ msgid "Create and manage reusable permission roles"
 msgstr "Crear y administrar roles de permisos reutilizables"
 
 msgid "Employee Permissions"
-msgstr "Permisos de empleados"
+msgstr "Permisos de colaboradores"
 
 msgid "Grant or revoke specific access rights per employee"
-msgstr "Otorgar o revocar derechos de acceso específicos por empleado"
+msgstr "Otorgar o revocar derechos de acceso específicos por colaborador"
 
 msgid "Audit & History"
 msgstr "Auditoría e historial"
@@ -5106,7 +5106,7 @@ msgid "LDAP"
 msgstr "LDAP"
 
 msgid "Connect to LDAP for employee authentication"
-msgstr "Conéctese a LDAP para la autenticación de empleados"
+msgstr "Conéctese a LDAP para la autenticación de colaboradores"
 
 msgid "LDAP Server"
 msgstr "Servidor LDAP"
@@ -5296,29 +5296,29 @@ msgid "Highlight"
 msgstr "Resaltar"
 
 msgid "Employee Account Restrictions"
-msgstr "Restricciones de la cuenta del empleado"
+msgstr "Restricciones de la cuenta del colaborador"
 
 msgid "By enabling this feature, you can block or unblock an employee account."
 msgstr ""
 "Al activar esta función, puede bloquear o desbloquear una cuenta de "
-"empleados."
+"colaboradores."
 
 msgid ""
 "By enabling this feature, you can restrict an employee from editing their "
 "profile."
 msgstr ""
-"Al activar esta función, puede restringir a un empleado la edición de su "
+"Al activar esta función, puede restringir a un colaborador la edición de su "
 "perfil."
 
 msgid ""
 "Are you sure you want to restrict all employees from editing their profiles?"
 msgstr ""
-"¿Está seguro de que desea restringir a todos los empleados la edición de sus "
+"¿Está seguro de que desea restringir a todos los colaboradores la edición de sus "
 "perfiles?"
 
 msgid "Are you sure you want to allow all employees to edit their profiles?"
 msgstr ""
-"¿Está seguro que desea permitir a todos los empleados editar sus perfiles?"
+"¿Está seguro que desea permitir a todos los colaboradores editar sus perfiles?"
 
 msgid "Please Confirm"
 msgstr "Por favor, confirme"
@@ -5330,13 +5330,13 @@ msgid "Something went wrong while updating."
 msgstr "Algo salió mal durante la actualización."
 
 msgid "Employee History Tracking"
-msgstr "Seguimiento del historial de empleados"
+msgstr "Seguimiento del historial de colaboradores"
 
 msgid ""
 "Employee history will be stored during updation of the fields that selected "
 "here. Leave empty to track all work information fields."
 msgstr ""
-"El historial del empleado se guardará al actualizar los campos seleccionados "
+"El historial del colaborador se guardará al actualizar los campos seleccionados "
 "aquí. Déjelo vacío para registrar todos los campos de información laboral."
 
 msgid "Assign to Companies"
@@ -5367,7 +5367,7 @@ msgid ""
 "information during updates for the currently selected company."
 msgstr ""
 "Al activar esta función, puede guardar el historial de la información "
-"laboral de los empleados durante las actualizaciones para la empresa "
+"laboral de los colaboradores durante las actualizaciones para la empresa "
 "seleccionada actualmente."
 
 msgid "First Name"
@@ -5420,14 +5420,14 @@ msgid "Do you want to delete this group permission?"
 msgstr "¿Quieres eliminar el permiso de este grupo?"
 
 msgid "There is no employee group at this moment."
-msgstr "No hay ningún grupo de empleados en este momento."
+msgstr "No hay ningún grupo de colaboradores en este momento."
 
 #, python-format
 msgid ""
 "Editing members of \"%(name)s\". Unchecking an employee removes them from "
 "this role, and unchecking a company removes that assignment."
 msgstr ""
-"Editando los miembros de «%(name)s». Al desmarcar un empleado se le elimina "
+"Editando los miembros de «%(name)s». Al desmarcar un colaborador se le elimina "
 "de este rol, y al desmarcar una empresa se elimina esa asignación."
 
 #, python-format
@@ -5435,7 +5435,7 @@ msgid ""
 "Choose employees for \"%(name)s\". Saving adds the selected employees "
 "without removing existing members."
 msgstr ""
-"Elija empleados para «%(name)s». Al guardar se añaden los empleados "
+"Elija colaboradores para «%(name)s». Al guardar se añaden los colaboradores "
 "seleccionados sin eliminar a los miembros existentes."
 
 msgid "Save members"
@@ -5492,7 +5492,7 @@ msgstr "Puede borrar"
 msgid "Manage reusable roles and direct employee permissions from one place."
 msgstr ""
 "Gestione desde un mismo lugar los roles reutilizables y los permisos "
-"directos de los empleados."
+"directos de los colaboradores."
 
 msgid "Two Factor Authentication"
 msgstr "Autenticación de dos factores"
@@ -5537,19 +5537,19 @@ msgid "Default pagination for all views."
 msgstr "Paginación predeterminada para todas las vistas."
 
 msgid "Update Employee Tag"
-msgstr "Actualizar etiqueta del empleado"
+msgstr "Actualizar etiqueta del colaborador"
 
 msgid "Create Employee Tag"
-msgstr "Crear Etiqueta de Empleado"
+msgstr "Crear Etiqueta de Colaborador"
 
 msgid "Color"
 msgstr "Color"
 
 msgid "Are you sure you want to delete this employee tag ?"
-msgstr "¿Está seguro que desea eliminar esta etiqueta de empleado?"
+msgstr "¿Está seguro que desea eliminar esta etiqueta de colaborador?"
 
 msgid "Are you sure you want to delete this employee type?"
-msgstr "¿Está seguro que desea eliminar este tipo de empleado?"
+msgstr "¿Está seguro que desea eliminar este tipo de colaborador?"
 
 msgid "Encashment Settings"
 msgstr "Configuración de cobro"
@@ -5717,7 +5717,7 @@ msgid ""
 "employees."
 msgstr ""
 "Todas las entradas del cuadrante sin publicar en este rango se harán "
-"visibles para los empleados."
+"visibles para los colaboradores."
 
 msgid "Publish"
 msgstr "Publicar"
@@ -5736,7 +5736,7 @@ msgstr "No se encontraron registros"
 
 msgid "No employees or roster entries match the current filter."
 msgstr ""
-"Ningún empleado ni entrada del cuadrante coincide con el filtro actual."
+"Ningún colaborador ni entrada del cuadrante coincide con el filtro actual."
 
 msgid "Confirm Publish"
 msgstr "Confirmar publicación"
@@ -5841,19 +5841,19 @@ msgid "Un-archive"
 msgstr "Des-archivar"
 
 msgid "There are no rotating shift assigned to this employee."
-msgstr "No hay ningún turno de rotación asignado a este empleado."
+msgstr "No hay ningún turno de rotación asignado a este colaborador."
 
 msgid "Selected Shifts"
 msgstr "Mayús seleccionados"
 
 msgid "No Employees Assigned to Rotating Shifts."
-msgstr "No hay empleados asignados a turnos rotatorios."
+msgstr "No hay colaboradores asignados a turnos rotatorios."
 
 msgid "Import Rotating Shift"
 msgstr "Importar turno de rotación"
 
 msgid "Employees Imported Successfully"
-msgstr "Empleados importados correctamente"
+msgstr "Colaboradores importados correctamente"
 
 msgid "You have"
 msgstr "Tiene"
@@ -5902,13 +5902,13 @@ msgid "Do you want to archive this rotating work type assign?"
 msgstr "¿Desea archivar este tipo de trabajo de rotación asignado?"
 
 msgid "There are no rotating work type assigned to this employee."
-msgstr "No hay ningún tipo de trabajo rotatorio asignado a este empleado."
+msgstr "No hay ningún tipo de trabajo rotatorio asignado a este colaborador."
 
 msgid "Selected Worktypes"
 msgstr "Tipos de trabajo seleccionados"
 
 msgid "No Employees Assigned to Rotating Work Types."
-msgstr "No hay empleados asignados a tipos de trabajo rotativos."
+msgstr "No hay colaboradores asignados a tipos de trabajo rotativos."
 
 msgid "Do you want to un-archive this rotating work type assign?"
 msgstr "¿Desea desarchivar este tipo de trabajo de rotación asignado?"
@@ -6042,7 +6042,7 @@ msgid ""
 "Choose which languages employees of this company can switch to. Leave empty "
 "to allow every language."
 msgstr ""
-"Elija a qué idiomas pueden cambiar los empleados de esta empresa. Déjelo "
+"Elija a qué idiomas pueden cambiar los colaboradores de esta empresa. Déjelo "
 "vacío para permitir todos los idiomas."
 
 msgid ""
@@ -6050,7 +6050,7 @@ msgid ""
 "this company. Leave empty to enable every language."
 msgstr ""
 "Los idiomas seleccionados aparecerán en el selector de idioma para los "
-"empleados de esta empresa. Déjelo vacío para activar todos los idiomas."
+"colaboradores de esta empresa. Déjelo vacío para activar todos los idiomas."
 
 msgid "Select languages…"
 msgstr "Seleccionar idiomas…"
@@ -6165,7 +6165,7 @@ msgid "Are you sure you want to delete this shift?"
 msgstr "¿Está seguro que desea eliminar este turno?"
 
 msgid "There is no employee shifts at this moment."
-msgstr "No hay desplazamientos de empleados en este momento."
+msgstr "No hay desplazamientos de colaboradores en este momento."
 
 msgid "Create Helpdesk Tag"
 msgstr "Crear etiqueta de helpdesk"
@@ -6434,10 +6434,10 @@ msgid "monthly"
 msgstr "mensual"
 
 msgid "Employee First Name"
-msgstr "Nombre del empleado"
+msgstr "Nombre del colaborador"
 
 msgid "Employee Last Name"
-msgstr "Apellido del Empleado"
+msgstr "Apellido del Colaborador"
 
 msgid "Bank Code #1"
 msgstr "Código bancario #1"
@@ -6452,7 +6452,7 @@ msgid "ONBOARDING"
 msgstr "INCORPORACIÓN"
 
 msgid "EMPLOYEE"
-msgstr "EMPLEADO"
+msgstr "COLABORADOR"
 
 msgid "PAYROLL"
 msgstr "PAYROL"
@@ -6692,10 +6692,10 @@ msgid "End till"
 msgstr "Fecha de finalización hasta"
 
 msgid "Employee first name"
-msgstr "Nombre del empleado"
+msgstr "Nombre del colaborador"
 
 msgid "Employee last name"
-msgstr "Apellido del empleado"
+msgstr "Apellido del colaborador"
 
 msgid "Reporting manager"
 msgstr "Administrador de informes"
@@ -6794,7 +6794,7 @@ msgid "Based on week day"
 msgstr "Basado en día de la semana"
 
 msgid "Emp obj"
-msgstr "Objetivo del empleado"
+msgstr "Objetivo del colaborador"
 
 msgid "Updated at"
 msgstr "Actualizado el"
@@ -6848,13 +6848,13 @@ msgid "Onboarding Portal S…"
 msgstr "Portal de incorporación S…"
 
 msgid "Employee work information"
-msgstr "Información de trabajo del empleado"
+msgstr "Información de trabajo del colaborador"
 
 msgid "Rotating work type assign"
 msgstr "Asignar tipo de trabajo de rotación"
 
 msgid "Employee shift schedule"
-msgstr "Horario de cambio de empleado"
+msgstr "Horario de cambio de colaborador"
 
 msgid "Rotating shift assign"
 msgstr "Girar asignación de turno"
@@ -6902,7 +6902,7 @@ msgid "candidates-view"
 msgstr "vista-candidatos"
 
 msgid "employee-profile"
-msgstr "perfil-empleado"
+msgstr "perfil-colaborador"
 
 msgid "employee-view"
 msgstr "vista-empleada"
@@ -6959,7 +6959,7 @@ msgid "leave-dashboard"
 msgstr "Panel"
 
 msgid "leave-employee-dashboard"
-msgstr "salir-panel-empleado-dashboard"
+msgstr "salir-panel-colaborador-dashboard"
 
 msgid "user-leave"
 msgstr "permiso de usuario"
@@ -7043,7 +7043,7 @@ msgid "payroll"
 msgstr "nómina"
 
 msgid "employee"
-msgstr "empleado"
+msgstr "colaborador"
 
 msgid "employee-settings"
 msgstr "Configuración"
@@ -7070,13 +7070,13 @@ msgid "rotating-work-type-view"
 msgstr "vista de tipo de trabajo de rotación"
 
 msgid "employee-type-view"
-msgstr "vista-tipo de empleado"
+msgstr "vista-tipo de colaborador"
 
 msgid "employee-shift-view"
-msgstr "vista de empleado-desplazamiento-"
+msgstr "vista de colaborador-desplazamiento-"
 
 msgid "employee-shift-schedule-view"
-msgstr "vista-horario-de-desplazamiento de empleados"
+msgstr "vista-horario-de-desplazamiento de colaboradores"
 
 msgid "rotating-shift-view"
 msgstr "girando-vista"
@@ -7091,7 +7091,7 @@ msgid "company-view"
 msgstr "vista-empresa"
 
 msgid "employee-permission-assign"
-msgstr "empleado-permiso-asignar"
+msgstr "colaborador-permiso-asignar"
 
 msgid "currency"
 msgstr "moneda"
@@ -7100,10 +7100,10 @@ msgid "leave-allocation-request-view"
 msgstr "solicitud-asignación-permisos"
 
 msgid "employee-view-update"
-msgstr "actualizar-visualizar-empleado"
+msgstr "actualizar-visualizar-colaborador"
 
 msgid "employee-bulk-update"
-msgstr "actualización masiva del empleado"
+msgstr "actualización masiva del colaborador"
 
 msgid "not_set"
 msgstr "no_conjunto"
@@ -7181,7 +7181,7 @@ msgid "company"
 msgstr "empresa"
 
 msgid "employee-create-personal-info"
-msgstr "información-personal-creado-empleado"
+msgstr "información-personal-creado-colaborador"
 
 msgid "offboarding"
 msgstr "desvinculación"
@@ -7193,7 +7193,7 @@ msgid "pagination-settings-view"
 msgstr "paginación-configuración-vista"
 
 msgid "organisation-chart"
-msgstr "Gráfico de organizaciones"
+msgstr "Organigrama"
 
 msgid "document-request-view"
 msgstr "documento-solicitar-ver"
@@ -7289,7 +7289,7 @@ msgid "bonus-point-setting"
 msgstr "configuración de puntos de bonificación"
 
 msgid "employee-past-leave-restriction"
-msgstr "restricción de abandono por parte del empleado"
+msgstr "restricción de abandono por parte del colaborador"
 
 msgid "track-late-come-early-out"
 msgstr "rastrear-tarde-llegar-temprano"
@@ -7355,7 +7355,7 @@ msgid "recruitment-report"
 msgstr "informe de reclutamiento"
 
 msgid "employee-report"
-msgstr "informe-empleado"
+msgstr "informe-colaborador"
 
 msgid "attendance-report"
 msgstr "reporte de asistencia"
@@ -7460,10 +7460,10 @@ msgid "mail-automations-view"
 msgstr "Automatización de correo"
 
 msgid "Employee Work Info"
-msgstr "Información de Trabajo del Empleado"
+msgstr "Información de Trabajo del Colaborador"
 
 msgid "Online Employees"
-msgstr "Empleados en línea"
+msgstr "Colaboradores en línea"
 
 msgid "Overall Leave Chart"
 msgstr "Resumen general de permisos"
@@ -7496,7 +7496,7 @@ msgid "Attendance analytics"
 msgstr "Análisis de asistencia"
 
 msgid "Employees Chart"
-msgstr "Gráfico de empleados"
+msgstr "Gráfico de colaboradores"
 
 msgid "Department Chart"
 msgstr "Gráfico del departamento"
@@ -7553,7 +7553,7 @@ msgstr "Base de datos cargada con éxito."
 #, python-format
 msgid "Assigned demo roles to %(count)s employee memberships."
 msgstr ""
-"Se asignaron roles de demostración a %(count)s membresías de empleados."
+"Se asignaron roles de demostración a %(count)s membresías de colaboradores."
 
 #, python-format
 msgid "Demo roles could not be assigned: %(error)s"
@@ -7637,13 +7637,13 @@ msgid "Role members added."
 msgstr "Miembros del rol añadidos."
 
 msgid "Employee removed from the group."
-msgstr "Empleado eliminado del grupo."
+msgstr "Colaborador eliminado del grupo."
 
 msgid "Company removed from the employee's assignment."
-msgstr "Empresa eliminada de la asignación del empleado."
+msgstr "Empresa eliminada de la asignación del colaborador."
 
 msgid "Unable to remove employee from the group."
-msgstr "No se puede eliminar al empleado del grupo."
+msgstr "No se puede eliminar al colaborador del grupo."
 
 #, python-brace-format
 msgid "The {} has been deleted successfully."
@@ -7757,7 +7757,7 @@ msgstr "Ya existe un tipo de trabajo giratorio para {employee_id}"
 #, python-brace-format
 msgid "Rotating work type for {count} employees is {message}"
 msgstr ""
-"La rotación del tipo de trabajo para los empleados de {count} es {message}"
+"La rotación del tipo de trabajo para los colaboradores de {count} es {message}"
 
 #, python-brace-format
 msgid "{employee} deleted."
@@ -7778,13 +7778,13 @@ msgid "You cannot delete this rotating work type."
 msgstr "No se puede eliminar este tipo de trabajo rotativo."
 
 msgid "Employee type created."
-msgstr "Tipo de empleado creado."
+msgstr "Tipo de colaborador creado."
 
 msgid "Employee type updated."
-msgstr "Tipo de empleado actualizado."
+msgstr "Tipo de colaborador actualizado."
 
 msgid "Employee Shift has been created successfully!"
-msgstr "¡El cambio de empleado se ha creado con éxito!"
+msgstr "¡El cambio de colaborador se ha creado con éxito!"
 
 msgid "Shift updated"
 msgstr "Cambio actualizado"
@@ -7844,16 +7844,16 @@ msgid "You cannot delete this rotating shift assign."
 msgstr "No puedes eliminar esta asignación de turno rotatorio."
 
 msgid "Employee not provided"
-msgstr "No se ha indicado un empleado"
+msgstr "No se ha indicado un colaborador"
 
 msgid "Permissions updated successfully"
 msgstr "Permisos actualizados correctamente"
 
 msgid "Employee not found"
-msgstr "Empleado no encontrado"
+msgstr "Colaborador no encontrado"
 
 msgid "Employee permission assigned."
-msgstr "Permiso de empleado asignado."
+msgstr "Permiso de colaborador asignado."
 
 msgid "Work type request added."
 msgstr "Solicitud de tipo de trabajo añadida."
@@ -8228,7 +8228,7 @@ msgid "Interval duration"
 msgstr "Duración del intervalo"
 
 msgid "Employee Name"
-msgstr "Nombre del empleado"
+msgstr "Nombre del colaborador"
 
 msgid "15 characters max."
 msgstr "15 caracteres máximo."
@@ -8269,7 +8269,7 @@ msgstr "Este ID de usuario ya existe."
 
 #, python-format
 msgid "This biometric %(label)s is already mapped with an employee"
-msgstr "Este %(label)s biométrico ya está mapeado con un empleado"
+msgstr "Este %(label)s biométrico ya está mapeado con un colaborador"
 
 msgid "Both hour and minute cannot be zero"
 msgstr "La hora y el minuto no pueden ser cero"
@@ -8387,10 +8387,10 @@ msgid "Biometric Device"
 msgstr "Dispositivo biométrico"
 
 msgid "Employee in Biometric Device"
-msgstr "Empleado en dispositivo biométrico"
+msgstr "Colaborador en dispositivo biométrico"
 
 msgid "Employees in Biometric Device"
-msgstr "Empleados en dispositivos biométricos"
+msgstr "Colaboradores en dispositivos biométricos"
 
 msgid "COSEC Attendance Arguments"
 msgstr "Argumentos de asistencia de COSEC"
@@ -8408,7 +8408,7 @@ msgid "Schedule"
 msgstr "Programar"
 
 msgid "Add Employee"
-msgstr "Añadir Empleado"
+msgstr "Añadir Colaborador"
 
 msgid "Add"
 msgstr "Añadir"
@@ -8495,7 +8495,7 @@ msgid "Map"
 msgstr "Mapa"
 
 msgid "Map Employee"
-msgstr "Empleado del Mapa"
+msgstr "Colaborador del Mapa"
 
 msgid "Emp Code"
 msgstr "Código vacío"
@@ -8641,7 +8641,7 @@ msgid "{} already added to biometric device"
 msgstr "{} ya se ha añadido al dispositivo biométrico"
 
 msgid "Selected employee successfully mapped to the biometric user"
-msgstr "El empleado seleccionado se asignó correctamente al usuario biométrico"
+msgstr "El colaborador seleccionado se asignó correctamente al usuario biométrico"
 
 msgid "Failed to add user to biometric device."
 msgstr "No se pudo agregar el usuario al dispositivo biométrico."
@@ -8752,7 +8752,7 @@ msgid "An error occurred"
 msgstr "Se ha producido un error"
 
 msgid "Employee assigned to group"
-msgstr "Empleado asignado al grupo"
+msgstr "Colaborador asignado al grupo"
 
 msgid "Allowance"
 msgstr "Permiso"
@@ -8779,10 +8779,10 @@ msgid "Select Deductions to Add"
 msgstr "Seleccione Deducciones a Añadir"
 
 msgid "Employee ID missing."
-msgstr "Falta el ID del empleado."
+msgstr "Falta el ID del colaborador."
 
 msgid "No Employee found matching the query."
-msgstr "No se encontró ningún empleado que coincida con la consulta."
+msgstr "No se encontró ningún colaborador que coincida con la consulta."
 
 msgid "Dashboard access provided"
 msgstr "Acceso al panel proporcionado"
@@ -8866,7 +8866,7 @@ msgid "Document Requests"
 msgstr "Solicitudes de documentos"
 
 msgid "No employee found matching the query."
-msgstr "No se encontró ningún empleado que coincida con la consulta."
+msgstr "No se encontró ningún colaborador que coincida con la consulta."
 
 msgid "Send password reset link"
 msgstr "Enviar enlace para restablecer la contraseña"
@@ -8881,7 +8881,7 @@ msgid "Edit Profile"
 msgstr "Editar perfil"
 
 msgid "Employee ID"
-msgstr "ID del empleado"
+msgstr "ID del colaborador"
 
 msgid "Date of Joining"
 msgstr "Fecha de adhesión"
@@ -8902,13 +8902,13 @@ msgid "Mail Log"
 msgstr "Registro de correo"
 
 msgid "Are you sure you want to delete this employee tag?"
-msgstr "¿Seguro que desea eliminar esta etiqueta de empleado?"
+msgstr "¿Seguro que desea eliminar esta etiqueta de colaborador?"
 
 msgid "Employee Tags"
-msgstr "Etiquetas del Empleado"
+msgstr "Etiquetas del Colaborador"
 
 msgid "Employee Tag Update"
-msgstr "Actualización de Etiqueta del Empleado"
+msgstr "Actualización de Etiqueta del Colaborador"
 
 msgid "Revoke Profile Edit Access"
 msgstr "Revocar Acceso a Editar Perfil"
@@ -8933,7 +8933,7 @@ msgstr "Tarjeta"
 
 #, python-format
 msgid "Do you want to %(status)s this employee?"
-msgstr "¿Desea %(status)s a este empleado?"
+msgstr "¿Desea %(status)s a este colaborador?"
 
 msgid "Policy Creation"
 msgstr "Creación de pólizas"
@@ -8954,13 +8954,13 @@ msgid "Shift Allocations"
 msgstr "Asignaciones de turnos"
 
 msgid "Search in : Employee"
-msgstr "Buscar en: Empleado"
+msgstr "Buscar en: Colaborador"
 
 msgid "Search in : Reporting manager"
 msgstr "Buscar en: Administrador de informes"
 
 msgid "Select employee type..."
-msgstr "Seleccionar tipo de empleado..."
+msgstr "Seleccionar tipo de colaborador..."
 
 msgid "Select job role..."
 msgstr "Seleccionar función..."
@@ -8973,10 +8973,10 @@ msgstr "Seleccionar permisos..."
 
 #, python-brace-format
 msgid "An Employee with this Email already exists in company {}"
-msgstr "Un empleado con este correo electrónico ya existe en la empresa {}"
+msgstr "Un colaborador con este correo electrónico ya existe en la empresa {}"
 
 msgid "An Employee with this Email already exists"
-msgstr "Ya existe un empleado con este correo electrónico"
+msgstr "Ya existe un colaborador con este correo electrónico"
 
 msgid "Badge ID must be unique."
 msgstr "El ID de credencial debe ser único."
@@ -9112,10 +9112,10 @@ msgid "Onboarding task manager"
 msgstr "Responsable de tareas de incorporación"
 
 msgid "---Choose employee---"
-msgstr "---Elija empleado---"
+msgstr "---Elija colaborador---"
 
 msgid "Employee tag"
-msgstr "Etiqueta de empleado"
+msgstr "Etiqueta de colaborador"
 
 msgid "Joining Date"
 msgstr "Fecha de adhesión"
@@ -9124,11 +9124,11 @@ msgid "Salary Per Hour"
 msgstr "Salario por hora"
 
 msgid "Employee Bank Details"
-msgstr "Detalles bancarios del empleado"
+msgstr "Detalles bancarios del colaborador"
 
 msgid "Bank details for an employee with this account number already exist"
 msgstr ""
-"Los datos bancarios de un empleado con este número de cuenta ya existen"
+"Los datos bancarios de un colaborador con este número de cuenta ya existen"
 
 msgid "Policy"
 msgstr "Política"
@@ -9170,7 +9170,7 @@ msgid ""
 "If is enabled, employees log in will be blocked based on period of "
 "suspension or dismissal."
 msgstr ""
-"Si se activa, se bloqueará el inicio de sesión de los empleados durante el "
+"Si se activa, se bloqueará el inicio de sesión de los colaboradores durante el "
 "período de suspensión o despido."
 
 msgid "Action Types"
@@ -9183,7 +9183,7 @@ msgid "Can view Department Chart"
 msgstr "Puede ver el gráfico de departamentos"
 
 msgid "Can view Employees Chart"
-msgstr "Puede ver el gráfico de empleados"
+msgstr "Puede ver el gráfico de colaboradores"
 
 msgid "Can view Birthdays"
 msgstr "Puede ver los cumpleaños"
@@ -9218,10 +9218,10 @@ msgid "Disciplinary action updated."
 msgstr "Acción disciplinaria actualizada."
 
 msgid "Employees login credentials will be unblocked."
-msgstr "Las credenciales de acceso de los empleados serán desbloqueadas."
+msgstr "Las credenciales de acceso de los colaboradores serán desbloqueadas."
 
 msgid "Employee removed from disciplinary action successfully."
-msgstr "Empleado eliminado de la acción disciplinaria con éxito."
+msgstr "Colaborador eliminado de la acción disciplinaria con éxito."
 
 msgid "Disciplinary action not found."
 msgstr "Medida disciplinaria no encontrada."
@@ -9229,8 +9229,8 @@ msgstr "Medida disciplinaria no encontrada."
 msgid "Disciplinary action deleted."
 msgstr "Acción disciplinaria eliminada."
 
-msgid "Organization Chart"
-msgstr "Gráfico de organizaciones"
+msgid "Organigram"
+msgstr "Organigrama"
 
 msgid "Requests"
 msgstr "Solicitudes"
@@ -9266,7 +9266,7 @@ msgid "Assign user groups"
 msgstr "Asignar grupos de usuarios"
 
 msgid "This employee is not assigned to any groups."
-msgstr "Este empleado no está asignado a ningún grupo."
+msgstr "Este colaborador no está asignado a ningún grupo."
 
 msgid "Personal Info"
 msgstr "Información Personal"
@@ -9320,7 +9320,7 @@ msgid "No file has been uploaded."
 msgstr "Ningún archivo ha sido subido."
 
 msgid "Are you sure want to remove this employee from this action?"
-msgstr "¿Está seguro de que desea eliminar a este empleado de esta acción?"
+msgstr "¿Está seguro de que desea eliminar a este colaborador de esta acción?"
 
 msgid "Disciplinary Action"
 msgstr "Acción disciplinaria"
@@ -9362,22 +9362,22 @@ msgid "Allocations"
 msgstr "Asignaciones"
 
 msgid "Do you want to archive this employee?"
-msgstr "¿Quieres archivar a este empleado?"
+msgstr "¿Quieres archivar a este colaborador?"
 
 msgid "Do you want to un-archive this employee?"
-msgstr "¿Quieres desarchivar a este empleado?"
+msgstr "¿Quieres desarchivar a este colaborador?"
 
 msgid "Currently Working"
 msgstr "Actualmente trabajando"
 
 msgid "Import Employee"
-msgstr "Importar Empleado"
+msgstr "Importar Colaborador"
 
 msgid "Export Employees"
-msgstr "Exportar Empleados"
+msgstr "Exportar Colaboradores"
 
 msgid "Bulk Update Employees"
-msgstr "Actualización masiva de empleados"
+msgstr "Actualización masiva de colaboradores"
 
 msgid "Export Data"
 msgstr "Exportar datos"
@@ -9386,24 +9386,24 @@ msgid ""
 "All non-active contracts of the employee will also be deleted. Do you want "
 "to continue ?"
 msgstr ""
-"También se eliminarán todos los contratos no activos del empleado. ¿Desea "
+"También se eliminarán todos los contratos no activos del colaborador. ¿Desea "
 "continuar?"
 
 msgid "This employee is already related in,"
-msgstr "Este empleado ya está relacionado en,"
+msgstr "Este colaborador ya está relacionado en,"
 
 msgid ""
 "Do you really want to prevent this employee from accessing and logging into "
 "this webpage?"
 msgstr ""
-"¿Realmente desea evitar que este empleado acceda e inicie sesión en esta "
+"¿Realmente desea evitar que este colaborador acceda e inicie sesión en esta "
 "página web?"
 
 msgid ""
 "Do you really want to allow this employee to access and log into this "
 "webpage?"
 msgstr ""
-"¿Realmente desea permitir que este empleado acceda e inicie sesión en esta "
+"¿Realmente desea permitir que este colaborador acceda e inicie sesión en esta "
 "página web?"
 
 msgid "Birthday"
@@ -9450,16 +9450,16 @@ msgid "Show"
 msgstr "Mostrar"
 
 msgid "Employee Dashboard"
-msgstr "Panel del empleado"
+msgstr "Panel del colaborador"
 
 msgid "View All Employees"
-msgstr "Ver todos los empleados"
+msgstr "Ver todos los colaboradores"
 
 msgid "All records"
 msgstr "Todos los registros"
 
 msgid "Archived employees"
-msgstr "Empleados archivados"
+msgstr "Colaboradores archivados"
 
 msgid "New This Month"
 msgstr "Nuevos este mes"
@@ -9468,7 +9468,7 @@ msgid "Joined this month"
 msgstr "Incorporado este mes"
 
 msgid "On Leave Today"
-msgstr "Personas con permiso hoy"
+msgstr "Colaboradores con permiso hoy"
 
 msgid "Approved leaves"
 msgstr "Ausencias aprobadas"
@@ -9483,10 +9483,10 @@ msgid "Gender Distribution"
 msgstr "Distribución por género"
 
 msgid "Active employees by gender"
-msgstr "Empleados activos por género"
+msgstr "Colaboradores activos por género"
 
 msgid "Active employees by type"
-msgstr "Empleados activos por tipo"
+msgstr "Colaboradores activos por tipo"
 
 msgid "By Job Position"
 msgstr "Por puesto"
@@ -9501,7 +9501,7 @@ msgid "New hires over the last 6 months"
 msgstr "Nuevas contrataciones de los últimos 6 meses"
 
 msgid "Recent Employees"
-msgstr "Empleados recientes"
+msgstr "Colaboradores recientes"
 
 msgid "Upcoming Birthdays"
 msgstr "Próximos cumpleaños"
@@ -9522,7 +9522,7 @@ msgid "New Hires"
 msgstr "Nuevas contrataciones"
 
 msgid "No employees"
-msgstr "No hay empleados"
+msgstr "No hay colaboradores"
 
 msgid "No upcoming birthdays"
 msgstr "No hay cumpleaños próximos"
@@ -9531,13 +9531,13 @@ msgid "Tomorrow"
 msgstr "Mañana"
 
 msgid "Active Employees"
-msgstr "Empleados activos"
+msgstr "Colaboradores activos"
 
 msgid "Inactive Employees"
-msgstr "Empleados inactivos"
+msgstr "Colaboradores inactivos"
 
 msgid "Employee Chart"
-msgstr "Gráfico de empleados"
+msgstr "Gráfico de colaboradores"
 
 msgid "In"
 msgstr "En"
@@ -9585,7 +9585,7 @@ msgid "Shift Information"
 msgstr "Información del cambio"
 
 msgid "Employee Avatar"
-msgstr "Avatar del empleado"
+msgstr "Avatar del colaborador"
 
 msgid "Also send to"
 msgstr "También enviar a"
@@ -9627,13 +9627,13 @@ msgid "---Choose Job Role---"
 msgstr "---Elegir función---"
 
 msgid "Employee Profile"
-msgstr "Perfil del empleado"
+msgstr "Perfil del colaborador"
 
 msgid "Employee Detail View"
-msgstr "Vista detallada del empleado"
+msgstr "Vista detallada del colaborador"
 
 msgid "Employee Group Assign"
-msgstr "Grupo de Empleados Asignado"
+msgstr "Grupo de Colaboradores Asignado"
 
 msgid "for:"
 msgstr "para:"
@@ -9645,19 +9645,19 @@ msgid "Bulk Update"
 msgstr "Actualización masiva"
 
 msgid "Employees Bulk Update"
-msgstr "Actualización masiva de empleados"
+msgstr "Actualización masiva de colaboradores"
 
 msgid "Do you want to un archive this employee?"
-msgstr "¿Quiere hacer un archivo a este empleado?"
+msgstr "¿Quiere hacer un archivo a este colaborador?"
 
 msgid "There are currently no employees to consider."
-msgstr "Actualmente no hay ningún empleado que cumplir."
+msgstr "Actualmente no hay ningún colaborador que cumplir."
 
 msgid "Select All Employees"
-msgstr "Seleccionar todos los empleados"
+msgstr "Seleccionar todos los colaboradores"
 
 msgid "Unselect All Employees"
-msgstr "Deseleccionar todos los empleados"
+msgstr "Deseleccionar todos los colaboradores"
 
 msgid "Sample photo"
 msgstr "Foto de muestra"
@@ -9666,10 +9666,10 @@ msgid "Info"
 msgstr "Información"
 
 msgid "Selected Employees"
-msgstr "Empleados seleccionados"
+msgstr "Colaboradores seleccionados"
 
 msgid "Are you sure want to delete this employee?"
-msgstr "¿Está seguro de que desea eliminar a este empleado?"
+msgstr "¿Está seguro de que desea eliminar a este colaborador?"
 
 msgid "Leave Icon"
 msgstr "Icono de ausencia"
@@ -9741,7 +9741,7 @@ msgid "Assigned As"
 msgstr "Asignado como"
 
 msgid "Replace Employee"
-msgstr "Reemplazar empleado"
+msgstr "Reemplazar colaborador"
 
 msgid "Encashment Redeem Condition"
 msgstr "Condición de canje de reembolso"
@@ -9750,7 +9750,7 @@ msgid ""
 "Define the unit values used when employees redeem bonus points or leave as "
 "encashment."
 msgstr ""
-"Defina los valores unitarios usados cuando los empleados canjean puntos de "
+"Defina los valores unitarios usados cuando los colaboradores canjean puntos de "
 "bonificación o ausencias como compensación."
 
 msgid "Bonus Unit"
@@ -9814,14 +9814,14 @@ msgid "Basic pay not added . Please update in the active contract."
 msgstr "Pago básico no añadido. Por favor actualice en el contrato activo."
 
 msgid "This employee is not eligible for any allowances."
-msgstr "Este empleado no es elegible para ningún permiso."
+msgstr "Este colaborador no es elegible para ningún permiso."
 
 msgid ""
 "This employee doesn't have an active contract. Please check the employee's "
 "contract"
 msgstr ""
-"Este empleado no tiene un contrato activo. Por favor, compruebe el contrato "
-"del empleado"
+"Este colaborador no tiene un contrato activo. Por favor, compruebe el contrato "
+"del colaborador"
 
 msgid "Is Pretax"
 msgstr "Es pretasa"
@@ -9833,7 +9833,7 @@ msgid "Do you want to delete this Deduction?"
 msgstr "¿Quieres eliminar esta Deducción?"
 
 msgid "This employee is not eligible for any deductions."
-msgstr "Este empleado no es elegible para ninguna deducción."
+msgstr "Este colaborador no es elegible para ninguna deducción."
 
 msgid "View requests"
 msgstr "Ver solicitudes"
@@ -9992,7 +9992,7 @@ msgid "No Mail have been send."
 msgstr "No se ha enviado ningún correo."
 
 msgid "No notes have been added for this employee"
-msgstr "No se han añadido notas para este empleado"
+msgstr "No se han añadido notas para este colaborador"
 
 msgid "No Payslips have been generated."
 msgstr "No se han generado Payslips."
@@ -10100,7 +10100,7 @@ msgid "Update Note"
 msgstr "Actualizar nota"
 
 msgid "Employee is not working in the selected company."
-msgstr "El empleado no está trabajando en la empresa seleccionada."
+msgstr "El colaborador no está trabajando en la empresa seleccionada."
 
 msgid "Profile updated."
 msgstr "Perfil actualizado."
@@ -10148,11 +10148,11 @@ msgid "Bank details updated"
 msgstr "Datos bancarios actualizados"
 
 msgid "There are no employees selected for bulk update."
-msgstr "No hay empleados seleccionados para la actualización masiva."
+msgstr "No hay colaboradores seleccionados para la actualización masiva."
 
 #, python-brace-format
 msgid "{} employees information updated successfully"
-msgstr "Información de {} empleados actualizada correctamente"
+msgstr "Información de {} colaboradores actualizada correctamente"
 
 msgid "blocked"
 msgstr "bloqueado"
@@ -10169,16 +10169,16 @@ msgid "{employee} is a superuser and cannot be blocked."
 msgstr "{employee} es un superusuario y no se puede bloquear."
 
 msgid "Employee personal information updated."
-msgstr "Información personal del empleado actualizada."
+msgstr "Información personal del colaborador actualizada."
 
 msgid "Your work details have been updated."
 msgstr "Tus datos de trabajo han sido actualizados."
 
 msgid "Employee work information updated."
-msgstr "Información de trabajo del empleado actualizada."
+msgstr "Información de trabajo del colaborador actualizada."
 
 msgid "Employee bank details updated."
-msgstr "Datos bancarios del empleado actualizados."
+msgstr "Datos bancarios del colaborador actualizados."
 
 msgid "Profile image updated."
 msgstr "Imagen de perfil actualizada."
@@ -10193,13 +10193,13 @@ msgid "Profile image removed."
 msgstr "Imagen de perfil eliminada."
 
 msgid "New Employee Added."
-msgstr "Nuevo empleado añadido."
+msgstr "Nuevo colaborador añadido."
 
 msgid "Employee updated."
-msgstr "Empleado actualizado."
+msgstr "Colaborador actualizado."
 
 msgid "Employee deleted"
-msgstr "Empleado eliminado"
+msgstr "Colaborador eliminado"
 
 #, python-brace-format
 msgid "- {}."
@@ -10214,7 +10214,7 @@ msgstr "No puedes eliminar %(employee)s."
 
 #, python-format
 msgid "%(deleted_count)s employees deleted."
-msgstr "Se eliminaron %(deleted_count)s empleados."
+msgstr "Se eliminaron %(deleted_count)s colaboradores."
 
 msgid "You can't archive the last superuser."
 msgstr "No puede archivar el último superusuario."
@@ -10228,7 +10228,7 @@ msgid "Related data found for {}."
 msgstr "Datos relacionados encontrados para {}."
 
 msgid "Employee archived"
-msgstr "Empleado archivado"
+msgstr "Colaborador archivado"
 
 msgid "Can't Archive"
 msgstr "No se puede archivar"
@@ -10256,13 +10256,13 @@ msgid "Bank Details Updated Successfully"
 msgstr "Detalles bancarios actualizados correctamente"
 
 msgid "Employee work information deleted"
-msgstr "Información de trabajo del empleado eliminada"
+msgstr "Información de trabajo del colaborador eliminada"
 
 msgid "Employee work information not found."
-msgstr "Información de trabajo de los empleados no encontrada."
+msgstr "Información de trabajo de los colaboradores no encontrada."
 
 msgid "You cannot delete this Employee work information"
-msgstr "No puede eliminar esta información de trabajo de los empleados"
+msgstr "No puede eliminar esta información de trabajo de los colaboradores"
 
 msgid "Unsupported file format. Please upload a CSV or Excel file."
 msgstr ""
@@ -10274,7 +10274,7 @@ msgstr "Error Ocurrió {}"
 
 #, python-format
 msgid "%(created_count)s employees created."
-msgstr "%(created_count)s empleados creados."
+msgstr "%(created_count)s colaboradores creados."
 
 #, python-brace-format
 msgid ""
@@ -10296,7 +10296,7 @@ msgid "Note added successfully.."
 msgstr "Nota añadida con éxito.."
 
 msgid "No Employee Note found matching the query."
-msgstr "No se encontró ninguna nota del empleado que coincida con la consulta."
+msgstr "No se encontró ninguna nota del colaborador que coincida con la consulta."
 
 msgid "Note updated successfully..."
 msgstr "Nota actualizada con éxito..."
@@ -11085,7 +11085,7 @@ msgid "Already Returned"
 msgstr "Ya regresado"
 
 msgid "Attendance for this employee on the current date already exists."
-msgstr "Ya existe una asistencia para este empleado en la fecha actual."
+msgstr "Ya existe una asistencia para este colaborador en la fecha actual."
 
 msgid "Old password is incorrect."
 msgstr "La contraseña anterior es incorrecta."
@@ -11101,7 +11101,7 @@ msgstr "La fecha de fin debe ser igual o posterior a la de inicio."
 
 #, python-format
 msgid "Employee is not assigned with leave type %(leave_type)s."
-msgstr "Al empleado no se le ha asignado el tipo de ausencia %(leave_type)s."
+msgstr "Al colaborador no se le ha asignado el tipo de ausencia %(leave_type)s."
 
 msgid "There is already a leave request for this date range."
 msgstr "Ya existe una solicitud de licencia para este rango de fechas."
@@ -11115,7 +11115,7 @@ msgstr ""
 "finalización."
 
 msgid "Employee doesn't have enough leave days.."
-msgstr "El empleado no tiene suficientes días de ausencia.."
+msgstr "El colaborador no tiene suficientes días de ausencia.."
 
 msgid "Nothing to approve."
 msgstr "Nada que aprobar."
@@ -11165,7 +11165,7 @@ msgid ""
 "You Don't have work information filled or your employee detail neither "
 "entered "
 msgstr ""
-"No tienes información de trabajo rellenada ni los detalles de tu empleado "
+"No tienes información de trabajo rellenada ni los detalles de tu colaborador "
 
 msgid "You do not have permission to view this attendance record."
 msgstr "No tiene permiso para ver este registro de asistencia."
@@ -11228,10 +11228,10 @@ msgid "RotatingWorkTypeAssign not found"
 msgstr "Asignación de tipo de trabajo rotativo no encontrada"
 
 msgid "EmployeeShift not found"
-msgstr "Turno del empleado no encontrado"
+msgstr "Turno del colaborador no encontrado"
 
 msgid "EmployeeShiftSchedule not found"
-msgstr "Horario de turno del empleado no encontrado"
+msgstr "Horario de turno del colaborador no encontrado"
 
 msgid "RotatingShift not found"
 msgstr "Turno rotativo no encontrado"
@@ -11255,7 +11255,7 @@ msgid "Shift request does not exists"
 msgstr "La solicitud de turno no existe"
 
 msgid "Employee does not exist"
-msgstr "El empleado no existe"
+msgstr "El colaborador no existe"
 
 msgid "Bank details do not exist"
 msgstr "Los datos bancarios no existen"
@@ -11270,7 +11270,7 @@ msgid "You do not have permission to edit this document request."
 msgstr "No tiene permiso para editar esta solicitud de documento."
 
 msgid "Related model found for this employee. "
-msgstr "Se encontró un modelo relacionado para este empleado. "
+msgstr "Se encontró un modelo relacionado para este colaborador. "
 
 msgid "TicketType not found"
 msgstr "Tipo de ticket no encontrado"
@@ -11336,7 +11336,7 @@ msgid "OffboardingStage not found"
 msgstr "Etapa de desvinculación no encontrada"
 
 msgid "OffboardingEmployee not found"
-msgstr "Empleado en desvinculación no encontrado"
+msgstr "Colaborador en desvinculación no encontrado"
 
 msgid "ResignationLetter not found"
 msgstr "Carta de renuncia no encontrada"
@@ -11345,7 +11345,7 @@ msgid "OffboardingTask not found"
 msgstr "Tarea de desvinculación no encontrada"
 
 msgid "EmployeeTask not found"
-msgstr "Tarea del empleado no encontrada"
+msgstr "Tarea del colaborador no encontrada"
 
 msgid "OffboardingNote not found"
 msgstr "Nota de desvinculación no encontrada"
@@ -11398,10 +11398,10 @@ msgid "Objective not found"
 msgstr "Objetivo no encontrado"
 
 msgid "EmployeeObjective not found"
-msgstr "Objetivo del empleado no encontrado"
+msgstr "Objetivo del colaborador no encontrado"
 
 msgid "EmployeeKeyResult not found"
-msgstr "Resultado clave del empleado no encontrado"
+msgstr "Resultado clave del colaborador no encontrado"
 
 msgid "QuestionTemplate not found"
 msgstr "Plantilla de preguntas no encontrada"
@@ -11428,7 +11428,7 @@ msgid "MeetingsAnswer not found"
 msgstr "Respuesta de la reunión no encontrada"
 
 msgid "EmployeeBonusPoint not found"
-msgstr "Punto de bonificación del empleado no encontrado"
+msgstr "Punto de bonificación del colaborador no encontrado"
 
 msgid "BonusPointSetting not found"
 msgstr "Configuración de puntos de bonificación no encontrada"
@@ -11625,9 +11625,9 @@ msgstr ""
 "\n"
 "                Elija qué modelos deben registrar sus cambios en el registro "
 "de auditoría.\n"
-"                Los modelos predeterminados (Empleado, Información laboral "
-"del empleado, Datos\n"
-"                bancarios del empleado) siempre se registran y no se pueden "
+"                Los modelos predeterminados (Colaborador, Información laboral "
+"del colaborador, Datos\n"
+"                bancarios del colaborador) siempre se registran y no se pueden "
 "eliminar.\n"
 "            "
 
@@ -11666,7 +11666,7 @@ msgid "Also Sent to"
 msgstr "También enviado a"
 
 msgid "The employees selected here will receive the email as Cc."
-msgstr "Los empleados seleccionados recibirán el correo electrónico como Cc."
+msgstr "Los colaboradores seleccionados recibirán el correo electrónico como Cc."
 
 msgid "Mail To"
 msgstr "Correo para"
@@ -11676,7 +11676,7 @@ msgid ""
 "triggers the automation)"
 msgstr ""
 "Rellena los detalles de la plantilla de correo electrónico (receptor/"
-"instancia, `self` será la persona que active la automatización)"
+"instancia, `self` será la colaborador que active la automatización)"
 
 msgid "Mail Details"
 msgstr "Detalles del correo"
@@ -11707,7 +11707,7 @@ msgid ""
 "trigger the automation)"
 msgstr ""
 "Rellena los detalles de la plantilla de correo electrónico (receptor/"
-"instancia, `self` será la persona que active la automatización)"
+"instancia, `self` será la colaborador que active la automatización)"
 
 msgid "Mail Template"
 msgstr "Plantilla de correo"
@@ -12223,7 +12223,7 @@ msgid ""
 "Configure LDAP settings to authenticate and sync employees from your "
 "directory server."
 msgstr ""
-"Configure los ajustes de LDAP para autenticar y sincronizar empleados desde "
+"Configure los ajustes de LDAP para autenticar y sincronizar colaboradores desde "
 "su servidor de directorio."
 
 msgid "Configuration updated successfully."
@@ -12343,7 +12343,7 @@ msgid "Managers"
 msgstr "Gestores"
 
 msgid "Answerable employees"
-msgstr "Empleados contestados"
+msgstr "Colaboradores contestados"
 
 msgid "Minutes of Meeting"
 msgstr "Minutos de la reunión"
@@ -12367,7 +12367,7 @@ msgid "Allowance Eligibility"
 msgstr "Elegibilidad de Permiso"
 
 msgid "Specific Employees"
-msgstr "Empleados Específicos"
+msgstr "Colaboradores Específicos"
 
 msgid "One Time deduction"
 msgstr "Deducción única"
@@ -12384,14 +12384,14 @@ msgstr "Esto borrará todos los filtros que has aplicado."
 msgid ""
 "Only the employees selected in any of the fields will have access to the "
 msgstr ""
-"Solo los empleados seleccionados en alguno de los campos tendrán acceso a "
+"Solo los colaboradores seleccionados en alguno de los campos tendrán acceso a "
 
 msgid ""
 "If none are selected, the feature will be available to all normal users and "
 "employees."
 msgstr ""
 "Si no se selecciona ninguno, la función estará disponible para todos los "
-"usuarios normales y empleados."
+"usuarios normales y colaboradores."
 
 msgid "Views"
 msgstr "Vistas"
@@ -12451,10 +12451,10 @@ msgstr "Registros de trabajo"
 msgid "Allow administrators to block or unblock employee login accounts."
 msgstr ""
 "Permitir a los administradores bloquear o desbloquear las cuentas de inicio "
-"de sesión de los empleados."
+"de sesión de los colaboradores."
 
 msgid "Prevent employees from editing their own profile details."
-msgstr "Impedir que los empleados editen los datos de su propio perfil."
+msgstr "Impedir que los colaboradores editen los datos de su propio perfil."
 
 msgid ""
 "Configure default tracking settings, then assign them to one or more "
@@ -12468,13 +12468,13 @@ msgid ""
 "Applies to the currently selected company."
 msgstr ""
 "Guardar un registro del historial cada vez que se actualice la información "
-"laboral de un empleado. Se aplica a la empresa seleccionada actualmente."
+"laboral de un colaborador. Se aplica a la empresa seleccionada actualmente."
 
 msgid ""
 "Selected fields will be recorded in employee history whenever they are "
 "updated. Leave empty to track all work information fields."
 msgstr ""
-"Los campos seleccionados se registrarán en el historial del empleado cada "
+"Los campos seleccionados se registrarán en el historial del colaborador cada "
 "vez que se actualicen. Déjelo vacío para registrar todos los campos de "
 "información laboral."
 
@@ -12507,14 +12507,14 @@ msgid ""
 "A role is a named set of employees who share the same access. Create a role, "
 "add members, then turn permissions on or off."
 msgstr ""
-"Un rol es un conjunto con nombre de empleados que comparten el mismo acceso. "
+"Un rol es un conjunto con nombre de colaboradores que comparten el mismo acceso. "
 "Cree un rol, añada miembros y luego active o desactive los permisos."
 
 msgid "Create a role"
 msgstr "Crear un rol"
 
 msgid "Add employees (Members)"
-msgstr "Añadir empleados (miembros)"
+msgstr "Añadir colaboradores (miembros)"
 
 msgid "Set what they can do (Permissions)"
 msgstr "Defina lo que pueden hacer (permisos)"
@@ -12541,7 +12541,7 @@ msgid "Members"
 msgstr "Miembros"
 
 msgid "People in this role get all of its permissions."
-msgstr "Las personas con este rol obtienen todos sus permisos."
+msgstr "Quienes ocupan este rol obtienen todos sus permisos."
 
 msgid "Search members by name, email or company..."
 msgstr "Buscar miembros por nombre, correo o empresa..."
@@ -12570,7 +12570,7 @@ msgid ""
 "Delete this role? Employees will keep their accounts, but will no longer get "
 "permissions from this role."
 msgstr ""
-"¿Eliminar este rol? Los empleados conservarán sus cuentas, pero ya no "
+"¿Eliminar este rol? Los colaboradores conservarán sus cuentas, pero ya no "
 "obtendrán permisos de este rol."
 
 msgid "Delete role"
@@ -12583,7 +12583,7 @@ msgid ""
 "Create a group, add employees, then choose what they can access. You can "
 "change this anytime."
 msgstr ""
-"Cree un grupo, añada empleados y elija a qué pueden acceder. Puede cambiarlo "
+"Cree un grupo, añada colaboradores y elija a qué pueden acceder. Puede cambiarlo "
 "en cualquier momento."
 
 msgid "Create your first group"
@@ -12606,7 +12606,7 @@ msgid "No company assignments"
 msgstr "Sin asignaciones de empresa"
 
 msgid "Edit this employee's companies"
-msgstr "Editar las empresas de este empleado"
+msgstr "Editar las empresas de este colaborador"
 
 #, python-format
 msgid "Remove %(name)s from this group?"
@@ -12635,7 +12635,7 @@ msgid ""
 "Update employees or companies for this role. Unchecking an employee removes "
 "them from the role; the selected companies apply to everyone selected."
 msgstr ""
-"Actualice los empleados o las empresas de este rol. Al desmarcar un empleado "
+"Actualice los colaboradores o las empresas de este rol. Al desmarcar un colaborador "
 "se le elimina del rol; las empresas seleccionadas se aplican a todos los "
 "seleccionados."
 
@@ -12643,8 +12643,8 @@ msgid ""
 "Search and pick employees below. Saving adds the selected employees to this "
 "role for the selected companies."
 msgstr ""
-"Busque y seleccione empleados a continuación. Al guardar se añaden los "
-"empleados seleccionados a este rol para las empresas elegidas."
+"Busque y seleccione colaboradores a continuación. Al guardar se añaden los "
+"colaboradores seleccionados a este rol para las empresas elegidas."
 
 #, python-format
 msgid "%(counter)s member currently in this role."
@@ -12653,13 +12653,13 @@ msgstr[0] "%(counter)s miembro actualmente en este rol."
 msgstr[1] "%(counter)s miembros actualmente en este rol."
 
 msgid "Employees in this role"
-msgstr "Empleados con este rol"
+msgstr "Colaboradores con este rol"
 
 msgid "Employees to add"
-msgstr "Empleados a añadir"
+msgstr "Colaboradores a añadir"
 
 msgid "Use search or filters to find people quickly."
-msgstr "Use la búsqueda o los filtros para encontrar personas rápidamente."
+msgstr "Use la búsqueda o los filtros para encontrar colaboradores rápidamente."
 
 msgid "Save changes"
 msgstr "Guardar cambios"
@@ -12674,13 +12674,13 @@ msgid "User Permissions"
 msgstr "Permisos de usuario"
 
 msgid "Review or assign permissions directly to individual employees."
-msgstr "Revise o asigne permisos directamente a empleados concretos."
+msgstr "Revise o asigne permisos directamente a colaboradores concretos."
 
 msgid ""
 "Permissions assigned directly to an employee here apply in all companies. "
 "Use Roles to grant company-specific permissions."
 msgstr ""
-"Los permisos asignados directamente a un empleado aquí se aplican en todas "
+"Los permisos asignados directamente a un colaborador aquí se aplican en todas "
 "las empresas. Use los roles para conceder permisos específicos de empresa."
 
 msgid "Search module or feature…"
@@ -12699,7 +12699,7 @@ msgid ""
 "Permissions from this employee's groups in the selected company (plus any "
 "direct permissions)."
 msgstr ""
-"Permisos de los grupos de este empleado en la empresa seleccionada (además "
+"Permisos de los grupos de este colaborador en la empresa seleccionada (además "
 "de los permisos directos)."
 
 msgid "Only allow viewing"
@@ -13058,10 +13058,10 @@ msgid "No key results found for this objective."
 msgstr "No se encontraron resultados clave para este objetivo."
 
 msgid "Do you want to unarchive this employee objective?"
-msgstr "¿Desea desarchivar este objetivo del empleado?"
+msgstr "¿Desea desarchivar este objetivo del colaborador?"
 
 msgid "Do you want to archive this employee objective?"
-msgstr "¿Desea archivar este objetivo de los empleados?"
+msgstr "¿Desea archivar este objetivo de los colaboradores?"
 
 msgid "Are you sure to delete this objective?"
 msgstr "¿Está seguro de eliminar este objetivo?"
@@ -13100,7 +13100,7 @@ msgid "View Project"
 msgstr "Ver proyecto"
 
 msgid "No projects assigned to this employee."
-msgstr "No hay proyectos asignados a este empleado."
+msgstr "No hay proyectos asignados a este colaborador."
 
 msgid "Share Link"
 msgstr "Compartir enlace"
@@ -13131,7 +13131,7 @@ msgstr "¿Realmente desea rechazar la solicitud?"
 
 msgid ""
 "By approving the request employee will added to the offboarding pipeline"
-msgstr "Al aprobar la solicitud, se añadirá al empleado al proceso de salida."
+msgstr "Al aprobar la solicitud, se añadirá al colaborador al proceso de salida."
 
 msgid "Do You really want to approve the request"
 msgstr "¿Realmente desea aprobar la solicitud"
@@ -13222,7 +13222,7 @@ msgid "arrow-back-outline"
 msgstr ""
 
 msgid "Total employee objectives"
-msgstr "Objetivos totales del empleado"
+msgstr "Objetivos totales del colaborador"
 
 msgid "Total key results"
 msgstr "Total resultados clave"
@@ -13285,13 +13285,13 @@ msgid "Charts"
 msgstr "Gráficos"
 
 msgid "Add New Employee"
-msgstr "Añadir nuevo empleado"
+msgstr "Añadir nuevo colaborador"
 
 msgid "Enter the details to create a new employee profile."
-msgstr "Introduzca los datos para crear un nuevo perfil de empleado."
+msgstr "Introduzca los datos para crear un nuevo perfil de colaborador."
 
 msgid "Employee photo"
-msgstr "Foto del empleado"
+msgstr "Foto del colaborador"
 
 msgid "Upload JPG, PNG or SVG"
 msgstr "Suba un archivo JPG, PNG o SVG"
@@ -13309,7 +13309,7 @@ msgid "Account Information"
 msgstr "Información de la cuenta"
 
 msgid "Update employee information across all sections."
-msgstr "Actualice la información del empleado en todas las secciones."
+msgstr "Actualice la información del colaborador en todas las secciones."
 
 msgid "Change Photo"
 msgstr "Cambiar foto"
@@ -13327,16 +13327,16 @@ msgid "Contact & Compensation"
 msgstr "Contacto y retribución"
 
 msgid "Create tags used to group and filter employees."
-msgstr "Cree etiquetas para agrupar y filtrar empleados."
+msgstr "Cree etiquetas para agrupar y filtrar colaboradores."
 
 msgid "Manage employee categories such as permanent or contract."
-msgstr "Gestione las categorías de empleados, como fijo o temporal."
+msgstr "Gestione las categorías de colaboradores, como fijo o temporal."
 
 msgid "Set up rotating shift patterns for employees."
-msgstr "Configure patrones de turnos rotativos para los empleados."
+msgstr "Configure patrones de turnos rotativos para los colaboradores."
 
 msgid "Set up rotating work type patterns for employees."
-msgstr "Configure patrones rotativos de tipo de trabajo para los empleados."
+msgstr "Configure patrones rotativos de tipo de trabajo para los colaboradores."
 
 msgid "Configure day-wise schedules linked to each shift."
 msgstr "Configure horarios por día vinculados a cada turno."
@@ -13401,10 +13401,10 @@ msgid "request"
 msgstr "solicitud"
 
 msgid "Answered Employees"
-msgstr "Empleados Respondidos"
+msgstr "Colaboradores Respondidos"
 
 msgid "Employees not answered yet"
-msgstr "Empleados aún no respondidos"
+msgstr "Colaboradores aún no respondidos"
 
 msgid "Cyclic feedback period"
 msgstr "Período de retroalimentación cíclico"
@@ -13428,7 +13428,7 @@ msgid "Colleague"
 msgstr "Colegio"
 
 msgid "Other Employees"
-msgstr "Otros empleados"
+msgstr "Otros colaboradores"
 
 msgid "Answers"
 msgstr "Respuestas"
@@ -13604,7 +13604,7 @@ msgid "No filtered records found at the moment"
 msgstr "No se encontraron registros filtrados en este momento"
 
 msgid "View employee profile"
-msgstr "Ver el perfil del empleado"
+msgstr "Ver el perfil del colaborador"
 
 msgid "Remove level"
 msgstr "Quitar nivel"
@@ -13722,10 +13722,10 @@ msgid "Work Type Requests to Approve"
 msgstr "Solicitudes de tipo de trabajo para aprobar"
 
 msgid "Employee Work Information"
-msgstr "Información de Trabajo del Empleado"
+msgstr "Información de Trabajo del Colaborador"
 
 msgid "Search Employee"
-msgstr "Buscar empleado"
+msgstr "Buscar colaborador"
 
 msgid "Candidates Started Onboarding"
 msgstr "Candidatos que iniciaron su incorporación"
@@ -14033,16 +14033,16 @@ msgid "Exit Ratio"
 msgstr "Ratio de salida"
 
 msgid "Archived Employees / Total Employees"
-msgstr "Empleados Archivados / Total Empleados"
+msgstr "Colaboradores Archivados / Total Colaboradores"
 
 msgid "Exiting to Joining Ratio"
 msgstr "Salir de la relación de unión"
 
 msgid "Exiting Employees : Joining Employees"
-msgstr "Empleados salientes: Uniéndose a Empleados"
+msgstr "Colaboradores salientes: Uniéndose a Colaboradores"
 
 msgid "Archived Employees"
-msgstr "Empleados archivados"
+msgstr "Colaboradores archivados"
 
 msgid "Joining and Offboarding Chart"
 msgstr "Gráfico de incorporaciones y desvinculaciones"
@@ -14054,7 +14054,7 @@ msgid "Not Returned Assets"
 msgstr "Activos no retornados"
 
 msgid "Offboarding Employees Feedbacks"
-msgstr "Comentarios de empleados en proceso de desvinculación"
+msgstr "Comentarios de colaboradores en proceso de desvinculación"
 
 msgid "'s Note"
 msgstr "nota de '"
@@ -14078,10 +14078,10 @@ msgid "Add Key Result"
 msgstr "Añadir resultado clave"
 
 msgid "Do you want to un-archive this employee objective?"
-msgstr "¿Desea desarchivar este objetivo de los empleados?"
+msgstr "¿Desea desarchivar este objetivo de los colaboradores?"
 
 msgid "Do you want to delete this employee objective?"
-msgstr "¿Desea eliminar este objetivo de los empleados?"
+msgstr "¿Desea eliminar este objetivo de los colaboradores?"
 
 msgid "Albert Camus"
 msgstr "Albert Camus"
@@ -14114,7 +14114,7 @@ msgid "Current Value Cannot be -ve"
 msgstr "El valor actual no puede ser negativo"
 
 msgid "Employee Onboarding"
-msgstr "Incorporación de empleados"
+msgstr "Incorporación de colaboradores"
 
 msgid "Login"
 msgstr "Ingresar"
@@ -14189,7 +14189,7 @@ msgid "No organization data available"
 msgstr "No hay datos de la organización disponibles"
 
 msgid "Employee Contribution"
-msgstr "Contribución del Empleado"
+msgstr "Contribución del Colaborador"
 
 msgid "Employer Contribution"
 msgstr "Contribución del Empleador"
@@ -14207,7 +14207,7 @@ msgid "Gross Earnings - Total Deductions"
 msgstr "Ganancias Brujas - Deducciones Totales"
 
 msgid "Employee Net Pay"
-msgstr "Pago Neto del Empleado"
+msgstr "Pago Neto del Colaborador"
 
 msgid "Actual Basic Pay"
 msgstr "Pago básico real"
@@ -14234,7 +14234,7 @@ msgid "Taxable amount"
 msgstr "Cantidad imponible"
 
 msgid "Employee Details"
-msgstr "Detalles del empleado"
+msgstr "Detalles del colaborador"
 
 msgid "Bank Acc."
 msgstr "Cuenta bancaria."
@@ -14383,16 +14383,16 @@ msgid ""
 "Define disciplinary action types used when recording employee incidents."
 msgstr ""
 "Defina los tipos de medidas disciplinarias que se usan al registrar "
-"incidentes de empleados."
+"incidentes de colaboradores."
 
 msgid "Record and track disciplinary incidents for employees."
 msgstr ""
 "Registre y haga seguimiento de los incidentes disciplinarios de los "
-"empleados."
+"colaboradores."
 
 msgid "Create and manage company policies shared with employees."
 msgstr ""
-"Cree y gestione las políticas de empresa compartidas con los empleados."
+"Cree y gestione las políticas de empresa compartidas con los colaboradores."
 
 msgid "Open attachment"
 msgstr "Abrir adjunto"
@@ -14622,7 +14622,7 @@ msgid "Out Time"
 msgstr "Hora de salida"
 
 msgid "Employee Reports"
-msgstr "Informes de empleados"
+msgstr "Informes de colaboradores"
 
 msgid ""
 "Ad-hoc pivots per module. Use Standard Reports for curated KPIs, charts, and "
@@ -14686,13 +14686,13 @@ msgid "Objectives"
 msgstr "Objetivos"
 
 msgid "Employee Objective"
-msgstr "Objetivo del empleado"
+msgstr "Objetivo del colaborador"
 
 msgid "Feedback"
 msgstr "Comentarios"
 
 msgid "Employee Objective Reports"
-msgstr "Informes de objetivos del empleado"
+msgstr "Informes de objetivos del colaborador"
 
 msgid "Feedback Reports"
 msgstr "Informes de feedback"
@@ -14716,7 +14716,7 @@ msgid "Feedback Title"
 msgstr "Título de Comentarios"
 
 msgid "Employee Badge Id"
-msgstr "ID de credencial del empleado"
+msgstr "ID de credencial del colaborador"
 
 msgid "Subordinate"
 msgstr "Subordinado"
@@ -14737,7 +14737,7 @@ msgid "Onboarding"
 msgstr "Onboarding"
 
 msgid "Recruitment Reports"
-msgstr "Informes de selección"
+msgstr "Informes de reclutamiento"
 
 msgid "Onboarding Reports"
 msgstr "Informes de incorporación"
@@ -15228,9 +15228,9 @@ msgstr ""
 
 msgid "Prefix added to every auto-generated employee badge ID (e.g. PEP0001)."
 msgstr ""
-"Prefijo añadido a cada ID de identificación de empleado generado "
+"Prefijo añadido a cada ID de identificación de colaborador generado "
 "automáticamente (p. ej. PEP0001).Prefijo agregado a las identificaciones de "
-"las credenciales de los empleados, p. EMP0001"
+"las credenciales de los colaboradores, p. EMP0001"
 
 msgid "Add Candidate"
 msgstr "Añadir Candidato"
@@ -15417,7 +15417,7 @@ msgid "Reporting managers"
 msgstr "Responsables jerárquicos"
 
 msgid "Employees (non-managers)"
-msgstr "Empleados (sin responsables)"
+msgstr "Colaboradores (sin responsables)"
 
 msgid "Auto-start once, then on demand"
 msgstr "Inicio automático una vez y luego a demanda"
@@ -15847,7 +15847,7 @@ msgstr "Nueva solicitud de asignación de permisos creada"
 
 #, python-format
 msgid "Leave allocated for %(count)s employee(s)"
-msgstr "Ausencias asignadas a %(count)s empleado(s)"
+msgstr "Ausencias asignadas a %(count)s colaborador(s)"
 
 msgid "Leave Clash"
 msgstr "Abandonar Clash"
@@ -15911,7 +15911,7 @@ msgid "Leave type assign is successfull"
 msgstr "El tipo de salida asignado es exitoso"
 
 msgid "leave type is already assigned to the employee"
-msgstr "el tipo de licencia ya está asignado al empleado"
+msgstr "el tipo de licencia ya está asignado al colaborador"
 
 msgid "Compensatory leave type can't assigned manually"
 msgstr "Tipo de licencia compensatoria no se asigna manualmente"
@@ -16028,7 +16028,7 @@ msgid ""
 "employee"
 msgstr ""
 "Condiciones de elegibilidad evaluadas antes de asignar este tipo de ausencia "
-"a un empleado"
+"a un colaborador"
 
 msgid "Compensatory Leave Request already exists."
 msgstr "La solicitud de permiso compensatoria ya existe."
@@ -16040,7 +16040,7 @@ msgid "Leave Clashes Count"
 msgstr "Abandonar cuenta de choques"
 
 msgid "The selected leave type is not assigned to this employee."
-msgstr "El tipo de licencia seleccionado no está asignado a este empleado."
+msgstr "El tipo de licencia seleccionado no está asignado a este colaborador."
 
 msgid "Mismatch in the breakdown of the start and end date."
 msgstr "Mismatch en el desglose de la fecha de inicio y fin."
@@ -16050,7 +16050,7 @@ msgstr "Se requiere un archivo adjunto para esta solicitud de permiso"
 
 msgid "Employee already has a leave request for this date range."
 msgstr ""
-"El empleado ya tiene una solicitud de permiso para este rango de fechas."
+"El colaborador ya tiene una solicitud de permiso para este rango de fechas."
 
 msgid "Requests cannot be made for past dates."
 msgstr "Las solicitudes no se pueden hacer para fechas pasadas."
@@ -16114,7 +16114,7 @@ msgstr "Elija los tipos de licencia para excluir de la restricción."
 #, python-brace-format
 msgid "This leave type is restricted to {gender} employees only."
 msgstr ""
-"Este tipo de ausencia está restringido únicamente a empleados de género "
+"Este tipo de ausencia está restringido únicamente a colaboradores de género "
 "{gender}."
 
 #, python-brace-format
@@ -16123,40 +16123,40 @@ msgid ""
 "assigned to this employee."
 msgstr ""
 "«{leave_type}» solo se puede asignar una vez por empleo y ya se ha asignado "
-"a este empleado."
+"a este colaborador."
 
 #, python-brace-format
 msgid ""
 "This leave type is restricted to employees with marital status: {status}."
 msgstr ""
-"Este tipo de ausencia está restringido a los empleados con estado civil: "
+"Este tipo de ausencia está restringido a los colaboradores con estado civil: "
 "{status}."
 
 #, python-brace-format
 msgid ""
 "This leave type is restricted to employees with nationality: {nationality}."
 msgstr ""
-"Este tipo de ausencia está restringido a los empleados con nacionalidad: "
+"Este tipo de ausencia está restringido a los colaboradores con nacionalidad: "
 "{nationality}."
 
 #, python-brace-format
 msgid ""
 "This leave type is restricted to employees in the {department} department."
 msgstr ""
-"Este tipo de ausencia está restringido a los empleados del departamento "
+"Este tipo de ausencia está restringido a los colaboradores del departamento "
 "{department}."
 
 #, python-brace-format
 msgid ""
 "This leave type is restricted to employees with employment type: {emp_type}."
 msgstr ""
-"Este tipo de ausencia está restringido a los empleados con tipo de empleo: "
+"Este tipo de ausencia está restringido a los colaboradores con tipo de empleo: "
 "{emp_type}."
 
 #, python-brace-format
 msgid "This leave type is restricted to employees with grade: {grade}."
 msgstr ""
-"Este tipo de ausencia está restringido a los empleados con grado: {grade}."
+"Este tipo de ausencia está restringido a los colaboradores con grado: {grade}."
 
 msgid "My Leave Requests"
 msgstr "Mis solicitudes de salida"
@@ -16264,7 +16264,7 @@ msgid ""
 "Define the different types of leave employees can request, along with "
 "payment and carry-forward rules."
 msgstr ""
-"Defina los distintos tipos de ausencia que pueden solicitar los empleados, "
+"Defina los distintos tipos de ausencia que pueden solicitar los colaboradores, "
 "junto con las reglas de pago y arrastre."
 
 msgid ""
@@ -16353,7 +16353,7 @@ msgid "On leave today"
 msgstr "De permiso hoy"
 
 msgid "Top leave takers"
-msgstr "Empleados con más permisos"
+msgstr "Colaboradores con más permisos"
 
 msgid "Unable to load chart. Please refresh the page."
 msgstr "No se pudo cargar el gráfico. Actualiza la página."
@@ -16401,13 +16401,13 @@ msgid "Leave Utilization"
 msgstr "Uso de ausencias"
 
 msgid "Used vs remaining by leave type — all employees"
-msgstr "Usado frente a restante por tipo de ausencia: todos los empleados"
+msgstr "Usado frente a restante por tipo de ausencia: todos los colaboradores"
 
 msgid "Next 7 days"
 msgstr "Próximos 7 días"
 
 msgid "Top Leave Takers"
-msgstr "Empleados con más ausencias"
+msgstr "Colaboradores con más ausencias"
 
 msgid "allocation req"
 msgstr "solicitudes de asignación"
@@ -16422,7 +16422,7 @@ msgid "comp. requests"
 msgstr "solicitudes compensatorias"
 
 msgid "Employees away"
-msgstr "Empleados ausentes"
+msgstr "Colaboradores ausentes"
 
 msgid "No leave data"
 msgstr "No hay datos de ausencias"
@@ -16455,7 +16455,7 @@ msgid "Today is a holiday."
 msgstr "Hoy es una vacación."
 
 msgid "No employees have taken leave today."
-msgstr "Ningún empleado ha tomado su permiso hoy."
+msgstr "Ningún colaborador ha tomado su permiso hoy."
 
 msgid "Are you sure you want to delete this record?"
 msgstr "¿Está seguro de que desea eliminar este registro?"
@@ -16497,7 +16497,7 @@ msgid "Leave types"
 msgstr "Tipos de permiso"
 
 msgid "Leave type is not assigned for the selected employee."
-msgstr "El tipo de salida no está asignado para el empleado seleccionado."
+msgstr "El tipo de salida no está asignado para el colaborador seleccionado."
 
 msgid "Available Leaves"
 msgstr "Hojas disponibles"
@@ -16638,7 +16638,7 @@ msgid ""
 "Only employees matching all conditions below will be eligible for this leave "
 "type."
 msgstr ""
-"Solo los empleados que cumplan todas las condiciones siguientes podrán optar "
+"Solo los colaboradores que cumplan todas las condiciones siguientes podrán optar "
 "a este tipo de ausencia."
 
 msgid "Remove this condition?"
@@ -16647,7 +16647,7 @@ msgstr "¿Quitar esta condición?"
 msgid "No conditions set — this leave type can be assigned to any employee."
 msgstr ""
 "No se han definido condiciones: este tipo de ausencia se puede asignar a "
-"cualquier empleado."
+"cualquier colaborador."
 
 msgid "Add Condition"
 msgstr "Añadir condición"
@@ -16773,7 +16773,7 @@ msgstr "No puedes aprobar tu propia solicitud de permiso."
 
 msgid "No available leave record found for this employee and leave type."
 msgstr ""
-"No se encontró ningún registro de ausencias disponible para este empleado y "
+"No se encontró ningún registro de ausencias disponible para este colaborador y "
 "tipo de ausencia."
 
 msgid "You are not an approver for this leave request."
@@ -16823,12 +16823,12 @@ msgstr "El tipo de licencia compensatoria no se puede asignar manualmente."
 
 #, python-brace-format
 msgid "Successfully assigned leave type to {} employees."
-msgstr "Tipo de licencia asignado correctamente a {} empleados."
+msgstr "Tipo de licencia asignado correctamente a {} colaboradores."
 
 #, python-brace-format
 msgid "Leave type is already assigned to some selected {} employees."
 msgstr ""
-"El tipo de partida ya está asignado a algunos empleados {} seleccionados."
+"El tipo de partida ya está asignado a algunos colaboradores {} seleccionados."
 
 #, python-brace-format
 msgid "{employee} — {leave_type}: {reason}"
@@ -16839,7 +16839,7 @@ msgstr "Tipos de permiso asignados correctamente."
 
 #, python-brace-format
 msgid "Some leave types were already assigned to {} employees."
-msgstr "Algunos tipos de permisos ya estaban asignados a {} empleados."
+msgstr "Algunos tipos de permisos ya estaban asignados a {} colaboradores."
 
 msgid "Available leaves updated successfully..."
 msgstr "Hojas disponibles actualizadas con éxito..."
@@ -16865,7 +16865,7 @@ msgid "This leave type does not exist."
 msgstr "Este tipo de licencia no existe."
 
 msgid "Leave type has already been assigned to the employee."
-msgstr "El tipo de salida ya ha sido asignado al empleado."
+msgstr "El tipo de salida ya ha sido asignado al colaborador."
 
 msgid "Invalid date format. Please use YYYY-MM-DD or a supported format."
 msgstr ""
@@ -16903,7 +16903,7 @@ msgid "User has no leave request.."
 msgstr "El usuario no tiene solicitud de salida.."
 
 msgid "User is not an employee.."
-msgstr "El usuario no es empleado.."
+msgstr "El usuario no es colaborador.."
 
 msgid "Total leaves available"
 msgstr "Total de hojas disponibles"
@@ -17090,13 +17090,13 @@ msgid "Offboarding Stage Created Successfully"
 msgstr "Etapa de desvinculación creada correctamente"
 
 msgid "Update Employee"
-msgstr "Actualizar empleado"
+msgstr "Actualizar colaborador"
 
 msgid "Updated Employee"
-msgstr "Empleado actualizado"
+msgstr "Colaborador actualizado"
 
 msgid "Added Employee"
-msgstr "Empleado añadido"
+msgstr "Colaborador añadido"
 
 #, python-format
 msgid "You have been added to the %(stage)s of %(offboarding_id)s"
@@ -17244,7 +17244,7 @@ msgid ""
 "A resignation letter for this employee is already in 'Requested' or "
 "'Approved' status."
 msgstr ""
-"Ya existe una carta de renuncia para este empleado en estado «Solicitada» o "
+"Ya existe una carta de renuncia para este colaborador en estado «Solicitada» o "
 "«Aprobada»."
 
 msgid "Is Required"
@@ -17273,7 +17273,7 @@ msgid "Allow Resignation Request"
 msgstr "Permitir solicitud de renuncia"
 
 msgid "Allow employees to submit resignation requests"
-msgstr "Permitir que los empleados envíen solicitudes de renuncia"
+msgstr "Permitir que los colaboradores envíen solicitudes de renuncia"
 
 msgid "Default days between resignation and last working day"
 msgstr "Días predeterminados entre la renuncia y el último día hábil"
@@ -17318,7 +17318,7 @@ msgid "Offboarding Pipeline"
 msgstr "Proceso de desvinculación"
 
 msgid "Employees by stage"
-msgstr "Empleados por etapa"
+msgstr "Colaboradores por etapa"
 
 msgid "Resignation Status"
 msgstr "Estado de la renuncia"
@@ -17342,7 +17342,7 @@ msgid "Exit Reasons"
 msgstr "Motivos de salida"
 
 msgid "Why employees leave"
-msgstr "Por qué se van los empleados"
+msgstr "Por qué se van los colaboradores"
 
 msgid "Joining vs Exiting"
 msgstr "Incorporaciones frente a salidas"
@@ -17411,13 +17411,13 @@ msgid "Reminder"
 msgstr "Recordatorio"
 
 msgid "No Assets Due for Return from Offboarding Employees."
-msgstr "No hay activos pendientes de devolución por parte de empleados en proceso de desvinculación."
+msgstr "No hay activos pendientes de devolución por parte de colaboradores en proceso de desvinculación."
 
 msgid "No feedbacks for Offboarding Employees."
-msgstr "No hay comentarios sobre empleados en proceso de desvinculación."
+msgstr "No hay comentarios sobre colaboradores en proceso de desvinculación."
 
 msgid "No Pending Tasks for Offboarding Employees."
-msgstr "No hay tareas pendientes para empleados en proceso de desvinculación."
+msgstr "No hay tareas pendientes para colaboradores en proceso de desvinculación."
 
 msgid "Are you sure you want to delete this offboarding?"
 msgstr "¿Seguro que desea eliminar esta desvinculación?"
@@ -17444,7 +17444,7 @@ msgid "No resignation has been created yet."
 msgstr "No se ha creado ninguna resignación todavía."
 
 msgid "Configure how employees exit the organization."
-msgstr "Configure cómo salen los empleados de la organización."
+msgstr "Configure cómo salen los colaboradores de la organización."
 
 msgid ""
 "By enabling this normal users can request for their resignation progress."
@@ -17459,7 +17459,7 @@ msgid ""
 "Set the default number of days an employee must serve between resignation "
 "and their last working day."
 msgstr ""
-"Defina el número de días predeterminado que un empleado debe cumplir entre "
+"Defina el número de días predeterminado que un colaborador debe cumplir entre "
 "la renuncia y su último día de trabajo."
 
 msgid "Are you sure want to delete this stage?"
@@ -17487,16 +17487,16 @@ msgid "Error Updating Sequence.."
 msgstr "Error al actualizar la secuencia..."
 
 msgid "Employee saved"
-msgstr "Empleado guardado"
+msgstr "Colaborador guardado"
 
 msgid "Offboarding employee deleted"
-msgstr "Empleado eliminado del proceso de desvinculación"
+msgstr "Colaborador eliminado del proceso de desvinculación"
 
 msgid "You have been removed from the offboarding"
 msgstr "Se te ha retirado del proceso de desvinculación"
 
 msgid "Employees not found"
-msgstr "Empleados no encontrados"
+msgstr "Colaboradores no encontrados"
 
 msgid "Stage deleted"
 msgstr "Etapa eliminada"
@@ -17541,7 +17541,7 @@ msgstr "El estado de la tarea ha cambiado correctamente."
 
 #, python-format
 msgid "Task could not be assigned to %(count)s employee(s)."
-msgstr "No se pudo asignar la tarea a %(count)s empleado(s)."
+msgstr "No se pudo asignar la tarea a %(count)s colaborador(s)."
 
 msgid "Task Assigned"
 msgstr "Tarea asignada"
@@ -18046,7 +18046,7 @@ msgstr "Por favor elija candidatos"
 
 #, python-format
 msgid "%(candidate)s has already been converted to employee."
-msgstr "%(candidate)s ya se ha convertido en empleado."
+msgstr "%(candidate)s ya se ha convertido en colaborador."
 
 #, python-format
 msgid "%(candidate)s added to onboarding"
@@ -18070,13 +18070,13 @@ msgstr "Imagen de perfil actualizada con éxito.."
 
 msgid "Please create your account first before continuing employee creation."
 msgstr ""
-"Cree primero su cuenta antes de continuar con la creación del empleado."
+"Cree primero su cuenta antes de continuar con la creación del colaborador."
 
 msgid "Employee with email id already exists."
-msgstr "El empleado con el identificador de correo electrónico ya existe."
+msgstr "El colaborador con el identificador de correo electrónico ya existe."
 
 msgid "Employee already exists.."
-msgstr "El empleado ya existe.."
+msgstr "El colaborador ya existe.."
 
 msgid ""
 "User account was not found. Please complete account creation and try again."
@@ -18085,13 +18085,13 @@ msgstr ""
 "inténtelo de nuevo."
 
 msgid "Employee personal details created successfully.."
-msgstr "Datos personales del empleado creados con éxito."
+msgstr "Datos personales del colaborador creados con éxito."
 
 msgid "Onboarding portal not found."
 msgstr "Portal de incorporación no encontrado."
 
 msgid "Employee bank details created successfully.."
-msgstr "Datos bancarios del empleado creados con éxito.."
+msgstr "Datos bancarios del colaborador creados con éxito.."
 
 #, python-format
 msgid ""
@@ -18491,7 +18491,7 @@ msgid ""
 "These employees have no active contract, so a salary structure can't be "
 "assigned to them: %(names)s"
 msgstr ""
-"Estos empleados no tienen un contrato activo, por lo que no se les puede "
+"Estos colaboradores no tienen un contrato activo, por lo que no se les puede "
 "asignar una estructura salarial: %(names)s"
 
 msgid "Rate must be greater than 0"
@@ -18571,10 +18571,10 @@ msgid "End date must be greater than start date"
 msgstr "La fecha de fin debe ser mayor que la fecha de inicio"
 
 msgid "An active contract already exists for this employee."
-msgstr "Ya existe un contrato activo para este empleado."
+msgstr "Ya existe un contrato activo para este colaborador."
 
 msgid "A draft contract already exists for this employee."
-msgstr "Ya existe un proyecto de contrato para este empleado."
+msgstr "Ya existe un proyecto de contrato para este colaborador."
 
 msgid "Company Experience"
 msgstr "Experiencia de la empresa"
@@ -18595,10 +18595,10 @@ msgid "Regular Overtime"
 msgstr "Horas extra ordinarias"
 
 msgid "Include All Employees"
-msgstr "Incluir a todos los empleados"
+msgstr "Incluir a todos los colaboradores"
 
 msgid "Employees Specific"
-msgstr "Empleados Específicos"
+msgstr "Colaboradores Específicos"
 
 msgid "Has max limit for allowance"
 msgstr "Tiene límite máximo para permisos"
@@ -18659,7 +18659,7 @@ msgid "Basic pay"
 msgstr "Pago básico"
 
 msgid "Employee rate"
-msgstr "Tarifa del empleado"
+msgstr "Tarifa del colaborador"
 
 msgid "Has max limit for deduction"
 msgstr "Tiene límite máximo para la deducción"
@@ -18667,7 +18667,7 @@ msgstr "Tiene límite máximo para la deducción"
 msgid ""
 "Employee rate must be specified for deductions that are not fixed amount"
 msgstr ""
-"La tarifa del empleado debe especificarse para las deducciones que no son un "
+"La tarifa del colaborador debe especificarse para las deducciones que no son un "
 "monto fijo"
 
 msgid " Don't choose taxable gross pay when pretax is enabled."
@@ -18702,7 +18702,7 @@ msgid "The start date cannot be in the future."
 msgstr "La fecha de inicio no puede ser en el futuro."
 
 msgid "Employee ,start and end date must be unique"
-msgstr "Empleado, fecha de inicio y fin debe ser única"
+msgstr "Colaborador, fecha de inicio y fin debe ser única"
 
 msgid "The data must be in dictionary or querydict type"
 msgstr "Los datos deben estar en el diccionario o tipo de querydict"
@@ -18748,7 +18748,7 @@ msgid ""
 "leaves                                         to encash in CFD / Available "
 "days"
 msgstr ""
-"El empleado no tiene tantas hojas para cobrar en CFD / Días disponibles"
+"El colaborador no tiene tantas hojas para cobrar en CFD / Días disponibles"
 
 msgid "Reimbursement deleted"
 msgstr "Reembolso eliminado"
@@ -18817,7 +18817,7 @@ msgid "Employer Rate :"
 msgstr "Tarifa del empleador:"
 
 msgid "Employee Rate :"
-msgstr "Tarifa de Empleado:"
+msgstr "Tarifa de Colaborador:"
 
 msgid "Based"
 msgstr "Basado"
@@ -18869,7 +18869,7 @@ msgid ""
 "Automatically generate payslips for employees on a scheduled day of the "
 "month."
 msgstr ""
-"Generar automáticamente las nóminas de los empleados en un día programado "
+"Generar automáticamente las nóminas de los colaboradores en un día programado "
 "del mes."
 
 msgid "Configure deductions for your company."
@@ -18939,7 +18939,7 @@ msgid "Add More"
 msgstr "Añadir más"
 
 msgid "Excluded Employees"
-msgstr "Empleados excluidos"
+msgstr "Colaboradores excluidos"
 
 msgid "There are currently no allowances to consider."
 msgstr "Actualmente no hay derechos de emisión de nada."
@@ -18996,7 +18996,7 @@ msgid "Salary Distribution"
 msgstr "Distribución salarial"
 
 msgid "Employee count by pay band"
-msgstr "Número de empleados por banda salarial"
+msgstr "Número de colaboradores por banda salarial"
 
 msgid "Deduction Components"
 msgstr "Componentes de la deducción"
@@ -19083,7 +19083,7 @@ msgid "Installments"
 msgstr "Cuotas"
 
 msgid "There are currently no loans to consider."
-msgstr "En la actualidad no hay préstamos para más personas."
+msgstr "En la actualidad no hay préstamos para más colaboradores."
 
 msgid "donation box"
 msgstr "caja de donaciones"
@@ -19124,13 +19124,13 @@ msgid "Logo"
 msgstr "Logotipo"
 
 msgid "Employee Netpay :"
-msgstr "Netpay de Empleados :"
+msgstr "Netpay de Colaboradores :"
 
 msgid "Employee ID :"
-msgstr "ID de Empleado:"
+msgstr "ID de Colaborador:"
 
 msgid "Employee Name :"
-msgstr "Nombre del empleado :"
+msgstr "Nombre del colaborador :"
 
 msgid "Department :"
 msgstr "Departamento :"
@@ -19249,10 +19249,10 @@ msgid ""
 "the employee contract start date."
 msgstr ""
 "Cuando se ejecuta este payslip, se actualizará la fecha de inicio del "
-"payslip para que coincida con la fecha de inicio del contrato del empleado."
+"payslip para que coincida con la fecha de inicio del contrato del colaborador."
 
 msgid "Employee Contract Start Date"
-msgstr "Fecha de inicio del contrato del empleado"
+msgstr "Fecha de inicio del contrato del colaborador"
 
 #, python-format
 msgid ""
@@ -19266,7 +19266,7 @@ msgstr "La fecha de fin debe ser igual o posterior a la de inicio."
 
 msgid "Payslip data not found for the specified employee and date range."
 msgstr ""
-"No se encontraron datos de nómina para el empleado y el intervalo de fechas "
+"No se encontraron datos de nómina para el colaborador y el intervalo de fechas "
 "indicados."
 
 msgid "Mail processing"
@@ -19384,7 +19384,7 @@ msgid "Contract status updated"
 msgstr "Estado del contrato actualizado"
 
 msgid "The employee filing status has been updated successfully."
-msgstr "El estado del archivo del empleado se ha actualizado correctamente."
+msgstr "El estado del archivo del colaborador se ha actualizado correctamente."
 
 msgid "You selected the wrong option for filing status."
 msgstr "Ha seleccionado la opción incorrecta para archivar estado."
@@ -19572,7 +19572,7 @@ msgstr "Has sido añadido a la reunión %(title)s"
 
 #, python-format
 msgid "You have been added as an answerable employee for the meeting %(title)s"
-msgstr "Has sido añadido como empleado responsable de la reunión %(title)s"
+msgstr "Has sido añadido como colaborador responsable de la reunión %(title)s"
 
 msgid "Add Response"
 msgstr "Añadir respuesta"
@@ -19602,16 +19602,16 @@ msgid "Objective Templates"
 msgstr "Plantillas de objetivos"
 
 msgid "Create Employee Objective"
-msgstr "Crear Objetivo de Empleado"
+msgstr "Crear Objetivo de Colaborador"
 
 msgid "Update Employee Objective"
-msgstr "Actualizar Objetivo de Empleados"
+msgstr "Actualizar Objetivo de Colaboradores"
 
 msgid "Employee objective Updated successfully"
-msgstr "Objetivo del empleado actualizado con éxito"
+msgstr "Objetivo del colaborador actualizado con éxito"
 
 msgid "Employee objective created successfully"
-msgstr "Objetivo del empleado creado con éxito"
+msgstr "Objetivo del colaborador creado con éxito"
 
 msgid "Create  Objective"
 msgstr "Crear objetivo"
@@ -19650,7 +19650,7 @@ msgid "Invalid Objective"
 msgstr "Objetivo no válido"
 
 msgid "Employee objective not found."
-msgstr "Objetivo del empleado no encontrado."
+msgstr "Objetivo del colaborador no encontrado."
 
 msgid "Key result updated sucessfully."
 msgstr "Resultado de la clave actualizado correctamente."
@@ -19710,10 +19710,10 @@ msgid "Create Bonus Point Setting"
 msgstr "Crear configuración de puntos de bonus"
 
 msgid "Employee Bonus Point "
-msgstr "Puntos extras del Empleado "
+msgstr "Puntos extras del Colaborador "
 
 msgid "Create Employee Bonus Point "
-msgstr "Crear puntos extras de empleados "
+msgstr "Crear puntos extras de colaboradores "
 
 msgid "Share Feedback request "
 msgstr "Compartir solicitud de retroalimentación "
@@ -19749,7 +19749,7 @@ msgid "Managers is a required field"
 msgstr "Gerentes es un campo obligatorio"
 
 msgid "Assign employees and start date"
-msgstr "Asignar empleados y fecha de inicio"
+msgstr "Asignar colaboradores y fecha de inicio"
 
 msgid "Enter a title"
 msgstr "Introduzca un título"
@@ -19772,7 +19772,7 @@ msgstr ""
 "objetiva"
 
 msgid "Employee Objective not found"
-msgstr "Objetivo del empleado no encontrado"
+msgstr "Objetivo del colaborador no encontrado"
 
 msgid "Target value should be greater than zero"
 msgstr "El valor objetivo debe ser mayor que cero."
@@ -19788,7 +19788,7 @@ msgstr "Añadir un comentario..."
 
 msgid "Question template is required when answer employees are choosed"
 msgstr ""
-"La plantilla de la pregunta es necesaria cuando se elige a los empleados"
+"La plantilla de la pregunta es necesaria cuando se elige a los colaboradores"
 
 msgid "For Objective and Key Result, 'Applicable For' must be 'Owner'."
 msgstr "Para Objetivo y Resultado clave, «Aplicable a» debe ser «Propietario»."
@@ -19807,10 +19807,10 @@ msgid "Point should be greater than zero."
 msgstr "El punto debe ser mayor que cero."
 
 msgid "Other employees"
-msgstr "Otros empleados"
+msgstr "Otros colaboradores"
 
 msgid "Employees need to sent feedback request."
-msgstr "Los empleados necesitan enviar una solicitud de retroalimentación."
+msgstr "Los colaboradores necesitan enviar una solicitud de retroalimentación."
 
 msgid "Include all subordinates"
 msgstr "Incluye todas las subordenadas"
@@ -19822,7 +19822,7 @@ msgid "Include all keyresults"
 msgstr "Incluye todos los resultados clave"
 
 msgid "Include all keyresults assigned to the employee."
-msgstr "Incluye todos los resultados clave asignados al empleado."
+msgstr "Incluye todos los resultados clave asignados al colaborador."
 
 msgid "Review Period Name"
 msgstr "Nombre del periodo de evaluación"
@@ -19843,7 +19843,7 @@ msgid "Years"
 msgstr "Años"
 
 msgid "Self employee progress update"
-msgstr "Actualización del progreso del empleado"
+msgstr "Actualización del progreso del colaborador"
 
 msgid "The target value can't be zero."
 msgstr "El valor objetivo no puede ser cero."
@@ -19873,11 +19873,11 @@ msgid "Likert"
 msgstr "Gusto"
 
 msgid "Employees working on the same department."
-msgstr "Empleados que trabajan en el mismo departamento."
+msgstr "Colaboradores que trabajan en el mismo departamento."
 
 msgid "Employees for whom the feedback requester is the reporting manager"
 msgstr ""
-"Empleados para los que el solicitante de retroalimentación es el gestor de "
+"Colaboradores para los que el solicitante de retroalimentación es el gestor de "
 "informes"
 
 msgid "Cycle Period"
@@ -19892,13 +19892,13 @@ msgid "Due in %(days)s days"
 msgstr "Vence en %(days)s días"
 
 msgid "Answerable Employees"
-msgstr "Empleados Responsables"
+msgstr "Colaboradores Responsables"
 
 msgid ""
 "Select the employees who can respond to question template in this meeting's, "
 "if any are added."
 msgstr ""
-"Seleccione los empleados que pueden responder a la plantilla de la pregunta "
+"Seleccione los colaboradores que pueden responder a la plantilla de la pregunta "
 "en esta reunión, si alguno se añade."
 
 msgid "Project"
@@ -19945,7 +19945,7 @@ msgid ""
 "model events and conditions."
 msgstr ""
 "Configure reglas que otorguen automáticamente puntos de bonificación a los "
-"empleados según eventos y condiciones de los modelos."
+"colaboradores según eventos y condiciones de los modelos."
 
 msgid "Do you want to delete the bonus point setting?"
 msgstr "¿Quieres eliminar la configuración de puntos de bono?"
@@ -19972,7 +19972,7 @@ msgid "in"
 msgstr "dentro de"
 
 msgid "Are you sure to remove this employee?"
-msgstr "¿Está seguro de eliminar a este empleado?"
+msgstr "¿Está seguro de eliminar a este colaborador?"
 
 msgid "Meeting"
 msgstr "Reunión"
@@ -19999,13 +19999,13 @@ msgid "Are you sure want to remove this assignee?"
 msgstr "¿Está seguro de que desea eliminar este asignado?"
 
 msgid "Do you want to Unarchive this Employee objective?"
-msgstr "¿Quieres desarchivar este objetivo de empleado?"
+msgstr "¿Quieres desarchivar este objetivo de colaborador?"
 
 msgid "Do you want to archive this Employee objective?"
-msgstr "¿Quieres archivar este objetivo de empleado?"
+msgstr "¿Quieres archivar este objetivo de colaborador?"
 
 msgid "Do you Want to delete this employee objective?"
-msgstr "¿Quiere eliminar este objetivo de empleado?"
+msgstr "¿Quiere eliminar este objetivo de colaborador?"
 
 msgid "Are you sure want to remove this key result?"
 msgstr "¿Está seguro de que desea eliminar este resultado de clave?"
@@ -20044,10 +20044,10 @@ msgid "Due on: "
 msgstr "Vence el: "
 
 msgid "Answered employees: "
-msgstr "Empleados contestados: "
+msgstr "Colaboradores contestados: "
 
 msgid "Employees not answered yet: "
-msgstr "Los empleados aún no responden: "
+msgstr "Los colaboradores aún no responden: "
 
 msgid "Cyclic feedback period: "
 msgstr "Período de retroalimentación cíclico: "
@@ -20143,7 +20143,7 @@ msgid "Response"
 msgstr "Respuesta"
 
 msgid "Employee Objectives"
-msgstr "Objetivos del Empleado"
+msgstr "Objetivos del Colaborador"
 
 msgid "Create Key Result"
 msgstr "Crear resultado de clave"
@@ -20191,7 +20191,7 @@ msgid " Days"
 msgstr " Días"
 
 msgid "Employee Key Results"
-msgstr "Resultados de la clave del empleado"
+msgstr "Resultados de la clave del colaborador"
 
 msgid "There are currently no key results to consider."
 msgstr "Actualmente no hay resultados clave para la empresa."
@@ -20260,7 +20260,7 @@ msgid "At Risk Objectives"
 msgstr "Objetivos en riesgo"
 
 msgid "Top Performers"
-msgstr "Empleados con mejor desempeño"
+msgstr "Colaboradores con mejor desempeño"
 
 msgid "Upcoming Meetings"
 msgstr "Próximas reuniones"
@@ -20383,7 +20383,7 @@ msgstr "Objetivo archivado con éxito!."
 
 msgid "No Employee Objective found matching the query."
 msgstr ""
-"No se encontró ningún objetivo del empleado que coincida con la consulta."
+"No se encontró ningún objetivo del colaborador que coincida con la consulta."
 
 msgid "You can't delete this objective,related entries exists"
 msgstr "No puede eliminar este objetivo,las entradas relacionadas existen"
@@ -20582,7 +20582,7 @@ msgstr "Resultado clave actualizado correctamente."
 
 msgid "No Employee Key Result found matching the query."
 msgstr ""
-"No se encontró ningún resultado clave del empleado que coincida con la "
+"No se encontró ningún resultado clave del colaborador que coincida con la "
 "consulta."
 
 #, python-brace-format
@@ -20608,7 +20608,7 @@ msgid "Manager has been successfully removed from the meeting."
 msgstr "El administrador se ha eliminado correctamente de la reunión."
 
 msgid "Employee has been successfully removed from the meeting."
-msgstr "El empleado ha sido eliminado con éxito de la reunión."
+msgstr "El colaborador ha sido eliminado con éxito de la reunión."
 
 msgid "Minutes of Meeting (MoM) have been created successfully"
 msgstr "Minutos de la reunión (MoM) se han creado correctamente"
@@ -20742,10 +20742,10 @@ msgid "Hours Spent"
 msgstr "Horas gastadas"
 
 msgid "Employee not included in this task"
-msgstr "Empleado no incluido en esta tarea"
+msgstr "Colaborador no incluido en esta tarea"
 
 msgid "Employee not included in this project"
-msgstr "Empleado no incluido en este proyecto"
+msgstr "Colaborador no incluido en este proyecto"
 
 msgid "Are you sure you want to delete this timesheet?"
 msgstr "¿Seguro que desea eliminar este parte de horas?"
@@ -20856,7 +20856,7 @@ msgid "Project manager"
 msgstr "Gestor del proyecto"
 
 msgid "Do you want to delete this employee?"
-msgstr "¿Desea eliminar a este empleado?"
+msgstr "¿Desea eliminar a este colaborador?"
 
 msgid "There are currently no available projects; please create a new one."
 msgstr "Actualmente no hay proyectos disponibles; por favor, cree uno nuevo."
@@ -21105,7 +21105,7 @@ msgid "Reject reason"
 msgstr "Motivo del rechazo"
 
 msgid "Convert to Employee"
-msgstr "Convertir a Empleado"
+msgstr "Convertir a Colaborador"
 
 msgid "Add to Talent Pool"
 msgstr "Añadir a la bolsa de talento"
@@ -21426,7 +21426,7 @@ msgid "Onboarding not started yet"
 msgstr "La incorporación aún no ha comenzado"
 
 msgid "Employee is uniques for candidate"
-msgstr "El empleado es único para el candidato"
+msgstr "El colaborador es único para el candidato"
 
 msgid "No Reason"
 msgstr "Sin motivo"
@@ -21518,7 +21518,7 @@ msgid "Registration Form"
 msgstr "Formulario de registro"
 
 msgid "Are you sure you want to convert this candidate into an employee?"
-msgstr "¿Está seguro de que desea convertir este candidato en un empleado?"
+msgstr "¿Está seguro de que desea convertir este candidato en un colaborador?"
 
 msgid "Do you want to archive this candidate?"
 msgstr "¿Quieres archivar este candidato?"
@@ -21533,10 +21533,10 @@ msgid "Changed by"
 msgstr "Modificado por"
 
 msgid "Converted to employee."
-msgstr "Convertido a empleado."
+msgstr "Convertido a colaborador."
 
 msgid "To employee "
-msgstr "A empleado "
+msgstr "A colaborador "
 
 msgid "Converted "
 msgstr "Convertido "
@@ -21695,7 +21695,7 @@ msgstr "Defina los motivos para rechazar a un candidato."
 
 msgid "Manage the list of skills available for candidates and employees."
 msgstr ""
-"Gestione la lista de competencias disponibles para candidatos y empleados."
+"Gestione la lista de competencias disponibles para candidatos y colaboradores."
 
 msgid "Define the recruitment pipeline stages."
 msgstr "Defina las etapas del proceso de selección."
@@ -21972,8 +21972,8 @@ msgid ""
 "employees, and hence you as part of your organization are also eligible for "
 "the same."
 msgstr ""
-". Como parte de nuestra política de empleados, ofrecemos alojamiento "
-"gratuito a todos nuestros empleados y, por lo tanto, usted, como parte de su "
+". Como parte de nuestra política de colaboradores, ofrecemos alojamiento "
+"gratuito a todos nuestros colaboradores y, por lo tanto, usted, como parte de su "
 "organización, también tiene derecho a ello."
 
 msgid ""
@@ -22026,6 +22026,261 @@ msgstr "Reclutamiento duplicado"
 
 msgid "Job positions :"
 msgstr "Posición del trabajo:"
+
+msgid "Upload %(title)s"
+msgstr "Cargar %(title)s"
+
+msgid "A guided tour of the candidate list — searching, filtering, views and managing candidates."
+msgstr "Recorrido guiado por la lista de candidatos: búsqueda, filtros, vistas y gestión de postulantes."
+
+msgid "The Candidates page is a consolidated view of every applicant across all your active recruitments. Search, filter, group and manage candidates — regardless of which pipeline or stage they are currently in."
+msgstr "La página reúne a los candidatos de todos los procesos activos. Permite buscar, filtrar, agrupar y gestionar candidaturas, sin importar el proceso o la etapa en la que se encuentren."
+
+msgid "Candidates List"
+msgstr "Lista de candidatos"
+
+msgid "The main area lists all candidates with their name, email, phone, rating, recruitment and job position. Click any row to open the full candidate profile — resume, interview history, survey responses and offer letter status."
+msgstr "El área principal muestra el nombre, correo, teléfono, calificación, proceso de selección y puesto de cada candidato. Selecciona una fila para consultar su perfil, currículum, entrevistas, respuestas de encuestas y estado de la oferta laboral."
+
+msgid "Click Create to manually add a new candidate. Fill in their personal details, assign a recruitment and starting stage, and the candidate appears in the pipeline immediately."
+msgstr "Selecciona Crear para registrar un candidato, completar sus datos personales y asignarlo a un proceso y una etapa inicial. Luego aparecerá en el flujo de selección."
+
+msgid "Actions Menu"
+msgstr "Menú de acciones"
+
+msgid "The Actions menu provides bulk operations — Export candidate data to a spreadsheet, send Bulk Mail, create a Document Request, Archive or Un-archive selected candidates, and Delete in bulk. Select candidates using the checkboxes first."
+msgstr "El menú Acciones permite exportar datos, enviar correos masivos, solicitar documentos, archivar o restaurar candidatos y eliminar varios registros. Primero selecciona los candidatos con las casillas."
+
+msgid "List & Card Views"
+msgstr "Vistas de lista y tarjetas"
+
+msgid "Switch between List view for a detailed table and Card view for a visual grid. Use the toggle icons next to the search bar to change the layout. Your last-used view is remembered."
+msgstr "Alterna entre la vista de lista, con una tabla detallada, y la vista de tarjetas. Usa los botones junto al buscador para cambiar el diseño; se recordará la última vista utilizada."
+
+msgid "Type in the search box to filter candidates by name. The list updates as you type — useful when you have a large candidate pool and need to locate someone quickly."
+msgstr "Escribe en el buscador para filtrar candidatos por nombre. La lista se actualiza mientras escribes, lo que facilita encontrar a alguien cuando hay muchos registros."
+
+msgid "Click Filter to narrow the list by recruitment, stage, hired status, source, department, job position, country and more. You can also use Group By inside the filter to organise results by recruitment, stage or other fields."
+msgstr "Selecciona Filtro para acotar la lista por proceso, etapa, estado de contratación, origen, departamento, puesto, país y otros criterios. También puedes agrupar los resultados por proceso, etapa u otros campos."
+
+msgid "A breakdown of all active candidates across your pipeline stages — Initial, Test, Interview, Hired and Cancelled."
+msgstr "Distribución de los candidatos activos en las etapas del proceso: inicial, prueba, entrevista, contratado y cancelado."
+
+msgid "A full breakdown of every active recruitment — showing candidate counts per stage so you can spot bottlenecks instantly."
+msgstr "Resumen de todos los procesos de selección activos y la cantidad de candidatos en cada etapa para identificar cuellos de botella."
+
+msgid "A guided tour of Skill Zone — talent pools for storing strong candidates for future recruitments."
+msgstr "Recorrido guiado por la bolsa de talento, donde puedes guardar perfiles destacados para futuros procesos de selección."
+
+msgid "A guided tour of recruitment stages — types, grouping by recruitment, creating and managing pipeline steps."
+msgstr "Recorrido guiado por las etapas de selección: tipos, agrupación por proceso y administración de las fases."
+
+msgid "A guided tour of survey templates, question banks and how surveys are linked to recruitments."
+msgstr "Recorrido guiado por las plantillas de encuestas, el banco de preguntas y su vinculación con los procesos de selección."
+
+msgid "A guided tour of the recruitment dashboard — KPIs, pipeline, charts and interview schedule."
+msgstr "Recorrido guiado por el panel de selección: indicadores, flujo de candidatos, gráficos y agenda de entrevistas."
+
+msgid "A guided tour of the recruitment list — creating, managing and sharing recruitment drives."
+msgstr "Recorrido guiado por la lista de procesos de selección: creación, administración y publicación de convocatorias."
+
+msgid "A guided tour of the scheduled interviews list — statuses, filtering, scheduling and managing interviews."
+msgstr "Recorrido guiado por las entrevistas programadas: estados, filtros, programación y administración."
+
+msgid "Add Candidates to a Skill Zone"
+msgstr "Añadir candidatos a una bolsa de talento"
+
+msgid "All interviews scheduled within the selected period are listed here — candidate name, stage and time at a glance."
+msgstr "Aquí se muestran las entrevistas del periodo seleccionado con el nombre del candidato, la etapa y la hora."
+
+msgid "Candidates Inside a Skill Zone"
+msgstr "Candidatos en una bolsa de talento"
+
+msgid "Click Create to add a new skill zone group — give it a title and description that reflects the skill set or role you want to pool candidates for."
+msgstr "Selecciona Crear para añadir una bolsa de talento e indica un título y una descripción relacionados con las habilidades o el puesto."
+
+msgid "Click Create to add a new stage. Give it a title, select the stage type — Initial, Test, Interview, Hired or Cancelled — assign stage managers and link it to a recruitment. The stage appears immediately in that recruitment's pipeline."
+msgstr "Selecciona Crear para añadir una etapa. Indica un título, elige el tipo —inicial, prueba, entrevista, contratado o cancelado—, asigna responsables y vincúlala a un proceso. La etapa aparecerá en su flujo de selección."
+
+msgid "Click Create to schedule a new interview. Select the candidate, assign one or more interviewers, set the date and time, and add a description or agenda. The interview appears in the list immediately."
+msgstr "Selecciona Crear para programar una entrevista. Elige al candidato, asigna uno o más entrevistadores, indica la fecha y hora y añade una descripción o agenda. La entrevista aparecerá en la lista."
+
+msgid "Click Create to start a new recruitment drive. Set the title, assign recruitment managers, add job positions, define the vacancy count, attach survey templates, and set the start and end dates."
+msgstr "Selecciona Crear para iniciar un proceso de selección. Indica el título, asigna responsables, añade puestos, define las vacantes, vincula plantillas de encuestas y establece las fechas de inicio y fin."
+
+msgid "Click Filter to narrow the list by candidate, interviewer, interview date range or status. Use date filters to see all interviews due today or this week at a glance."
+msgstr "Selecciona Filtro para acotar la lista por candidato, entrevistador, rango de fechas o estado. Usa los filtros de fecha para consultar las entrevistas de hoy o de esta semana."
+
+msgid "Click Filter to narrow the list by job position, department, company, open or closed status, and start or end date range. Use the closed filter to review historical recruitment data."
+msgstr "Selecciona Filtro para acotar la lista por puesto, departamento, empresa, estado y rango de fechas. Usa el filtro de procesos cerrados para consultar convocatorias anteriores."
+
+msgid "Click Filter to narrow the list by recruitment, stage type (Initial, Test, Interview, Hired, Cancelled) or stage manager. Use the Group By option inside the filter to organise stages under their recruitment."
+msgstr "Selecciona Filtro para acotar la lista por proceso, tipo de etapa o responsable. Usa la opción Agrupar por para organizar las etapas según el proceso al que pertenecen."
+
+msgid "Click Filter to narrow the question list by answer type or recruitment. Use this to review all questions of a particular type or to see which questions are linked to a specific recruitment pipeline."
+msgstr "Selecciona Filtro para acotar las preguntas por tipo de respuesta o proceso de selección, y revisar las preguntas asociadas a un flujo determinado."
+
+msgid "Click the + button in the Questions tab to create a new individual question. Set the question text, choose the answer type and optionally mark it as required. Once saved it appears in the bank ready to be added to templates."
+msgstr "Selecciona el botón + de la pestaña Preguntas para crear una pregunta. Escribe el texto, elige el tipo de respuesta y, si corresponde, márcala como obligatoria. Al guardarla, estará disponible para las plantillas."
+
+msgid "Click the + button in the Templates tab to create a new template group. Give it a title — this becomes the group name that you'll assign to a recruitment pipeline."
+msgstr "Selecciona el botón + de la pestaña Plantillas para crear un grupo. El título será el nombre que podrás asignar a un proceso de selección."
+
+msgid "Click the column settings button at the top-right of the table to show or hide columns — Interviewer, Interview Time, Description or Status — so you can focus on the data you need."
+msgstr "Usa el botón de configuración de columnas, en la parte superior derecha de la tabla, para mostrar u ocultar el entrevistador, la hora, la descripción o el estado."
+
+msgid "Click the column settings button at the top-right of the table to show or hide columns — Managers, Open Jobs, Vacancy, Total Hires, Start Date or End Date — so you can tailor the view to what you need."
+msgstr "Usa el botón de configuración de columnas, en la parte superior derecha de la tabla, para mostrar u ocultar responsables, puestos, vacantes, contrataciones y fechas."
+
+msgid "Click the column settings button at the top-right of the table to show or hide columns — Title, Managers or Type — to focus on the information you need."
+msgstr "Usa el botón de configuración de columnas, en la parte superior derecha de la tabla, para mostrar u ocultar el título, los responsables o el tipo."
+
+msgid "Click the ellipsis (⋮) button on any template group to access its actions — Preview the full survey as a candidate would see it, Add Questions from your question bank, Edit the group name, or Delete the group entirely."
+msgstr "Selecciona el botón de opciones (⋮) de un grupo para previsualizar la encuesta, añadir preguntas, editar el nombre o eliminar el grupo."
+
+msgid "Create Question"
+msgstr "Crear pregunta"
+
+msgid "Create Recruitment"
+msgstr "Crear proceso de selección"
+
+msgid "Create Template Group"
+msgstr "Crear grupo de plantillas"
+
+msgid "Create a Skill Zone"
+msgstr "Crear una bolsa de talento"
+
+msgid "Each accordion row is one template group. It shows the group name and the count of questions attached to it. Expand it to review the individual questions inside."
+msgstr "Cada fila desplegable corresponde a un grupo de plantillas y muestra su nombre y la cantidad de preguntas. Expándela para revisar las preguntas incluidas."
+
+msgid "Each row represents one recruitment drive. Click a row to open its detail panel — where you can view the full record, edit settings, or access the pipeline for that job opening. A coloured left border indicates whether it is open or closed."
+msgstr "Cada fila representa un proceso de selección. Selecciónala para consultar sus detalles, editar la configuración o abrir el flujo del puesto. El borde de color indica si está abierto o cerrado."
+
+msgid "Each row shows a stage with its title, assigned stage managers and type. Click any row to open the detail panel where you can edit the stage name, reassign managers, change its type or delete it."
+msgstr "Cada fila muestra el nombre y tipo de etapa y sus responsables. Selecciónala para editarla, reasignar responsables, cambiar el tipo o eliminarla."
+
+msgid "Each row shows the candidate name, interviewer(s), scheduled date and time, description and current status. Click any row to open the full interview detail — update the outcome, add notes or reschedule from there."
+msgstr "Cada fila muestra el candidato, los entrevistadores, la fecha, la hora, la descripción y el estado. Selecciónala para consultar los detalles, actualizar el resultado, añadir notas o reprogramarla."
+
+msgid "Each skill zone is a named group — for example 'Python Developers' or 'Sales Talent'. Click any group row to expand it and see the candidates stored inside."
+msgstr "Cada bolsa de talento es un grupo con nombre. Selecciona una fila para expandirla y consultar los candidatos incluidos."
+
+msgid "Edit & Archive Skill Zones"
+msgstr "Editar y archivar bolsas de talento"
+
+msgid "Expanded rows show each candidate's name, reason for adding them, date added and a link to their resume. Click a candidate row to open their full profile."
+msgstr "Las filas expandidas muestran el nombre del candidato, el motivo y la fecha de inclusión, además de un enlace a su currículum. Selecciona una fila para abrir su perfil."
+
+msgid "Filter by Period"
+msgstr "Filtrar por periodo"
+
+msgid "Hiring Pipeline Table"
+msgstr "Tabla del flujo de selección"
+
+msgid "Interview List"
+msgstr "Lista de entrevistas"
+
+msgid "Interviews Panel"
+msgstr "Panel de entrevistas"
+
+msgid "KPI Cards"
+msgstr "Tarjetas de indicadores"
+
+msgid "Questions Tab"
+msgstr "Pestaña Preguntas"
+
+msgid "Recruitment List"
+msgstr "Lista de procesos de selección"
+
+msgid "Schedule an Interview"
+msgstr "Programar una entrevista"
+
+msgid "Search & Filter"
+msgstr "Buscar y filtrar"
+
+msgid "Search by candidate name or use the Filter button to narrow by candidate, recruitment, job position, reject reason, offer letter status and more."
+msgstr "Busca por nombre de candidato o usa Filtro para acotar por candidato, proceso, puesto, motivo de rechazo, estado de la oferta y otros criterios."
+
+msgid "See how many candidates move through each hiring stage and where drop-offs happen. Click a bar to drill into that stage's candidates."
+msgstr "Consulta cuántos candidatos avanzan por cada etapa y dónde se producen abandonos. Selecciona una barra para ver los candidatos de esa etapa."
+
+msgid "Skill Zone Groups"
+msgstr "Grupos de bolsas de talento"
+
+msgid "Skill Zone is a talent pool — a place to park strong candidates who were not hired this time but should be considered for future openings. Organised by skill or role, not by recruitment."
+msgstr "La bolsa de talento permite guardar perfiles destacados que no fueron seleccionados en esta ocasión, pero podrían considerarse para futuras vacantes. Se organiza por habilidades o puestos, no por proceso."
+
+msgid "Stages List"
+msgstr "Lista de etapas"
+
+msgid "Stages define the steps candidates move through in a recruitment pipeline — Initial, Test, Interview, Hired and Cancelled. This page lists all active stages with their recruitment, assigned managers and type. The order here determines the column sequence in the pipeline kanban board."
+msgstr "Las etapas definen las fases que recorren los candidatos: inicial, prueba, entrevista, contratado y cancelado. Esta página muestra las etapas activas, sus procesos y responsables. El orden determina las columnas del tablero."
+
+msgid "Tabs Overview"
+msgstr "Resumen de pestañas"
+
+msgid "Template Actions"
+msgstr "Acciones de plantilla"
+
+msgid "Template Group"
+msgstr "Grupo de plantillas"
+
+msgid "Templates Tab"
+msgstr "Pestaña Plantillas"
+
+msgid "The Questions tab is your reusable question bank. Each card is one question — text, multiple choice, rating or file upload — that can be added to any template group."
+msgstr "La pestaña Preguntas contiene el banco de preguntas reutilizables. Cada tarjeta representa una pregunta de texto, selección múltiple, calificación o carga de archivos que puedes añadir a un grupo."
+
+msgid "The Recruitment page lists all your hiring drives. Each row is one recruitment — showing its title, assigned managers, open job positions, vacancy target, total hires to date, start and end dates, and whether it is open or closed."
+msgstr "La página de selección muestra todas las convocatorias. Cada fila incluye el título, los responsables, los puestos, la cantidad de vacantes y contrataciones, las fechas y el estado."
+
+msgid "The Scheduled Interviews page lists every interview across all recruitments in one place. Each row shows the candidate, assigned interviewers, date, time and a live status — Upcoming, Interview Today, Completed or Expired — calculated automatically."
+msgstr "La página de entrevistas programadas reúne todas las entrevistas de los procesos. Muestra el candidato, los entrevistadores, la fecha, la hora y el estado actualizado automáticamente."
+
+msgid "The Survey Templates page lets you build reusable question banks and template groups that are sent to candidates during recruitment. Organise your questions into named templates — for example, Technical Screen or Culture Fit — and assign them to any recruitment pipeline."
+msgstr "La página de plantillas de encuestas permite crear bancos de preguntas y grupos reutilizables para enviar a los candidatos. Organiza las preguntas en plantillas y asígnalas a los procesos de selección."
+
+msgid "The Templates tab lists all your named template groups. Each group accordion shows which questions belong to it and how many. Click a group to expand it and see its questions."
+msgstr "La pestaña Plantillas muestra los grupos disponibles y la cantidad de preguntas que contiene cada uno. Selecciona un grupo para desplegar sus preguntas."
+
+msgid "The page is split into two tabs: Templates groups your questions under named headings, and Questions holds the individual reusable questions that make up those templates."
+msgstr "La página tiene dos pestañas: Plantillas organiza las preguntas en grupos y Preguntas contiene las preguntas reutilizables que forman esas plantillas."
+
+msgid "This dashboard gives you a real-time view of your entire hiring operation — vacancies, candidates, pipeline health and interview schedule all in one place."
+msgstr "Este panel ofrece una vista actualizada de la selección: vacantes, candidatos, avance de los procesos y agenda de entrevistas."
+
+msgid "Toggle Columns"
+msgstr "Mostrar u ocultar columnas"
+
+msgid "Total vacancies, ongoing recruitments, candidates hired, conversion rate and offer acceptance rate — your key hiring metrics updated live."
+msgstr "Consulta en tiempo real las vacantes, los procesos activos, las contrataciones, la tasa de conversión y la aceptación de ofertas."
+
+msgid "Track how many offer letters are pending, accepted or rejected across all candidates at a glance."
+msgstr "Consulta de un vistazo cuántas ofertas laborales están pendientes, aceptadas o rechazadas."
+
+msgid "Type in the search box to filter interviews by candidate name or interviewer. The list updates as you type — handy for finding a specific interview in a busy schedule."
+msgstr "Escribe en el buscador para filtrar entrevistas por candidato o entrevistador. La lista se actualiza mientras escribes."
+
+msgid "Type in the search box to filter recruitments by title. The list updates as you type — helpful when you manage many open and closed positions and need to locate one quickly."
+msgstr "Escribe en el buscador para filtrar procesos por título. La lista se actualiza mientras escribes y facilita encontrar una convocatoria."
+
+msgid "Type in the search box to filter stages by name. The list updates as you type — useful when you have many stages across several recruitments and need to find one quickly."
+msgstr "Escribe en el buscador para filtrar etapas por nombre. La lista se actualiza mientras escribes y facilita encontrar una etapa."
+
+msgid "Understand where your successful candidates come from — application form, referrals, internal or other sources."
+msgstr "Identifica de dónde provienen los candidatos seleccionados: formularios, referidos, fuentes internas u otros medios."
+
+msgid "Use the edit icon to rename a skill zone, the archive icon to hide it without deleting, and the trash icon to permanently remove it."
+msgstr "Usa el icono de edición para cambiar el nombre de una bolsa, el de archivo para ocultarla sin eliminarla y el de papelera para borrarla definitivamente."
+
+msgid "Use the period picker to focus on this month, last month, the quarter, or any custom date range. All charts and KPIs update instantly."
+msgstr "Usa el selector de periodo para consultar este mes, el anterior, el trimestre o un rango personalizado. Los gráficos e indicadores se actualizarán."
+
+msgid "Use the person+ icon on any skill zone row to add a candidate to that pool. You can also add candidates directly from the pipeline when rejecting or archiving them."
+msgstr "Usa el icono de colaborador con + para añadir un candidato a una bolsa. También puedes agregarlo desde el flujo al rechazarlo o archivarlo."
+
+msgid "Use the search box to filter questions by name. The list updates as you type — handy when your question bank grows large and you need to locate a specific question quickly."
+msgstr "Escribe en el buscador para filtrar preguntas por nombre. La lista se actualiza mientras escribes y facilita encontrar una pregunta."
 
 msgid "'s Talent Pools"
 msgstr ": Bolsas de talento"
@@ -22416,19 +22671,19 @@ msgid "Candidate Does not exists.."
 msgstr "Candidate no existe.."
 
 msgid "This candidate is already converted to an employee."
-msgstr "Este candidato ya se ha convertido en empleado."
+msgstr "Este candidato ya se ha convertido en colaborador."
 
 msgid "User instance with this mail already exists"
 msgstr "La instancia de usuario con este correo ya existe"
 
 msgid "Candidate has been successfully converted into an employee."
-msgstr "Candidate se ha convertido con éxito en empleado."
+msgstr "Candidate se ha convertido con éxito en colaborador."
 
 msgid "An error occurred while creating employee data."
-msgstr "Se produjo un error al crear los datos de los empleados."
+msgstr "Se produjo un error al crear los datos de los colaboradores."
 
 msgid "An employee with this email already exists"
-msgstr "Ya existe un empleado con este correo electrónico"
+msgstr "Ya existe un colaborador con este correo electrónico"
 
 msgid "Interview deleted successfully."
 msgstr "Entrevista eliminada con éxito."
@@ -22613,7 +22868,7 @@ msgid "Employment status"
 msgstr "Situación laboral"
 
 msgid "Employee type"
-msgstr "Tipo de empleado"
+msgstr "Tipo de colaborador"
 
 msgid "Leave status"
 msgstr "Estado de la ausencia"
@@ -22952,7 +23207,7 @@ msgid ""
 "OT hours by department (default). Named employee rows require ?"
 "include_names=1 and attendance.change_attendance."
 msgstr ""
-"Horas extra por departamento (predeterminado). Las filas de empleados con "
+"Horas extra por departamento (predeterminado). Las filas de colaboradores con "
 "nombre requieren ?include_names=1 y attendance.change_attendance."
 
 msgid "Leave Planning (Used vs Entitlement)"
@@ -22964,7 +23219,7 @@ msgid ""
 msgstr ""
 "Relación de planificación entre los días de ausencia aprobados en el periodo "
 "y la instantánea de derechos actual: no es un indicador del consumo del "
-"empleado."
+"colaborador."
 
 msgid "Open Leave Balance (Days)"
 msgstr "Saldo de ausencias abierto (días)"
@@ -23004,7 +23259,7 @@ msgid ""
 "Gross cost per active headcount and average pay by department (not hours-"
 "based FTE)."
 msgstr ""
-"Coste bruto por empleado activo y salario medio por departamento (no es un "
+"Coste bruto por colaborador activo y salario medio por departamento (no es un "
 "ETC basado en horas)."
 
 msgid "Payslip Register"
@@ -23170,7 +23425,7 @@ msgid ""
 "Active employees who cannot be paid: missing bank details or no active "
 "contract. An exception report -- empty is good."
 msgstr ""
-"Empleados activos que no pueden recibir pago: faltan datos bancarios o no "
+"Colaboradores activos que no pueden recibir pago: faltan datos bancarios o no "
 "tienen contrato activo. Un informe de excepciones: vacío es bueno."
 
 msgid "Loan & Advance Ledger"
@@ -23180,7 +23435,7 @@ msgid ""
 "Outstanding employee loans and advances: principal, recovered installments "
 "and remaining balance."
 msgstr ""
-"Préstamos y anticipos pendientes de los empleados: principal, cuotas "
+"Préstamos y anticipos pendientes de los colaboradores: principal, cuotas "
 "recuperadas y saldo restante."
 
 msgid "Reimbursement Register"
@@ -23342,7 +23597,7 @@ msgid "Top 10 share"
 msgstr "Proporción de los 10 principales"
 
 msgid "Employees with OT"
-msgstr "Empleados con horas extra"
+msgstr "Colaboradores con horas extra"
 
 msgid "Names hidden unless include_names + change_attendance"
 msgstr "Los nombres se ocultan salvo con include_names + change_attendance"
@@ -23408,7 +23663,7 @@ msgid "Component"
 msgstr "Componente"
 
 msgid "Cost per head (proxy)"
-msgstr "Coste por persona (aproximado)"
+msgstr "Coste por colaborador (aproximado)"
 
 msgid "Gross / active headcount — not hours-based FTE"
 msgstr "Bruto / plantilla activa: no es un ETC basado en horas"
@@ -23423,16 +23678,16 @@ msgid "Total gross"
 msgstr "Bruto total"
 
 msgid "Cost per Head by Department"
-msgstr "Coste por persona y departamento"
+msgstr "Coste por colaborador y departamento"
 
 msgid "Cost / head"
-msgstr "Coste / persona"
+msgstr "Coste / colaborador"
 
 msgid "Avg Net"
 msgstr "Neto promedio"
 
 msgid "Cost / Head"
-msgstr "Coste / persona"
+msgstr "Coste / colaborador"
 
 msgid "Gross total"
 msgstr "Total bruto"
@@ -23471,7 +23726,7 @@ msgid "Payroll app is not installed."
 msgstr "La aplicación de nóminas no está instalada."
 
 msgid "No active employees in scope."
-msgstr "No hay empleados activos en el ámbito."
+msgstr "No hay colaboradores activos en el ámbito."
 
 msgid "No bank details"
 msgstr "Sin datos bancarios"
@@ -23489,7 +23744,7 @@ msgid "Missing bank details"
 msgstr "Faltan datos bancarios"
 
 msgid "No EmployeeBankDetails record"
-msgstr "No hay registro de datos bancarios del empleado"
+msgstr "No hay registro de datos bancarios del colaborador"
 
 msgid "No contract in 'active' status"
 msgstr "Ningún contrato en estado «activo»"
@@ -23499,7 +23754,7 @@ msgstr "Listo para pagar"
 
 #, python-format
 msgid "%(ready)s of %(total)s active employees"
-msgstr "%(ready)s de %(total)s empleados activos"
+msgstr "%(ready)s de %(total)s colaboradores activos"
 
 msgid "Ready"
 msgstr "Listo"
@@ -23630,7 +23885,7 @@ msgid "Onboarding app is not installed."
 msgstr "La aplicación de incorporación no está instalada."
 
 msgid "Onboardees (period)"
-msgstr "Personas en incorporación (periodo)"
+msgstr "Colaboradores en incorporación (periodo)"
 
 msgid "start_onboard candidates in period"
 msgstr "candidatos start_onboard en el periodo"
@@ -23639,7 +23894,7 @@ msgid "Task completion"
 msgstr "Finalización de tareas"
 
 msgid "Tasks for period onboardees only"
-msgstr "Tareas solo para las personas en incorporación del periodo"
+msgstr "Tareas solo para colaboradores incorporados en este periodo"
 
 msgid "Total tasks"
 msgstr "Total de tareas"
@@ -23723,10 +23978,10 @@ msgid "Candidates · source %(s)s"
 msgstr "Candidatos · fuente %(s)s"
 
 msgid "Present employee-days"
-msgstr "Días-empleado presentes"
+msgstr "Días-colaborador presentes"
 
 msgid "Unique employee × day"
-msgstr "Empleado único × día"
+msgstr "Colaborador único × día"
 
 msgid "Late comes"
 msgstr "Retrasos"
@@ -23786,10 +24041,10 @@ msgid "With OT"
 msgstr "Con horas extra"
 
 msgid "OT concentrated in the top 5 employees"
-msgstr "Horas extra concentradas en los 5 principales empleados"
+msgstr "Horas extra concentradas en los 5 principales colaboradores"
 
 msgid "OT concentrated in the top 10 employees"
-msgstr "Horas extra concentradas en los 10 principales empleados"
+msgstr "Horas extra concentradas en los 10 principales colaboradores"
 
 msgid "Period used / entitlement"
 msgstr "Usado en el periodo / derecho"
@@ -23833,7 +24088,7 @@ msgid "With balances"
 msgstr "Con saldos"
 
 msgid "Employees with leave"
-msgstr "Empleados con ausencias"
+msgstr "Colaboradores con ausencias"
 
 msgid "Liability by Leave Type"
 msgstr "Pasivo por tipo de ausencia"
@@ -23897,13 +24152,13 @@ msgid "Headcount"
 msgstr "Plantilla"
 
 msgid "Active employees"
-msgstr "Empleados activos"
+msgstr "Colaboradores activos"
 
 msgid "FTE (proxy)"
 msgstr "ETC (aproximado)"
 
 msgid "From employee type"
-msgstr "Del tipo de empleado"
+msgstr "Del tipo de colaborador"
 
 msgid "With active staff"
 msgstr "Con personal activo"
@@ -23918,13 +24173,13 @@ msgid "Headcount by Department"
 msgstr "Plantilla por departamento"
 
 msgid "By Employee Type"
-msgstr "Por tipo de empleado"
+msgstr "Por tipo de colaborador"
 
 msgid "Dimension"
 msgstr "Dimensión"
 
 msgid "No active employees."
-msgstr "No hay empleados activos."
+msgstr "No hay colaboradores activos."
 
 msgid "Under 25"
 msgstr "Menores de 25"
@@ -23984,7 +24239,7 @@ msgid "Avg tenure (yrs)"
 msgstr "Antigüedad promedio (años)"
 
 msgid "Active employees with joining date"
-msgstr "Empleados activos con fecha de incorporación"
+msgstr "Colaboradores activos con fecha de incorporación"
 
 msgid "With joining date"
 msgstr "Con fecha de incorporación"
@@ -24187,19 +24442,19 @@ msgstr "Días hasta la salida"
 
 #, python-format
 msgid "Employees in %(dept)s"
-msgstr "Empleados en %(dept)s"
+msgstr "Colaboradores en %(dept)s"
 
 #, python-format
 msgid "Employees · %(type)s"
-msgstr "Empleados · %(type)s"
+msgstr "Colaboradores · %(type)s"
 
 #, python-format
 msgid "Employees in %(loc)s"
-msgstr "Empleados en %(loc)s"
+msgstr "Colaboradores en %(loc)s"
 
 #, python-format
 msgid "Employees · %(job)s"
-msgstr "Empleados · %(job)s"
+msgstr "Colaboradores · %(job)s"
 
 msgid "Exits · Rolling 6 months"
 msgstr "Salidas · 6 meses móviles"
@@ -24533,28 +24788,28 @@ msgid "Shift Allocation Requests"
 msgstr "Solicitudes de asignación de turnos"
 
 msgid "Active employees by work type"
-msgstr "Empleados activos por tipo de trabajo"
+msgstr "Colaboradores activos por tipo de trabajo"
 
 msgid "Active employees by assigned shift"
-msgstr "Empleados activos por turno asignado"
+msgstr "Colaboradores activos por turno asignado"
 
 msgid "Department Distribution"
 msgstr "Distribución por departamento"
 
 msgid "Active employees by department"
-msgstr "Empleados activos por departamento"
+msgstr "Colaboradores activos por departamento"
 
 msgid "Employees Per Reporting Manager"
-msgstr "Empleados por responsable directo"
+msgstr "Colaboradores por responsable directo"
 
 msgid "Active direct reports, top 10 managers"
-msgstr "Empleados a cargo de los 10 principales responsables"
+msgstr "Colaboradores a cargo de los 10 principales responsables"
 
 msgid "Job Position Headcount by Department"
 msgstr "Personal por puesto y departamento"
 
 msgid "Active employees per job position, stacked by department"
-msgstr "Empleados activos por puesto, desglosados por departamento"
+msgstr "Colaboradores activos por puesto, desglosados por departamento"
 
 msgid "New Employees"
 msgstr "Nuevas incorporaciones"
@@ -24611,13 +24866,13 @@ msgid "Open Leave dashboard"
 msgstr "Abrir el panel de ausencias"
 
 msgid "Employee Status"
-msgstr "Estado del empleado"
+msgstr "Estado del colaborador"
 
 msgid "Active vs Inactive"
 msgstr "Activos frente a inactivos"
 
 msgid "Open Employee dashboard"
-msgstr "Abrir el panel del empleado"
+msgstr "Abrir el panel del colaborador"
 
 msgid "Leave Breakdown"
 msgstr "Desglose de ausencias"
@@ -24644,7 +24899,7 @@ msgid "Hiring Timeline"
 msgstr "Cronología de contratación"
 
 msgid "Employees joined by month"
-msgstr "Empleados incorporados por mes"
+msgstr "Colaboradores incorporados por mes"
 
 msgid "Requests ranked by department"
 msgstr "Solicitudes clasificadas por departamento"
@@ -24659,7 +24914,7 @@ msgid "Stage pipeline — share of candidates"
 msgstr "Proceso por etapas: proporción de candidatos"
 
 msgid "Employee Turnover"
-msgstr "Rotación de empleados"
+msgstr "Rotación de colaboradores"
 
 msgid "New hires vs exits — last 6 months"
 msgstr "Nuevas contrataciones frente a salidas: últimos 6 meses"
@@ -24869,16 +25124,16 @@ msgid "Secure Sign-in"
 msgstr "Inicio de sesión seguro"
 
 msgid "People operations, made human."
-msgstr "Gestión de personas, más humana."
+msgstr "Gestión de colaboradores, más humana."
 
 msgid "Your people workspace"
-msgstr "Tu espacio de trabajo para personas"
+msgstr "Tu espacio de trabajo para colaboradores"
 
 msgid "Bring your whole team together."
 msgstr "Todo tu equipo, en un solo lugar."
 
 msgid "One thoughtful space to support your people and make work better, every day."
-msgstr "Un espacio para acompañar a las personas y hacer que el trabajo sea mejor cada día."
+msgstr "Un espacio para acompañar al equipo y hacer que el trabajo sea mejor cada día."
 
 msgid "Your team at a glance"
 msgstr "Tu equipo de un vistazo"
@@ -24887,7 +25142,7 @@ msgid "All together"
 msgstr "Todo el equipo"
 
 msgid "People"
-msgstr "Personas"
+msgstr "Colaboradores"
 
 msgid "Wellbeing"
 msgstr "Bienestar"
@@ -24944,7 +25199,7 @@ msgid "d overdue"
 msgstr "d de retraso"
 
 msgid "Active employees, by department"
-msgstr "Empleados activos por departamento"
+msgstr "Colaboradores activos por departamento"
 
 msgid "Total records"
 msgstr "Registros totales"
@@ -25010,7 +25265,7 @@ msgid "Access denied"
 msgstr "Acceso denegado"
 
 msgid "Only the employees selected in any of the fields will have access to the"
-msgstr "Solo los empleados seleccionados en alguno de los campos tendrán acceso a"
+msgstr "Solo los colaboradores seleccionados en alguno de los campos tendrán acceso a"
 
 msgid "Comments of -"
 msgstr "Comentarios de -"
@@ -25082,7 +25337,7 @@ msgid "Schedule reports"
 msgstr "Programar informes"
 
 msgid "The report is emailed to each selected employee."
-msgstr "El informe se enviará por correo a cada empleado seleccionado."
+msgstr "El informe se enviará por correo a cada colaborador seleccionado."
 
 msgid "Weekday"
 msgstr "Día de la semana"
@@ -25109,7 +25364,7 @@ msgid "Hires vs exits"
 msgstr "Contrataciones frente a bajas"
 
 msgid "By month. Click a column to see the people."
-msgstr "Por mes. Haz clic en una columna para ver a las personas."
+msgstr "Por mes. Haz clic en una columna para ver a los colaboradores."
 
 msgid "Exits by department"
 msgstr "Bajas por departamento"
@@ -25124,25 +25379,25 @@ msgid "Month by month"
 msgstr "Mes a mes"
 
 msgid "people"
-msgstr "personas"
+msgstr "colaboradores"
 
 msgid "Enable Leave Encashment"
 msgstr "Habilitar el pago de permisos no utilizados"
 
 msgid "When disabled, employees will not see the Leave Encashments section."
-msgstr "Si se deshabilita, los empleados no verán la sección de pago de permisos no utilizados."
+msgstr "Si se deshabilita, los colaboradores no verán la sección de pago de permisos no utilizados."
 
 msgid "Show or hide the Leave Encashments section for employees."
-msgstr "Mostrar u ocultar para los empleados la sección de pago de permisos no utilizados."
+msgstr "Mostrar u ocultar para los colaboradores la sección de pago de permisos no utilizados."
 
 msgid "Apply to all employees"
-msgstr "Aplicar a todos los empleados"
+msgstr "Aplicar a todos los colaboradores"
 
 msgid "When enabled, every employee can use Leave Encashment."
-msgstr "Al habilitar esta opción, todos los empleados podrán solicitar el pago de permisos no utilizados."
+msgstr "Al habilitar esta opción, todos los colaboradores podrán solicitar el pago de permisos no utilizados."
 
 msgid "Choose which employees can use Leave Encashment."
-msgstr "Elige qué empleados pueden solicitar el pago de permisos no utilizados."
+msgstr "Elige qué colaboradores pueden solicitar el pago de permisos no utilizados."
 
 msgid "Update Survey Template"
 msgstr "Actualizar plantilla de encuesta"
@@ -25394,7 +25649,7 @@ msgid "Edit in contract"
 msgstr "Editar en el contrato"
 
 msgid "No active contract. Pay is set on the employee's contract."
-msgstr "No hay un contrato activo. El salario se configura en el contrato del empleado."
+msgstr "No hay un contrato activo. El salario se configura en el contrato del colaborador."
 
 msgid "Login Access"
 msgstr "Acceso al sistema"
@@ -25421,7 +25676,7 @@ msgid "Cancellation Requested"
 msgstr "Cancelación solicitada"
 
 msgid "No key results have been added for this employee"
-msgstr "No se han añadido resultados clave para este empleado"
+msgstr "No se han añadido resultados clave para este colaborador"
 
 msgid "Access Denied !"
 msgstr "¡Acceso denegado!"
@@ -26876,7 +27131,7 @@ msgid "This email was sent because your email was registered as a candidate at %
 msgstr "Recibió este correo porque su dirección se registró como candidato en %(company)s."
 
 msgid "This email was sent because your email was registered as an employee at %(company)s."
-msgstr "Recibió este correo porque su dirección se registró como empleado en %(company)s."
+msgstr "Recibió este correo porque su dirección se registró como colaborador en %(company)s."
 
 msgid "Don't want to receive emails like these anymore?"
 msgstr "¿Ya no desea recibir correos como este?"
@@ -26981,7 +27236,7 @@ msgid "Download them, fix the problems in the Errors column's list, then upload 
 msgstr "Descárguelos, corrija los problemas indicados en la columna «Errores» y vuelva a cargar el archivo corregido."
 
 msgid "Each row must find exactly one employee. Tick more than one and all of them must agree."
-msgstr "Cada fila debe encontrar exactamente un empleado. Si selecciona más de uno, todos deben coincidir."
+msgstr "Cada fila debe encontrar exactamente un colaborador. Si selecciona más de uno, todos deben coincidir."
 
 msgid "Error Records"
 msgstr "Registros con errores"
@@ -27020,7 +27275,7 @@ msgid "Master Data Import"
 msgstr "Importación de datos maestros"
 
 msgid "Match Employees By"
-msgstr "Buscar coincidencias de empleados por"
+msgstr "Buscar coincidencias de colaboradores por"
 
 msgid "Match Records By"
 msgstr "Buscar coincidencias de registros por"
@@ -27266,7 +27521,7 @@ msgid "Each half counts as half a day in its own status."
 msgstr "Cada mitad cuenta como medio día en su estado correspondiente."
 
 msgid "Employees with pending hours, by department"
-msgstr "Empleados con horas pendientes por departamento"
+msgstr "Colaboradores con horas pendientes por departamento"
 
 msgid "Enter the hours as H:MM, for example 8:30."
 msgstr "Introduzca las horas como H:MM; por ejemplo, 8:30."
@@ -27389,7 +27644,7 @@ msgid "early"
 msgstr "antes"
 
 msgid "employees with pending hours"
-msgstr "empleados con horas pendientes"
+msgstr "colaboradores con horas pendientes"
 
 msgid "for one day. Save it anyway?"
 msgstr "para un día. ¿Desea guardarlo de todos modos?"
@@ -27440,10 +27695,10 @@ msgid "Add slab"
 msgstr "Añadir tramo"
 
 msgid "Add to these employees"
-msgstr "Añadir a estos empleados"
+msgstr "Añadir a estos colaboradores"
 
 msgid "All active employees"
-msgstr "Todos los empleados activos"
+msgstr "Todos los colaboradores activos"
 
 msgid "All filing statuses"
 msgstr "Todos los estados fiscales"
@@ -27464,13 +27719,13 @@ msgid "Applies"
 msgstr "Se aplica"
 
 msgid "Applies to the selected employees only."
-msgstr "Solo se aplica a los empleados seleccionados."
+msgstr "Solo se aplica a los colaboradores seleccionados."
 
 msgid "Applies to this employee only."
-msgstr "Solo se aplica a este empleado."
+msgstr "Solo se aplica a este colaborador."
 
 msgid "Apply to every active employee"
-msgstr "Aplicar a todos los empleados activos"
+msgstr "Aplicar a todos los colaboradores activos"
 
 msgid "Assign a structure"
 msgstr "Asignar una estructura"
@@ -27560,10 +27815,10 @@ msgid "Check a salary"
 msgstr "Comprobar un salario"
 
 msgid "Choose exactly which employees to include in this run."
-msgstr "Elija exactamente qué empleados incluir en este proceso."
+msgstr "Elija exactamente qué colaboradores incluir en este proceso."
 
 msgid "Clear the employees this search found"
-msgstr "Quitar los empleados encontrados por esta búsqueda"
+msgstr "Quitar los colaboradores encontrados por esta búsqueda"
 
 msgid "Code"
 msgstr "Código"
@@ -27674,19 +27929,19 @@ msgid "Elapsed"
 msgstr "Tiempo transcurrido"
 
 msgid "Employee and employer share, paid payslips"
-msgstr "Aportaciones del empleado y de la empresa en nóminas pagadas"
+msgstr "Aportaciones del colaborador y de la empresa en nóminas pagadas"
 
 msgid "Employee name:"
-msgstr "Nombre del empleado:"
+msgstr "Nombre del colaborador:"
 
 msgid "Employee share"
-msgstr "Aportación del empleado"
+msgstr "Aportación del colaborador"
 
 msgid "Employees by payslip status"
-msgstr "Empleados por estado de nómina"
+msgstr "Colaboradores por estado de nómina"
 
 msgid "Employees on this structure"
-msgstr "Empleados con esta estructura"
+msgstr "Colaboradores con esta estructura"
 
 msgid "Employer formula"
 msgstr "Fórmula de la empresa"
@@ -27863,7 +28118,7 @@ msgid "No basic pay"
 msgstr "No hay salario básico"
 
 msgid "No component reaches this employee yet."
-msgstr "Todavía no hay conceptos asignados a este empleado."
+msgstr "Todavía no hay conceptos asignados a este colaborador."
 
 msgid "No components exist yet. Create an allowance or a deduction first."
 msgstr "Todavía no hay conceptos. Primero cree una asignación o una deducción."
@@ -27884,10 +28139,10 @@ msgid "No earnings to choose from."
 msgstr "No hay percepciones disponibles."
 
 msgid "No employees found."
-msgstr "No se encontraron empleados."
+msgstr "No se encontraron colaboradores."
 
 msgid "No employees with an active contract"
-msgstr "No hay empleados con un contrato activo"
+msgstr "No hay colaboradores con un contrato activo"
 
 msgid "No employer formula yet."
 msgstr "Todavía no hay una fórmula de aportación de la empresa."
@@ -27896,7 +28151,7 @@ msgid "No filing status"
 msgstr "No hay un estado fiscal"
 
 msgid "No filing status is set on this employee's contract, so no income tax is worked out."
-msgstr "El contrato de este empleado no tiene un estado fiscal, por lo que no se calcula el impuesto sobre la renta."
+msgstr "El contrato de este colaborador no tiene un estado fiscal, por lo que no se calcula el impuesto sobre la renta."
 
 msgid "No filing status matches your search."
 msgstr "Ningún estado fiscal coincide con la búsqueda."
@@ -28016,7 +28271,7 @@ msgid "Pending requests by type"
 msgstr "Solicitudes pendientes por tipo"
 
 msgid "Per employee"
-msgstr "Por empleado"
+msgstr "Por colaborador"
 
 msgid "Period from"
 msgstr "Período desde"
@@ -28025,7 +28280,7 @@ msgid "Period to"
 msgstr "Período hasta"
 
 msgid "Pick the period and the people"
-msgstr "Seleccione el período y los empleados"
+msgstr "Seleccione el período y los colaboradores"
 
 msgid "Plus cess"
 msgstr "Más el impuesto adicional"
@@ -28058,7 +28313,7 @@ msgid "Reimbursements & Encashments"
 msgstr "Reembolsos y compensaciones"
 
 msgid "Remove from these employees"
-msgstr "Quitar de estos empleados"
+msgstr "Quitar de estos colaboradores"
 
 msgid "Remove this rule"
 msgstr "Eliminar esta regla"
@@ -28112,7 +28367,7 @@ msgid "Search components"
 msgstr "Buscar conceptos"
 
 msgid "Search employees"
-msgstr "Buscar empleados"
+msgstr "Buscar colaboradores"
 
 msgid "Search filing statuses"
 msgstr "Buscar estados fiscales"
@@ -28127,13 +28382,13 @@ msgid "See the run"
 msgstr "Ver el proceso"
 
 msgid "Select Employees"
-msgstr "Seleccionar empleados"
+msgstr "Seleccionar colaboradores"
 
 msgid "Select all shown"
 msgstr "Seleccionar todos los que se muestran"
 
 msgid "Select every employee this search found"
-msgstr "Seleccionar todos los empleados encontrados por esta búsqueda"
+msgstr "Seleccionar todos los colaboradores encontrados por esta búsqueda"
 
 msgid "Separate, pre-tax"
 msgstr "Por separado, antes de impuestos"
@@ -28169,7 +28424,7 @@ msgid "Start from a ready-made component"
 msgstr "Empezar con un concepto predefinido"
 
 msgid "Stop applying to every active employee"
-msgstr "Dejar de aplicar a todos los empleados activos"
+msgstr "Dejar de aplicar a todos los colaboradores activos"
 
 msgid "Structure"
 msgstr "Estructura"
@@ -28274,10 +28529,10 @@ msgid "Will be paid"
 msgstr "Se pagará"
 
 msgid "Withheld from employees"
-msgstr "Retenido a los empleados"
+msgstr "Retenido a los colaboradores"
 
 msgid "Without one, no income tax is worked out for anybody."
-msgstr "Si no se define, no se calculará el impuesto sobre la renta de ningún empleado."
+msgstr "Si no se define, no se calculará el impuesto sobre la renta de ningún colaborador."
 
 msgid "Work out the tax"
 msgstr "Calcular el impuesto"
@@ -28319,10 +28574,10 @@ msgid "8h or more"
 msgstr "8 h o más"
 
 msgid "A component reaches this employee through the salary structure, by being added to them directly, by applying to every employee, or by a condition. Only the first two are this contract's to change."
-msgstr "Un concepto se asigna a este empleado mediante la estructura salarial, añadiéndolo directamente, aplicándolo a todos los empleados o mediante una condición. Este contrato solo permite modificar las dos primeras opciones."
+msgstr "Un concepto se asigna a este colaborador mediante la estructura salarial, añadiéndolo directamente, aplicándolo a todos los colaboradores o mediante una condición. Este contrato solo permite modificar las dos primeras opciones."
 
 msgid "A one-off change to these employees. Nothing afterwards remembers why they have it — a structure is the way to keep a set maintained."
-msgstr "Un cambio puntual para estos empleados. El sistema no conserva el motivo; para mantener un conjunto de conceptos, utilice una estructura."
+msgstr "Un cambio puntual para estos colaboradores. El sistema no conserva el motivo; para mantener un conjunto de conceptos, utilice una estructura."
 
 msgid "A one-off, on this payslip only. No allowance or deduction is created, so nobody's next payslip changes."
 msgstr "Un cambio puntual que solo afecta a esta nómina. No se crea ninguna asignación ni deducción, por lo que no cambia la próxima nómina."
@@ -28394,7 +28649,7 @@ msgid "Available for all"
 msgstr "Disponible para todos"
 
 msgid "Average progress across all employee key results,"
-msgstr "Progreso promedio de todos los resultados clave de los empleados,"
+msgstr "Progreso promedio de todos los resultados clave de los colaboradores,"
 
 msgid "Awaiting Approval"
 msgstr "Pendiente de aprobación"
@@ -28487,25 +28742,25 @@ msgid "Due date"
 msgstr "Fecha límite"
 
 msgid "Employee Key Result"
-msgstr "Resultado clave del empleado"
+msgstr "Resultado clave del colaborador"
 
 msgid "Employees exiting per month"
-msgstr "Empleados que salen por mes"
+msgstr "Colaboradores que salen por mes"
 
 msgid "Employees who completed tasks in this period"
-msgstr "Empleados que completaron tareas en este período"
+msgstr "Colaboradores que completaron tareas en este período"
 
 msgid "Employees whose notice period ends in the next 30 days"
-msgstr "Empleados cuyo período de preaviso termina en los próximos 30 días"
+msgstr "Colaboradores cuyo período de preaviso termina en los próximos 30 días"
 
 msgid "Employees with objectives in this period"
-msgstr "Empleados con objetivos en este período"
+msgstr "Colaboradores con objetivos en este período"
 
 msgid "Enable Asset Fine"
 msgstr "Habilitar multas por activos"
 
 msgid "Enabling this allows adding a fine for an employee when an asset is returned."
-msgstr "Al habilitar esta opción, se podrá aplicar una multa al empleado cuando devuelva un activo."
+msgstr "Al habilitar esta opción, se podrá aplicar una multa al colaborador cuando devuelva un activo."
 
 msgid "Errors"
 msgstr "Errores"
@@ -28553,7 +28808,7 @@ msgid "Import Leave Requests"
 msgstr "Importar solicitudes de permiso"
 
 msgid "Importing employees..."
-msgstr "Importando empleados..."
+msgstr "Importando colaboradores..."
 
 msgid "Importing projects..."
 msgstr "Importando proyectos..."
@@ -28568,7 +28823,7 @@ msgid "Include username"
 msgstr "Incluir nombre de usuario"
 
 msgid "Included, worked out by the same code a payslip uses. A real employee takes their filing status from their contract."
-msgstr "Incluido y calculado con el mismo código que utiliza una nómina. En el caso de un empleado real, el estado fiscal se obtiene de su contrato."
+msgstr "Incluido y calculado con el mismo código que utiliza una nómina. En el caso de un colaborador real, el estado fiscal se obtiene de su contrato."
 
 msgid "Income is taxed a band at a time: only the part falling inside each band is charged at that band's rate. Start the first band at 0, make each one begin where the previous ended, and leave the last band's upper limit empty for “and above”."
 msgstr "Los ingresos se gravan por tramos: solo la parte que cae dentro de cada tramo se calcula con su tasa. El primer tramo comienza en 0; cada tramo siguiente empieza donde termina el anterior. Deje vacío el límite superior del último tramo para indicar «y más»."
@@ -28709,7 +28964,7 @@ msgid "Offer Accepted"
 msgstr "Oferta aceptada"
 
 msgid "On the %(s)s structure, which does not include this component. It is applied to them outside that structure."
-msgstr "En la estructura %(s)s, que no incluye este concepto. Se aplica al empleado por fuera de esa estructura."
+msgstr "En la estructura %(s)s, que no incluye este concepto. Se aplica al colaborador por fuera de esa estructura."
 
 msgid "Ongoing Recruitment Candidates"
 msgstr "Candidatos en procesos de selección activos"
@@ -28775,7 +29030,7 @@ msgid "Proration, CTC and ceilings are on the structure's own page once saved."
 msgstr "El prorrateo, el costo total para la empresa y los límites se configuran en la página de la estructura una vez guardada."
 
 msgid "Puts each employee onto that structure's components, and takes them off the one they were on."
-msgstr "Asigna a cada empleado los conceptos de esa estructura y lo quita de la estructura anterior."
+msgstr "Asigna a cada colaborador los conceptos de esa estructura y lo quita de la estructura anterior."
 
 msgid "Rates and thresholds change every year. Check each one against the current finance act before anyone is paid by it."
 msgstr "Las tasas y los límites cambian cada año. Compruebe cada uno con la legislación fiscal vigente antes de utilizarlos para pagar."
@@ -28832,13 +29087,13 @@ msgid "This structure reads each contract's wage as basic pay, and builds gross 
 msgstr "Esta estructura toma el salario de cada contrato como salario básico y calcula el salario bruto a partir de él."
 
 msgid "This takes priority: where an hourly contract states a rate, basic pay comes from the hours worked, and an earning marked as basic pay is not used for that employee."
-msgstr "Esto tiene prioridad: si un contrato por horas establece una tarifa, el salario básico se calcula según las horas trabajadas y no se utiliza para ese empleado ninguna percepción marcada como salario básico."
+msgstr "Esto tiene prioridad: si un contrato por horas establece una tarifa, el salario básico se calcula según las horas trabajadas y no se utiliza para ese colaborador ninguna percepción marcada como salario básico."
 
 msgid "This will immediately invalidate the current password. Continue?"
 msgstr "La contraseña actual dejará de ser válida de inmediato. ¿Desea continuar?"
 
 msgid "Tick anyone else to apply it outside a structure, or use the header box to apply it to every active employee and untick anyone to leave them out."
-msgstr "Marque otros empleados para aplicar el concepto fuera de una estructura o utilice la casilla del encabezado para aplicarlo a todos los empleados activos; desmarque a quienes quiera excluir."
+msgstr "Marque otros colaboradores para aplicar el concepto fuera de una estructura o utilice la casilla del encabezado para aplicarlo a todos los colaboradores activos; desmarque a quienes quiera excluir."
 
 msgid "Tick the contracts on the list first."
 msgstr "Primero marque los contratos de la lista."
@@ -28925,7 +29180,7 @@ msgid "Yearly income the slabs are applied to"
 msgstr "Ingresos anuales a los que se aplican los tramos"
 
 msgid "Years of service: counted from the employee joining date to the end of the pay period, with decimals (6.4). Use round(...) for whole years."
-msgstr "Antigüedad: se cuenta desde la fecha de ingreso del empleado hasta el final del período de pago y admite decimales (6.4). Use round(...) para obtener años enteros."
+msgstr "Antigüedad: se cuenta desde la fecha de ingreso del colaborador hasta el final del período de pago y admite decimales (6.4). Use round(...) para obtener años enteros."
 
 msgid "Years of the active contract: counted from the start date of the active contract to the end of the pay period, with decimals (2.5). Use round(...) for whole years."
 msgstr "Antigüedad del contrato activo: se cuenta desde el inicio del contrato vigente hasta el final del período de pago y admite decimales (2.5). Use round(...) para obtener años enteros."
@@ -28940,13 +29195,13 @@ msgid "Your username is:"
 msgstr "Su nombre de usuario es:"
 
 msgid "a company cost on top of gross, not taken from the employee."
-msgstr "un costo adicional para la empresa sobre el salario bruto; no se descuenta al empleado."
+msgstr "un costo adicional para la empresa sobre el salario bruto; no se descuenta al colaborador."
 
 msgid "about"
 msgstr "aproximadamente"
 
 msgid "active employees"
-msgstr "empleados activos"
+msgstr "colaboradores activos"
 
 msgid "add a balance earning to absorb the remainder."
 msgstr "añada una percepción de ajuste para compensar la diferencia."
@@ -28991,7 +29246,7 @@ msgid "comes off the tax."
 msgstr "se descuenta del impuesto."
 
 msgid "employees still to run · based on the applied filter:"
-msgstr "empleados pendientes de procesar · según el filtro aplicado:"
+msgstr "colaboradores pendientes de procesar · según el filtro aplicado:"
 
 msgid "employer"
 msgstr "empresa"
@@ -29162,7 +29417,7 @@ msgid "Check the status of your leave applications, attendance corrections and o
 msgstr "Consulta aquí el estado de tus solicitudes de permisos, correcciones de asistencia y otras peticiones."
 
 msgid "A guided tour of the employee self-service dashboard."
-msgstr "Un recorrido guiado por el panel de autoservicio del empleado."
+msgstr "Un recorrido guiado por el panel de autoservicio del colaborador."
 
 msgid "{current} of {total}"
 msgstr "{current} de {total}"
@@ -29192,7 +29447,7 @@ msgid "Step 2 — Create departments & job positions"
 msgstr "Paso 2 — Crea departamentos y puestos"
 
 msgid "Under Settings → Base, add your Departments and Job Positions so employees can be placed correctly and reports make sense."
-msgstr "En Configuración → Base, añade los departamentos y puestos para asignar correctamente a los empleados y obtener informes útiles."
+msgstr "En Configuración → Base, añade los departamentos y puestos para asignar correctamente a los colaboradores y obtener informes útiles."
 
 msgid "Step 3 — Configure email (important)"
 msgstr "Paso 3 — Configura el correo electrónico (importante)"
@@ -29204,7 +29459,7 @@ msgid "Step 4 — Add your team"
 msgstr "Paso 4 — Añade a tu equipo"
 
 msgid "Go to Employees to add people one by one or import them in bulk. Each employee gets their own login and self-service portal."
-msgstr "Ve a Empleados para añadir personas individualmente o importarlas en grupo. Cada empleado tendrá su propio acceso y portal de autoservicio."
+msgstr "Ve a Colaboradores para añadir colaboradores individualmente o importarlas en grupo. Cada colaborador tendrá su propio acceso y portal de autoservicio."
 
 msgid "You're all set!"
 msgstr "¡Todo listo!"
@@ -29258,7 +29513,7 @@ msgid "Summary tiles show all-time totals and do not follow the selected period.
 msgstr "Los indicadores resumen muestran los totales históricos y no cambian según el período seleccionado."
 
 msgid "Every employee has a payslip — based on the applied filter:"
-msgstr "Cada empleado tiene una nómina — según el filtro aplicado:"
+msgstr "Cada colaborador tiene una nómina — según el filtro aplicado:"
 
 msgid "Payslips are written as they are generated. If this page is closed, reopen the run from the list and it carries on from where it stopped — nobody is paid twice."
 msgstr "Las nóminas se guardan a medida que se generan. Si cierra esta página, vuelva a abrir el proceso desde la lista para continuar donde se detuvo; nadie recibirá un pago duplicado."
@@ -29267,16 +29522,16 @@ msgid "Starting the run…"
 msgstr "Iniciando el proceso…"
 
 msgid "Every employee with an active contract. Anyone not eligible, or who already has a payslip for this period, is listed as excluded on the next step rather than silently dropped."
-msgstr "Todos los empleados con un contrato activo. Los que no cumplan los requisitos o ya tengan una nómina para este período aparecerán como excluidos en el siguiente paso, en lugar de omitirse sin aviso."
+msgstr "Todos los colaboradores con un contrato activo. Los que no cumplan los requisitos o ya tengan una nómina para este período aparecerán como excluidos en el siguiente paso, en lugar de omitirse sin aviso."
 
 msgid "Payslips are written as they are generated. If this is closed, reopen the run from the list and it carries on from where it stopped; nobody is paid twice."
 msgstr "Las nóminas se guardan a medida que se generan. Si cierra esta ventana, vuelva a abrir el proceso desde la lista para continuar donde se detuvo; nadie recibirá un pago duplicado."
 
 msgid "Employees on a salary structure that includes this component get it automatically and cannot be unticked here."
-msgstr "Los empleados con una estructura salarial que incluye este concepto lo reciben automáticamente y no se pueden desmarcar aquí."
+msgstr "Los colaboradores con una estructura salarial que incluye este concepto lo reciben automáticamente y no se pueden desmarcar aquí."
 
 msgid "Example periods. A real one follows the company calendar and the employee's contract."
-msgstr "Períodos de ejemplo. El período real sigue el calendario de la empresa y el contrato del empleado."
+msgstr "Períodos de ejemplo. El período real sigue el calendario de la empresa y el contrato del colaborador."
 
 msgid "Formula. Type numbers and + - * / ( ), arrows move the cursor, Backspace deletes."
 msgstr "Fórmula. Escriba números y los operadores + - * / ( ). Use las flechas para mover el cursor y Retroceso para borrar."
@@ -29291,7 +29546,7 @@ msgid "Round to whole numbers (or round(x, 2) to 2 decimals)"
 msgstr "Redondear a números enteros (o use round(x, 2) para dos decimales)"
 
 msgid "Ticking one adds this employee to that component. It does not change the component itself, which is shared with everyone else on it. The standard items — loss of pay, loans, fines — are always on and shown here so the list is the whole picture."
-msgstr "Al marcarlo, se añade este empleado al concepto. El concepto en sí no cambia y sigue compartido con los demás empleados asignados. Los conceptos estándar —días sin sueldo, préstamos y multas— siempre están activos y se muestran aquí para ofrecer una vista completa."
+msgstr "Al marcarlo, se añade este colaborador al concepto. El concepto en sí no cambia y sigue compartido con los demás colaboradores asignados. Los conceptos estándar —días sin sueldo, préstamos y multas— siempre están activos y se muestran aquí para ofrecer una vista completa."
 
 msgid "Overtime is paid by the overtime earnings on the salary structure. Hours are recorded here whether or not the structure includes them."
 msgstr "Las horas extra se pagan según los conceptos de horas extra de la estructura salarial. Aquí se registran las horas, tanto si la estructura las incluye como si no."
@@ -29315,7 +29570,7 @@ msgid "Sorts the contracts with no basic pay to the top."
 msgstr "Muestra primero los contratos sin salario básico."
 
 msgid "Nobody is on this structure yet. An employee joins it through their active contract, so assign it there or from the structure's own edit form."
-msgstr "Todavía no hay empleados en esta estructura. Se asigna a través del contrato activo del empleado; hágalo desde el contrato o desde el formulario de edición de la estructura."
+msgstr "Todavía no hay colaboradores en esta estructura. Se asigna a través del contrato activo del colaborador; hágalo desde el contrato o desde el formulario de edición de la estructura."
 
 msgid "Run through the same engine that produces real payslips, over a sample 30 day month with 22 working days. Nothing is saved."
 msgstr "Se ejecuta con el mismo motor que genera las nóminas reales, usando un mes de ejemplo de 30 días y 22 días laborables. No se guarda ningún dato."
@@ -29348,7 +29603,7 @@ msgid "Resolved Of"
 msgstr "Resueltos de"
 
 msgid "Send an invitation email to this employee?"
-msgstr "¿Enviar un correo de invitación a este empleado?"
+msgstr "¿Enviar un correo de invitación a este colaborador?"
 
 msgid "Send Invitation"
 msgstr "Enviar invitación"
@@ -29393,7 +29648,7 @@ msgid "<b>Paid by the hour:</b> basic pay is <span class=\"ss-emp__formula\">hou
 msgstr "<b>Pago por hora:</b> el salario básico es la <span class=\"ss-emp__formula\">tarifa por hora × horas normales</span> —las horas trabajadas en los días laborables programados, descontando las horas extra de esos días. Las horas de los días libres y festivos cuentan íntegramente como horas extra, no como salario básico, y solo se pagan mediante los conceptos de horas extra si la estructura los incluye."
 
 msgid "Every employee has a payslip · based on the applied filter:"
-msgstr "Todos los empleados tienen una nómina · según el filtro aplicado:"
+msgstr "Todos los colaboradores tienen una nómina · según el filtro aplicado:"
 
 msgid "Rejected candidates per rejection reason · click a bar to list them"
 msgstr "Candidatos rechazados por motivo · haga clic en una barra para ver la lista"

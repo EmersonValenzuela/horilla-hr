@@ -6,9 +6,15 @@ from types import SimpleNamespace
 from django.contrib.sessions.middleware import SessionMiddleware
 from django.http import HttpResponse
 from django.test import RequestFactory, SimpleTestCase, TestCase, override_settings
+from django.utils.translation import gettext as _
 
 from horilla.testkit import make_user
-from report.sidebar import employee_accessibility, menu_accessibility
+from report.sidebar import (
+    SUBMENUS,
+    employee_accessibility,
+    menu_accessibility,
+    recruitment_accessibility,
+)
 from report.views import check_export_access
 from report.views.explorer import explorer_domain_entries
 
@@ -48,7 +54,7 @@ class ReportSidebarAccessibilityTests(SimpleTestCase):
 
         self.assertNotIn("Payroll", names)
         self.assertNotIn("Recruitment", names)
-        self.assertIn("Performance", names)
+        self.assertIn(str(_("Performance")), names)
 
     def test_employee_accessibility_with_perm(self):
         request = SimpleNamespace(
@@ -73,6 +79,30 @@ class ReportSidebarAccessibilityTests(SimpleTestCase):
             user=SimpleNamespace(is_superuser=True, has_perm=lambda p: False)
         )
         self.assertTrue(menu_accessibility(request, None, None))
+
+    def test_recruitment_reports_sidebar_requires_recruitment_access(self):
+        from django.urls import reverse
+
+        report_url = reverse("recruitment-report")
+        entry = next(
+            item for item in SUBMENUS if str(item["redirect"]) == report_url
+        )
+        self.assertEqual(
+            entry["accessibility"], "report.sidebar.recruitment_accessibility"
+        )
+
+        without_permission = SimpleNamespace(
+            user=SimpleNamespace(is_superuser=False, has_perm=lambda _perm: False)
+        )
+        self.assertFalse(recruitment_accessibility(without_permission, entry, None))
+
+        with_permission = SimpleNamespace(
+            user=SimpleNamespace(
+                is_superuser=False,
+                has_perm=lambda perm: perm == "recruitment.view_recruitment",
+            )
+        )
+        self.assertTrue(recruitment_accessibility(with_permission, entry, None))
 
 
 class ReportExportAccessEndpointTests(TestCase):

@@ -63,6 +63,7 @@ from base.demo_data.modules.recruitment_features import (
     backfill_recruitment_job_position,
     backfill_rejected_candidates,
 )
+from base.demo_data.modules.recruitment_showcase import seed_recruitment_showcase
 from base.demo_data.modules.request_windows import backfill_request_windows
 from base.demo_data.org import (
     differentiate_org_taxonomy_by_company,
@@ -83,9 +84,8 @@ def run_enterprise_demo_seeder(
     """
     Standardize demo data after JSON fixtures are loaded.
 
-    Safe to call repeatedly (idempotent renames / upserts). Does not create
-    or delete employees — only activates companies, renames org taxonomy,
-    refreshes announcements, and sanitizes vendor-specific labels.
+    Safe to call repeatedly; applies idempotent demo-data backfills without
+    replacing user records or creating or deleting employees.
     """
     today = today or date.today()
     root = Path(load_dir) if load_dir else Path(settings.BASE_DIR) / "load_data"
@@ -159,6 +159,7 @@ def run_enterprise_demo_seeder(
     result["recruitment_candidate_source"] = backfill_candidate_source(today)
     result["recruitment_job_position"] = backfill_recruitment_job_position(today)
     result["recruitment_offer_status"] = backfill_candidate_offer_status(today)
+    result["recruitment_showcase"] = seed_recruitment_showcase(today=today)
     result["asset_company_pools"] = backfill_company_asset_pools(today)
     result["asset_reports"] = backfill_asset_reports(today)
 
