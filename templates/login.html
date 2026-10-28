@@ -7,7 +7,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{% trans "Sign In" %} - {{ white_label_company_name }}</title>
+        <title>{% trans "Sign In" %} - {{ product_name }}</title>
         <link
             rel="apple-touch-icon"
             sizes="180x180"
@@ -143,15 +143,18 @@
                     {% endif %}
                 </div>
                 <div style="display: contents">
-                    <img
-                        src="{% if white_label_company.icon %}
-                        "{{white_label_company.icon.url}}"
-                        alt="{{white_label_company_name}}"
-                        style=" opacity:.90; 200px; height: 140px;"
+                    {% if white_label_company.icon %}
+                        <img
+                            src="{{ white_label_company.icon.url }}"
+                            alt="{{ white_label_company_name }}"
+                            style="opacity: .90; max-width: 200px; max-height: 140px;"
+                        >
                     {% else %}
-                        "{% static 'images/ui/auth-logo.png' %}" alt="{% trans 'Horilla' %}"
-                    {% endif %}"
-                    >
+                        <span
+                            aria-hidden="true"
+                            style="display: inline-grid; width: 88px; height: 88px; place-items: center; border-radius: 24px; background: #243957; color: #fff; font-size: 30px; font-weight: 800;"
+                        >SZ</span>
+                    {% endif %}
                     {% if white_label_company %}
                         <p style="font-size: large; color: gray; text-align: center" class="mt-2">
                             {{ white_label_company }}

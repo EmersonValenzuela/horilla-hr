@@ -14,6 +14,7 @@ Two surfaces:
 
 from typing import Any
 
+from django.conf import settings
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required as auth_login_required
 from django.http import HttpResponse, JsonResponse
@@ -37,6 +38,14 @@ from horilla_views.generic.cbv.views import (
 # ---------------------------------------------------------------------------
 # Helpers
 # ---------------------------------------------------------------------------
+
+
+def _product_text(text):
+    """Localize tour text and replace the default product name if configured."""
+    translated = gettext(text)
+    return translated.replace(
+        "Horilla", getattr(settings, "PRODUCT_NAME", "Horilla")
+    )
 
 
 def _audiences_for(user):
@@ -87,8 +96,8 @@ def _serialize_steps(tour, page):
             continue
         steps.append(
             {
-                "title": gettext(step.title),
-                "description": gettext(step.description),
+                "title": _product_text(step.title),
+                "description": _product_text(step.description),
                 "element": step.element_selector or None,
                 "side": step.side,
                 "align": step.align,
@@ -136,8 +145,8 @@ def tour_active(request):
             {
                 "id": tour.id,
                 "slug": tour.slug,
-                "title": gettext(tour.title),
-                "description": gettext(tour.description),
+                "title": _product_text(tour.title),
+                "description": _product_text(tour.description),
                 "icon": tour.icon or "map-outline",
                 "auto_start": auto_start,
                 "show_progress": tour.show_progress,

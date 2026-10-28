@@ -36,6 +36,7 @@ DEBUG = env("DEBUG")
 ALLOWED_HOSTS = env("ALLOWED_HOSTS")
 CSRF_TRUSTED_ORIGINS = env("CSRF_TRUSTED_ORIGINS")
 HORILLA_ENV = env("HORILLA_ENV", default="")
+PRODUCT_NAME = env("PRODUCT_NAME", default="Horilla")
 REDIS_URL = env("REDIS_URL", default=None)
 
 # Default site ID for django.contrib.sites framework.

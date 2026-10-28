@@ -9,7 +9,7 @@ tours (getting-started, dashboard-overview) which the API tests rely on.
 
 import json
 
-from django.test import Client, TestCase
+from django.test import Client, TestCase, override_settings
 from django.urls import reverse
 from django.utils import translation
 
@@ -89,6 +89,13 @@ class TourApiTests(TestCase):
         self.assertIn("getting-started", tours)
         self.assertTrue(tours["getting-started"]["auto_start"])
         self.assertGreater(len(tours["getting-started"]["steps"]), 0)
+
+    @override_settings(PRODUCT_NAME="Safe Zone Personas")
+    def test_seeded_tour_uses_configured_product_name(self):
+        self.client.force_login(self.admin)
+        tour = self._active("dashboard")["getting-started"]
+        self.assertIn("Safe Zone Personas", tour["title"])
+        self.assertNotIn("Horilla", tour["title"])
 
     def test_ess_tour_is_translated_for_spanish_users(self):
         self.client.force_login(self.employee)

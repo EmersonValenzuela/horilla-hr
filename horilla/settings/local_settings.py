@@ -18,3 +18,6 @@ Examples:
     INSTALLED_APPS += ["client_portal"]
     MIDDLEWARE += ["client_portal.middleware.ClientTrackingMiddleware"]
 """
+
+PRODUCT_NAME = "Safe Zone Personas"
+WHITE_LABELLING = True
