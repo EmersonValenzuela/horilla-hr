@@ -16,6 +16,8 @@ services:
       - media:/app/media
     environment:
       - DEBUG=1
+      - HORILLA_ENV=development
+      - HORILLA_LOAD_DEMO_DATA=${HORILLA_LOAD_DEMO_DATA:-1}
       - DB_HOST=db
       # nginx is the single proxy hop; lets django-axes read the real client IP
       - AXES_PROXY_COUNT=1
@@ -48,6 +50,7 @@ services:
       - media:/app/media
     environment:
       - DEBUG=1
+      - HORILLA_ENV=development
       - DB_HOST=db
       # nginx is the single proxy hop; lets django-axes read the real client IP
       - AXES_PROXY_COUNT=1

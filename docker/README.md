@@ -77,10 +77,15 @@ open http://localhost:8000
 On first launch, Horilla will:
 1. Wait for PostgreSQL to be ready (30s timeout)
 2. Run database migrations automatically
-3. Collect static files
-4. Start the Gunicorn application server
+3. Load demo fixtures on a fresh development database (enabled by default)
+4. Collect static files
+5. Start the Gunicorn application server
 
-You'll see the **Database Initialization** page where you can create your first admin user and company.
+Demo loading is limited to development, and is skipped if the database already
+contains any users. It creates the sample accounts from `load_data/`, so the
+Database Initialization wizard is not shown on that database. Set
+`HORILLA_LOAD_DEMO_DATA=0` before the first launch if you want to create your
+own admin and company instead. Production always disables automatic demo data.
 
 ### Stopping & Starting
 
@@ -177,6 +182,7 @@ make logs
 | `CSRF_TRUSTED_ORIGINS` | `http://localhost:8000` | Full URLs for CSRF validation. Must include protocol |
 | `DATABASE_URL` | `postgres://...@db:5432/...` | PostgreSQL connection string. `db` is the Docker service name |
 | `DB_INIT_PASSWORD` | `dev-init-password...` | Initial database setup password — **change for production** |
+| `HORILLA_LOAD_DEMO_DATA` | `1` in development Compose; `0` in production | Load sample fixtures once on a fresh development database |
 | `REDIS_URL` | `redis://:...@redis:6379/0` | Redis connection string (includes password) |
 
 #### PostgreSQL Settings

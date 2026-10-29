@@ -5,7 +5,7 @@ from pathlib import Path
 
 from django.conf import settings
 from django.core.management import call_command
-from django.core.management.base import BaseCommand
+from django.core.management.base import BaseCommand, CommandError
 
 from base.demo_data import run_enterprise_demo_seeder
 from base.demo_data.fixtures import demo_fixture_files
@@ -31,6 +31,13 @@ class Command(BaseCommand):
             help="Flush all existing data before loading (full reset).",
         )
         parser.add_argument(
+            "--if-empty",
+            action="store_true",
+            help=(
+                "Load only in DEBUG development mode and when no users exist."
+            ),
+        )
+        parser.add_argument(
             "--no-input",
             "--noinput",
             action="store_false",
@@ -39,6 +46,33 @@ class Command(BaseCommand):
         )
 
     def handle(self, *args, **options):
+        if options["if_empty"]:
+            if (
+                not settings.DEBUG
+                or str(getattr(settings, "HORILLA_ENV", "")).strip().lower()
+                != "development"
+            ):
+                self.stdout.write(
+                    self.style.WARNING(
+                        "Demo data skipped: automatic loading is restricted to "
+                        "DEBUG development environments."
+                    )
+                )
+                return
+
+            from django.contrib.auth import get_user_model
+
+            if get_user_model().objects.exists():
+                self.stdout.write(
+                    self.style.WARNING(
+                        "Demo data skipped: this database already has users."
+                    )
+                )
+                return
+
+            if options["flush"]:
+                raise CommandError("--if-empty cannot be combined with --flush.")
+
         if options["flush"]:
             if options["interactive"]:
                 confirm = input(
@@ -67,6 +101,7 @@ class Command(BaseCommand):
 
         loaded = 0
         errors = 0
+        seeder_failed = False
 
         for fname in data_files:
             file_path = load_dir / fname
@@ -110,6 +145,7 @@ class Command(BaseCommand):
                 )
             )
         except Exception:
+            seeder_failed = True
             # The seeder is one long sequence of ~25 steps -- without this,
             # an exception from any one of them would crash the whole
             # command before normalize_demo_payslips()/assign_demo_user_groups()
@@ -143,3 +179,7 @@ class Command(BaseCommand):
                 f"\nDone. {loaded} fixture(s) loaded, {errors} error(s)."
             )
         )
+        if options["if_empty"] and (errors or seeder_failed):
+            raise CommandError(
+                "Demo data loading was incomplete; review the errors above."
+            )

@@ -5,6 +5,10 @@ Enterprise demo fixtures and the post-load seeder used by Horilla HR.
 ## Load
 
 ```bash
+# Automatically enabled for a fresh database with `make dev`; set
+# HORILLA_LOAD_DEMO_DATA=0 to use the normal first-run setup wizard instead.
+# Production Compose always disables automatic demo loading.
+
 # Full reset (destructive)
 python manage.py load_demo_data --flush --no-input
 

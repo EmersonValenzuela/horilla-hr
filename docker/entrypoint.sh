@@ -73,6 +73,12 @@ fi
 
 python manage.py migrate --noinput
 
+# Demo fixtures are opt-in at the environment level and the management
+# command independently rejects production and databases with existing users.
+if [ "${HORILLA_LOAD_DEMO_DATA:-0}" = "1" ]; then
+  python manage.py load_demo_data --if-empty --no-input
+fi
+
 # Collect static files.
 #
 # --clear is deliberate: STATIC_ROOT is a named volume that outlives the image,

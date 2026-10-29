@@ -15,6 +15,7 @@ services:
     environment: !override
       DEBUG: "0"
       HORILLA_ENV: production
+      HORILLA_LOAD_DEMO_DATA: "0"
       DB_HOST: db
       SECRET_KEY: ${SECRET_KEY:?Set SECRET_KEY in .env}
       ALLOWED_HOSTS: ${ALLOWED_HOSTS:?Set ALLOWED_HOSTS in .env}
